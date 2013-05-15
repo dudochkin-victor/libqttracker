@@ -1,0 +1,701 @@
+libqttracker (1~6.12.6) unstable; urgency=low
+
+  * Refactor libqttracker test suites for increasing reliability
+  * Fixes: NB#191946 - Memory leaks when adding SMS messages
+  * Fixes: NB#206261 - Signals for inserted, removed or updated videos aren't emitted
+  * Fixes: NB#207809 - [browser-blocker] Hang in SopranoLive::SequenceOperation::waitForStarted
+  * Fixes: NB#202932 - call-ui is leaking memory during NFT-call tests
+  * Fixes: NB#203725 - Slow streaming query performance
+
+ -- Jean-Luc Lamadon <jean-luc.lamadon@nokia.com>  Thu, 09 Dec 2010 13:57:41 +0200
+
+libqttracker (1~6.12.5) unstable; urgency=low
+
+  * Benchmark tests no longer fail, only warn, on incorrect result counts
+  * Implements direct access to tracker with QSparql backend
+  * Updates tracker ontologies to tracker 0.9.29
+
+ -- Jean-Luc Lamadon <jean-luc.lamadon@nokia.com>  Tue, 30 Nov 2010 17:29:35 +0200
+
+libqttracker (1~6.12.4) unstable; urgency=low
+
+  * Benchmark tests no longer fail, only warn, on incorrect result counts
+  * debian: Aegis security framework integration for test cases
+
+ -- Jean-Luc Lamadon <jean-luc.lamadon@nokia.com>  Thu, 25 Nov 2010 16:05:30 +0200
+
+libqttracker (1~6.12.4) unstable; urgency=low
+
+  * debian: Aegis security framework integration for test cases
+ 
+ -- Jean-Luc Lamadon <jean-luc.lamadon@nokia.com>  Wed, 24 Nov 2010 13:09:38 +0200
+
+libqttracker (1~6.12.3) unstable; urgency=low
+
+  * Fixes: NB#197096 - libqttracker doesn't support INSERT/DELETE SILENT
+  * Fixes: NB#193973 - Not possible to create a "FILTER( false )" in output
+  * Fixes: NB#159383 - <MemLeak> small memory leaks after open / close image
+
+ -- Jean-Luc Lamadon <jean-luc.lamadon@nokia.com>  Tue, 23 Nov 2010 14:36:42 +0200
+
+libqttracker (1~6.12.2) unstable; urgency=low
+
+  * Fixes: NB#193607 - nfo::fileSize returns 0 for large files
+  * Fixes: NB#197867 - call-ui locks up when tracker-store crashes
+  * Fixes: NB#203307 - libqttracker is built without optimizations
+  * Fixes: NB#175281 - Massive leak in SopranoLive::BackEnds::Tracker::TrackerService::getRDFGraphCache()
+  * Fixes: NB#193973 - Not possible to create a "FILTER( false )" in output
+  * Fixes: NB#197096 - libqttracker doesn't support INSERT/DELETE SILENT
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 03 Nov 2010 15:14:10 +0200
+
+libqttracker (1~6.12.1.1) unstable; urgency=low
+
+  * Fixes: NB#192152 - libqttracker: add pkg-config to build-deps
+
+ -- Jean-Luc Lamadon <jean-luc.lamadon@nokia.com>  Tue, 16 Nov 2010 23:38:34 +0200
+
+libqttracker (1~6.12.1) unstable; urgency=low
+
+  * Returns localDebug, localWarning and localCritical temporarily
+  * Fixes: NB#168049 - Require an environment variable for setting tracker/qttracker log level
+
+ -- Jean-Luc Lamadon <jean-luc.lamadon@nokia.com>  Tue, 19 Oct 2010 17:38:41 +0300
+
+libqttracker (1~6.12.0) unstable; urgency=low
+
+  * ABI break
+  * Adds query sequencer to tracker backend
+  * Fixes: NB#186334 -  qttracker does not support EXISTS for limited type verification in queries
+  * mafwbackend implicit browse cancel fix
+  * Fixes: NB#193250 - Qmafw-gui crashes when exited during non-completed YouTube browse.
+  * Fixes: NB#196895 - <Other> libqttracker-tests depend on testrunner instead of testrunner-lite
+  * Adds RDFVariable::exists and ::notExists
+  * mafwbackend serviceIri and some cleanup
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 27 Aug 2010 13:48:12 +0300
+
+libqttracker (1~6.11.1) unstable; urgency=low
+
+  * Fixes: NB#183114 -  Model emits data changed signal only on the first row
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 27 Aug 2010 13:41:18 +0300
+
+libqttracker (1~6.11.0) unstable; urgency=low
+
+  * Fixes: NB#180590 - Subscribed feed is not displayed in Feeds main view
+  * Fixes: NB#176346 - Model hangs trying to give dataChanged() signal
+  * Fixes: NB#181463 - Query for predefined tag 'favorite' results in qttracker not sending rowsInserted signal
+  * Fixes: NB#175281 - Massive leak in SopranoLive::BackEnds::Tracker::TrackerService::getRDFGraphCache()
+  * Fixes: NB#180684 - TrackerContentModule::refreshModel_chain() doesn't emit error()
+  * Fixes: NB#182998 - Not able to use the IN keyword
+  * Fixes: NB#181677 - Please enhance LiveNodesModel to give access to each row's QStringList
+  * Adds benchmarking test cases to benchmark test suite
+  * Improvements in user manual
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <iridian@iribuntu>  Tue, 17 Aug 2010 02:27:15 +0300
+
+libqttracker (1~6.10.0) unstable; urgency=low
+
+  * Fixes: NB#179134 - Property functions don't work as expected for subselects
+  * Fixes: NB#177226 - Count column does not get updated with current count value.
+  * Fixes: NB#176926 - Strange output for "literal columns"
+  * Fixes: NB#178107 - Add API files to libqttracker
+  * Adds benchmark and profiling test suites
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <iridian@iribuntu>  Mon, 19 Jul 2010 12:51:22 +0300
+
+libqttracker (1~6.9.8) unstable; urgency=low
+
+  * Fixes: NB#176925 - Requires C++ RTTI against Qt coding conventions
+  * Fixes: NB#176926 - Strange output for "literal columns"
+  * Fixes: NB#176754 - dataChanged signal after refreshModel indicates whole row not just changed cell
+  * Fixes: NB#165920 - LiteralValue creates xsd:date and xsd:time literals
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 05 Jul 2010 03:48:30 +0300
+
+libqttracker (1~6.9.7) unstable; urgency=low
+
+  * Fixes: NB#174703 - Leak in ClassUpdateDispatcher::create()
+  * Fixes: NB#174374 - Contacts application crashes at QList<QString>::operator[] ...
+  * Fixes: NB#173984 - msyncd crash when contact sync is initiated with N95
+  * Fixes: NB#175131 - libqttracker does not build with g++ 4.5.0
+  * Fixes: NB#174847 - LiveNodeModel doesn't emit dataChanged or rowsUpdated -signals after setData call.
+  * Fixes: NB#176328 - Blocking for content doesn't run main event loop
+  * Fixes: NB#176745 - QtTracker looses WHERE clause of INSERT statements
+  * Fices: NB#176346 - Model hands trying to give dataChanged() signal
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 25 Jun 2010 00:44:36 +0300
+
+libqttracker (1~6.9.6) unstable; urgency=low
+
+  * Fixes: NB#174521 - Call history query breaks with 6.9.5
+  * Adds RDFStrategy::UpdateProperty derived property flag for update hints
+  * Limits base_rdfGraph_modelResources to test data
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 14 Jun 2010 23:57:47 +0300
+
+libqttracker (1~6.9.5) unstable; urgency=low
+
+  * Fixes: NB#174198 - QtTracker 1~6.9.4 segfaults after modelQuery
+  * Fixes: NB#174106 - Incorrect behaviour by qttracker model
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 14 Jun 2010 11:35:07 +0300
+
+libqttracker (1~6.9.4) unstable; urgency=low
+
+  * Fixes: NB#169936 - Segfault when adding var=QUrl(...) in a subquery
+  * Fixes: NB#167013 - Adding a contact fails in few cases (Sync ovi.com)
+  * Fixes: NB#172263 - Syntax error with streaming query
+  * Fixes: NB#160660 - Tracker sync needed in libqttracker
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 10 Jun 2010 18:56:58 +0300
+
+libqttracker (1~6.9.2) unstable; urgency=low
+
+  * Fixes: NB#169339 - Crash on streamed query with secondary sorting
+  * Implemented: SWP#MCoFr-742 - sorting criteria in streaming mode
+  * Fixes: NB#166651 - refreshModel does not work in some cases
+  * Fixes: NB#171430 - LiveNodeModel contains invalid rows after removing images from Gallery
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 31 May 2010 19:53:40 +0300
+
+libqttracker (1~6.9.0) unstable; urgency=low
+
+  * Fixes: NB#168774 - createUniqueIri() is not unique across processes
+  * Tracker performance: optimizes derived property OPTIONAL clauses as function properties
+  * Fixes: NB#167860 - libqttracker is not thread safe
+  * Fixes: NB#167582 - derivedsUpdated not always emitted if no data
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 25 May 2010 01:49:19 +0300
+
+libqttracker (1~6.8.4) unstable; urgency=low
+
+  * Fixes: NB#166683 - Music-suite doesn't startup with qttracker's version 1~6.8.0+0m6 (again)
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 07 May 2010 15:24:58 +0300
+
+libqttracker (1~6.8.3) unstable; urgency=low
+
+  * Fixes: NB#166683 - Music-suite doesn't startup with qttracker's version 1~6.8.0+0m6
+  * Large testing framework overhaul
+  * Adds performance tests infrastructure
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 06 May 2010 11:55:52 +0300
+
+libqttracker (1~6.8.0) unstable; urgency=low
+
+  * Fixes: NB#163508 - RDFUpdate doesn't handle blank variables
+  * Fixes: NB#163512 - TrackerService doesn't report update results
+  * Implemented: SWP#MCoFr-591 - LibQtTracker: Limited graph support
+  * Adds support for non-column RDFSelect::groupBy
+  * Fixes: NB#162499 - Assignment operator of RDFVariable doesn't work (as expected)
+  * Fixes: NB#165720 - refreshModel crash after removed items
+  * Fixes: NB#165509 - Changing the ascending/decending parameter in RDFSelect::orderBy does not work with coalesce filter column
+  * Fixes: NB#165859 - Tags get added automatically
+  * Fixes: NB#164935 - LiveNodeModel doesn't emit signals rowsInserted, rowsRemoved and dataChanged for a union query of photos and videos
+  * Fixes: NB#159923 - valgrind warning in SopranoLive::QSparseVector()
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 29 Apr 2010 19:28:32 +0300
+
+libqttracker (1~6.7.0) unstable; urgency=low
+
+  * Fixes: NB#156955 - Object ID unescaped when it should not be
+  * Fixes: NB#162082 - Not able to add contacts with avatar
+  * Implemented: SWP#MCoFr-592 - LibQtTracker: Revisit dates storage
+  * Implemented: SWP#MCoFr-429 - LibQtTracker: Ability to create livenodes from list of URI
+  * Adds RDFRange and RDFDomain typedefs to property description classes
+  * Adds BaseClasses to type description classes for use with AutoGen::baseClassInfo
+  * Implemented: SWP#MCoFr-410 - Live Mode support without derived properties
+  * Fixes: NB#157973 - Performance: Autogenerated get*() methods create redundant queries
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 20 Apr 2010 00:00:20 +0300
+
+libqttracker (1~6.6.0) unstable; urgency=low
+
+  * Fixes: NB#161884 - DEFINES += QT_NO_CAST_FROM_ASCII not supported
+  * Fixes: NB#161509 - pkg-config .pc file is not installed by libqttracker-dev
+  * Fixes: NB#160660 - Tracker sync needed in libqttracker
+  * Fixes: NB#149997 - LiveNodeModel must update the content of query if content has been added/removed/modified
+  * Fixes: NB#151165 - rowCount() of LiveNodes can return a negative number
+  * Adds RDFStrategy::Live mode support to queries
+  * Adds completion and error signals to local write transactions
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 08 Apr 2010 14:45:27 +0300
+
+libqttracker (1~6.5.3) unstable; urgency=low
+
+  * Fixes: NB#160210 - Regression: Signals about contacts added are not emitted
+  * Removes obsolete coresuite in favor of unit-tests
+  * Adds ClassUpdateSignaler::get<foo::Type>() function
+  * Fixes invalidated cached resource access
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 17 Mar 2010 19:59:18 +0200
+
+libqttracker (1~6.5.2) unstable; urgency=low
+
+  * Fixes streaming mode with descending optionals
+  * Implements model canFetchMore and fetchMore
+  * Fixes: NB#160671 -  Crash while trying to save contact to tracker
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 16 Mar 2010 15:05:08 +0200
+
+libqttracker (1~6.5.1) unstable; urgency=low
+
+  * Fixes: NB#159712 - Not able to delete using a single qttracker client transaction
+  * Fixes: NB#158771 - Abort/stopOperations does not work
+  * Fixes: NB#157718 - Streaming mode query to tracker not working properly
+  * Fixes: NB#152087 - Threaded query hangs randomly
+  * Fixes: NB#143274 - libqttracker RDFVariable::Data memory leak
+  * Fixes: NB#151155 - libqttracker SopranoLive::RDFService::modelVariable memory leak
+  * Fixes: NB#160038 - Streaming mode not working when the query is ordered by an optional property
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 15 Mar 2010 17:01:40 +0200
+
+libqttracker (1~6.5.0) unstable; urgency=low
+
+  * MAFW backend: fixes crash in implicit cancel
+  * Fixes: NB#156955 - Object ID unescaped when it should not be
+  * Updates tracker ontologies
+  * Adds RDFSelect::addCountDistinctColumn family
+  * Adds RDFVariable::fromUnion
+  * Fixes NB#152087 - Threaded query hangs randomly
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 22 Feb 2010 12:29:52 +0200
+
+libqttracker (1~6.4.2) unstable; urgency=low
+
+  * Updates tracker ontologies
+  * Fixes ontology generation issues with newest additions
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 24 Feb 2010 13:23:24 +0200
+
+libqttracker (1~6.4.1) unstable; urgency=low
+
+  * MAFW backend: fixes derived property handling in browsing
+  * Fixes: NB#148841 - Qyerying 1000 pieces gives no results
+  * Fixes convenience class autogeneration issue in scratchbox
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 18 Feb 2010 18:31:01 +0200
+
+libqttracker (1~6.4.0) unstable; urgency=low
+
+  * Fixes: NB#139745 - Tracker keeps executing the query after DBus timeout reply from libqttracker
+  * Implemented: SWP#MCoFr-509 - Group Concat
+  * Implemented: SWP#MCoFr-274 - Reducing the amount of redundant type INSERTs across libqttracker to half
+  * Implemented: SWP#MCoFr-398 - Streaming strategy for query model
+  * Implemented: SWP#MCoFr-443 - Merge Models
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 12 Feb 2010 20:11:07 +0200
+
+libqttracker (1~6.3.5) unstable; urgency=low
+
+  * Fixes: NB#154839 - Libqttracker crashes if MafwSource MafwYoutubePlugin is browsed
+  * MAFW backend query abort
+  * Fixes: NB#154348 - Using setData(...) on an inserted row in LiveNodeModel causes a segmentation fault
+  * Fixes: NB#154387 - API for setting d-bus timeout for time consuming queries
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 05 Jan 2010 18:04:22 +0200
+
+libqttracker (1~6.3.4) unstable; urgency=low
+
+  * Fixes: NB#153939 - crash with orderBy
+  * Adds group concat
+  * Fixes: NB#153757 - nco:iri("im-capability-audio-calls") isn't translated in to 'im-capability-audio-calls' in generated sparql
+  * Adds enum/static variable support API and documentation
+  * Adds documentation cross-referencing
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 29 Jan 2010 13:01:17 +0200
+
+libqttracker (1~6.3.3) unstable; urgency=low
+
+  * Renames mergeUnion to unionMerge
+  * Fixes: NB#152652 - properties to be cached not coming to backend's implGetProperties properly
+  * Implemented: SWP#MCoFr-274 - Reducing the amount of redundant type INSERTs across libqttracker to half
+  * Fixes: NB#149230 - Union queries don't work with LibQtTracker
+  * Fixes: NB#153729 - Unable to link libduicontentwidgets with qtracker
+  * Fixes: NB#151730 - Using setData() removes data of next colum where data is setted
+  * Updates tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 19 Jan 2010 20:41:52 +0200
+
+libqttracker (1~6.3.2) unstable; urgency=low
+
+  * Fixes: NB#149503 - ClassUpdateSignaler for MusicPiece doesn't signal subjectsChanged signals
+  * Fixes: NB#151910 - Crash in subquery support
+  * Adds tracker property expression support by RDFVariable::function
+  * Updates tracker ontologies
+  * Fixes: NB#152709 - SopranoLive::LiveNodes.model() does not emit modelUpdated() signal
+  * Adds tracker backend RDFStrategy::Running behaviour
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 13 Jan 2010 18:47:06 +0200
+
+libqttracker (1~6.3.1) unstable; urgency=low
+
+  * Fixes Mafw backend implicit cancel bug
+  * Adds subselections
+  * Adds expression select parameters
+  * Updates tracker ontologies
+  * Major internal refactoring for backend and live query support
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 21 Dec 2009 03:26:58 +0200
+
+libqttracker (1~6.3.0) unstable; urgency=low
+
+  * Remove me when releasing, add new items below
+  * Fixes: NB#146962 - LiveNodeModel::setData(...) causes a segmentation fault
+  * Adds stress test suite and test cases
+  * Fixes: NB#147673 - Union queries fail randomly
+  * Adds local writable model support
+  * Fixes: NB#144665 - When trying to get Medialist's fileLastAccessed as optional tracker doesn't return anything
+  * Adds RDFVariable::mergeUnion
+  * Documentation improvements
+  * Adds RDFVariable::DeepCopier
+  * Updated tracker ontologies
+  * Implemented: SWP#MCoFr-376 . QAbstractItemModel tree recursion for cached properties
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 27 Nov 2009 13:53:20 +0200
+
+libqttracker (1~6.2.2) unstable; urgency=low
+
+  * Updated tracker ontologies
+
+ -- Iridian Kiiskinen <iridian@iribuntu>  Mon, 23 Nov 2009 14:35:58 +0200
+
+libqttracker (1~6.2.1) unstable; urgency=low
+
+  * Fixed a low occurence crash bug with query building introduced by 1~6.2.0
+  * Joined the missing mafw functionality
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 13 Nov 2009 03:21:25 +0200
+
+libqttracker (1~6.2.0) unstable; urgency=low
+
+  * Implemented: SWP#MCoFr-276 . refine cache-aware query building
+  * Implemented: SWP#MCoFr-377 . Finish the first version of the user manual and deploy it.
+  * Implemented: SWP#MCoFr-277 . createModel writable support
+  * Fixes: NB#139736 - Random crash with LiveNodes
+  * Fixes: NB#139710 - browse (implGetProperties) result model not shown on view
+  * Fixes: NB#140648 - libqttracker caching does not work
+  * Removes the "while requesting property model, model wrapping not yet supported." issue
+  * Updated tracker ontologies
+  * Dependent query building
+  * Strategy alteration infrastructure for LiveNodeModel
+  * Mafw backend browse cancellation functionality
+  * Query building now deterministic
+  * Fixes LiveNodes bug with LiveNodeList
+  * Added LiveNodeModel::RawDataRole
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 10 Nov 2009 21:02:42 +0200
+
+libqttracker (1~6.1.1) unstable; urgency=low
+
+  * Updated tracker ontologies
+  * Fixed set* family of convenience functions to work with latest tracker
+  * Added RDFService::inPlaceTransaction and clarified in-place transaction semantics
+  * Fixes: NB#135633 - filter("str").contains() fails for strings with escape characters
+  * Fixes: NB#132687 - Removing rows from a LiveNodeModel causes a segmentation fault
+  * Fixes: NB#136713 - metaAddCachedObject() breaks query
+  * Bugs below this line have been fixed in earlier release, but weren't checked and closed.
+  * Fixes: NB#119505 - Resource nmm::MusicAlbum::iri() not found from an album
+  * Fixes: NB#124245 - tracker()->modelQuery() causes an assertion in Qt when there is no D-Bus session bus running
+  * Fixes: NB#135504 - Subdirectory 'domains' missing fron libqttracker-dev
+  * Fixes: NB#135597 - Adding mail addresses to contact doesnt work anymore: firstHasEmailAddress doesnt return null anymore as it should according to spec
+  * Fixes: NB#137391 - strictLiveNode is emitting a signal subjectAdded
+  * Fixes: NB#138405 - Live<nco::PersonContact>::addHasImAccount method generates faulty sparql
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 21 Sep 2009 17:44:42 +0300
+
+libqttracker (1~6.1.0) unstable; urgency=low
+
+  * Added BackEnds::Tracker::dispatchBatchSparqlUpdate and dispatchBatchCommit
+  * Added RDFVariable::exists
+  * Fixed tag domain bugs
+  * Added more tests
+  * Updated tracker ontologies
+
+ -- Iridian Kiiskinen <iridian@iridian-laptop>  Mon, 14 Sep 2009 19:48:40 +0300
+
+libqttracker (1~6.0.5) unstable; urgency=low
+
+  * Renamed ClassUpdateSignaler::subjectsRemoved back after accidental rename to baseRemoveSubjectsd
+  * Added RDFVariable::doesntExist to replace the awkward foo.inParent().isBound().not_()
+  * Added more tests
+  * Added RDFVariable::metaAssign for conventional destructive assignment
+  * Fixed layer structure transparency issues, where accesses bypassed cache where they should not have
+  * Small documentation improvements
+  * Mafw backend: fixed handling of missing property in browse
+  * Updated tracker ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 09 Sep 2009 19:47:18 +0300
+
+libqttracker (1~6.0.4) unstable; urgency=low
+
+  * Changed internal result string parsing to QUrl::TolerantMode
+  * Fixes: #NB 137087 - Possibly broken libqttracker prevents building QMAFW packages.
+  * Added eighth main test
+  * Added LiveNodeModel::(strict)live+Node/Resource-family
+  * Added tag domain functions hasAllTags and hasAnyTag
+  * Reduced spurious inserts by adding strictLive functionality
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 07 Sep 2009 15:28:36 +0300
+
+libqttracker (1~6.0.3) unstable; urgency=low
+
+  * Panic release, fixes broken 1~6.0.2 that had missing headers and slipped into integration prematurely
+  * Added main test suite and 7 tests
+  * Several smaller bugs fixed exposed by those tests
+  * Fixes: NB#135150 - Segfault in libqttracker when adding livenode using transaction
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 03 Sep 2009 13:34:00 +0300
+
+libqttracker (1~6.0.2) unstable; urgency=low
+
+  * Added support for sequential transactions using same Transaction object.
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 26 Aug 2009 16:48:36 +0300
+
+libqttracker (1~6.0.1) unstable; urgency=low
+
+  * Added support for cached properties to executeQuery
+  * Fixes: NB#135008 - Count column always returns 0
+  * Fixed the bug with RDFVariable::isMemberOf and RDFVariable::fromContainer
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 25 Aug 2009 20:28:30 +0300
+
+libqttracker (1~6.0.0) unstable; urgency=low
+
+  * ABI break
+  * Cached properties enabled
+  * RDFSelect and some other memory leaks plugged
+  * Fixes: NB#129197 - Performance is really slow when associating LiveNode to
+    an other
+  * Updated ontologies
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 24 Aug 2009 13:47:55 +0300
+
+libqttracker (1~5.1.1) unstable; urgency=low
+
+  * Ontology update: mfo and scal added
+  * Fixes: a bug with mafw backend causing getProperties not getting called
+  * Fixes: NB#132168 - Libqttracker does not start tracker-store if it is not running
+  * Fixes: NB#133004 - nmo:isRead setting for 'true'  not working.
+  * Fixed the old QSharedPointer already tracker bug on desktop for good
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 19 Aug 2009 19:33:33 +0300
+
+libqttracker (1~5.1.0) unstable; urgency=low
+
+  * Second stage of cached properties: roughyl final API, but implementation disabled
+  * Added: transactions
+  * Updated email example to reflect the transactions and cached properties
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 17 Aug 2009 04:50:52 +0300
+
+libqttracker (1~5.0.3) unstable; urgency=low
+
+  * Fixes: NB#132091 - segfault in libqttracker1pre5 QHasBackReferencedProperty::setProperty
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 10 Aug 2009 11:56:36 +0300
+
+libqttracker (1~5.0.2) unstable; urgency=low
+
+  * Ontology update
+  * Bugfix with RDFVariable::subject
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 07 Aug 2009 19:05:33 +0300
+
+libqttracker (1~5.0.1) intrepid; urgency=low
+
+  * Added tracker dbus versioning support causing fromType to fail
+  * Fixed a regression bug with RDFVariable
+  * Fixed couple minor syntactic issues preventing compilation in scratchbox
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 05 Aug 2009 18:16:26 +0300
+
+libqttracker (1~5.0.0) unstable; urgency=low
+
+  * ABI break
+  * Preparing for property cache migration
+  * Added StrictLive functionality
+  * Automated reading custom ontologies from the rdf-xml in rdf_namespaces.py
+  * Updated ontologies
+  * A lot of minor additions
+  * Fixed: Harmattan#129008
+  * Fixed: Harmattan#127544
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 04 Aug 2009 14:46:27 +0300
+
+libqttracker (1~4.0.6) unstable; urgency=low
+
+  * Fixed: bug with RDFVariable::child and unconstrained variables
+  * Added: better debug output when not connected to dbus
+  * Added: RDFVariable::isBound
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 23 Jun 2009 17:55:30 +0300
+
+libqttracker (1~4.0.5) unstable; urgency=low
+
+  * Added mlo ontology
+  * Updated ontologies
+  * Fixed: regression bug with binary RDFFilter's
+  * Fixed: long time nagging bug with uri escaping
+  * Added: fix candidate for LiveNodes result usage bug
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 22 Jun 2009 22:17:20 +0300
+
+libqttracker (1~4.0.3) unstable; urgency=low
+
+  * Fixed: issues with raw string query
+  * Internal refactoring with live properties.
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 12 Jun 2009 17:12:55 +0300
+
+libqttracker (1~4.0.2) unstable; urgency=low
+
+  * Bugfix: Tracker::ClassUpdateSignaler now correctly bound to backend
+  * Added: first* family of functions
+  * Small documentation updates and additions
+  * Greatly improved LiveNodes documentation (as in, it exists now)
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Wed, 10 Jun 2009 17:46:12 +0300
+
+libqttracker (1~4.0.1) unstable; urgency=low
+
+  * Bugfix: mafw getObjectId
+  * Bugfix: live.h plain inclusion causing breakage with QStringList not included
+
+ -- Iridian <ext-iridian.kiiskinen@nokia.com>  Wed, 10 Jun 2009 12:14:02 +0300
+
+libqttracker (1~4.0.0) unstable; urgency=low
+
+  * Major unstable version update to 0+4
+  * Updated ontologies
+  * Implemented: SWP#MCoFr-253 . Async call
+  * Implemented: SWP#MCoFr-255 . Live properties
+  * Implemented: SWP#MCoFr-256 . Tag domain services (helper functions for tagging)
+  * Implemented: SWP#MCoFr-257 . Service layering structure (internal multiple service backends - MAFW + Tracker support)
+  * Implemented: SWP#MCoFr-258 . Cache layer base (caching for above)
+  * Implemented: SWP#MCoFr-259 . Model transition  (livenode model -> transition to another model)
+  * Implemented: SWP#MCoFr-261 . RDFVariable filter function support
+  * Too many smaller changes to list
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 08 Jun 2009 12:11:23 +0300
+
+libqttracker (0.3.3) unstable; urgency=low
+
+  * Updated ontologies
+  * Added hasType(LiveNode) method to LiveNode
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 30 Apr 2009 12:12:52 +0300
+
+libqttracker (0.3.2) unstable; urgency=low
+
+  * Fixed: a bug with LiveNodeModel content updates with modelQuery
+  * Fixed: a bug with RDFVariable constrained to a LiteralValue
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 24 Apr 2009 11:26:22 +0300
+
+libqttracker (0.3.1) unstable; urgency=low
+
+  * Updated ontologies, added poi ontology
+  * Added mafw backend
+  * Implemented: SQP#MCoFr-166
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 21 Apr 2009 09:19:08 +0300
+
+libqttracker (0.3.0) unstable; urgency=low
+
+  * Revision change due to API changes. See doc/migration-0.2.x-0.3.0
+  * Added RDFUpdate
+  * Added RDFVariableLink
+  * Fixed ontology inheritance bug across ontology boundaries
+  * Updated ontologies, added fts, mts and maemo ontologies
+  * Implemented: SWP#MCoFr-41
+  * Implemented: SWP#MCoFR-111
+  * Implemented: SWP#MCoFR-67
+  * Implemented: SWP#MCoFR-66
+  * Implemented: SWP#MCoFR-171
+  * Implemented: SWP#MCoFR-196
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 09 Apr 2009 11:30:50 +0300
+
+libqttracker (0.2.6) unstable; urgency=low
+
+  * Implemented: SWP#MCoFr-196
+  * Fixed a bug in tracker-browser with custom queries.
+  * Updated tracker ontologies.
+  * Updated documentation to include range information.
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 23 Mar 2009 14:20:01 +0200
+
+libqttracker (0.2.5) unstable; urgency=low
+
+  * Fixed tracker-browser bugs and rearranged the tree layout
+  * Dropped limited delete convenience support
+  * Fixed a bug with rdfpattern unions
+  * Updated ontologies to reflect tracker, with nco:has* cardinalities fixed
+  * Added couple examples into examples/queries.cpp
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Thu, 12 Mar 2009 14:43:52 +0200
+
+libqttracker (0.2.4) unstable; urgency=low
+
+  * Tracker browser now fully functional.
+  * Added limited delete convenience support.
+  * Improved rdf-xml import support.
+  * Fixed bug with LiveNodeModel memory management.
+  * Retrieved ontology changes and updates from tracker.
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Mon, 02 Mar 2009 19:06:56 +0200
+
+libqttracker (0.2.3) unstable; urgency=low
+
+  * Added doc package
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 17 Feb 2009 15:17:31 +0200
+
+libqttracker (0.2.2) unstable; urgency=low
+
+  * Added documentation
+  * Added filter capability, including full text search api
+  * Added tracker browser utility
+  * Added autogeneration for property names
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 13 Feb 2009 20:28:49 +0200
+
+libqttracker (0.2.1) unstable; urgency=low
+
+  * Added convenience class autogeneration support
+  * Added ontologies to now include: ncal, nco, nfo, nid3, nie, nmo, rdf,
+    rdfs, tracker and xsd
+  * Added a contact example
+  * Fixed queries example
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Tue, 03 Feb 2009 14:26:57 +0200
+
+libqttracker (0.2) unstable; urgency=low
+
+  * Complete rewrite for the tracker decomposed version with expanded scope
+
+ -- Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>  Fri, 23 Jan 2009 16:08:28 +0200
+
+libqttracker (0.1.0-1) intrepid; urgency=low
+
+  * Initial packaging
+
+ -- Otto Kopra <otto.kopra@nokia.com>  Wed, 29 Oct 2008 13:44:49 +0200
+

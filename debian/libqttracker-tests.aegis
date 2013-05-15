@@ -1,0 +1,26 @@
+<aegis>
+   <request>
+      <credential name="TrackerReadAccess" />
+      <credential name="TrackerWriteAccess" />
+      <credential name="tracker::tracker-miner-fs-access" />
+      <credential name="tracker::tracker-extract-access" />
+      <credential name="GRP::metadata-users" />
+      <for path="/usr/bin/qttracker-unit-tests" />
+   </request>
+   <request>
+      <credential name="TrackerReadAccess" />
+      <credential name="TrackerWriteAccess" />
+      <credential name="tracker::tracker-miner-fs-access" />
+      <credential name="tracker::tracker-extract-access" />
+      <credential name="GRP::metadata-users" />
+      <for path="/usr/bin/qttracker-perf-tests" />
+   </request>
+   <request>
+      <credential name="TrackerReadAccess" />
+      <credential name="TrackerWriteAccess" />
+      <credential name="tracker::tracker-miner-fs-access" />
+      <credential name="tracker::tracker-extract-access" />
+      <credential name="GRP::metadata-users" />
+      <for path="/usr/share/libqttracker-tests/benchmarking/runall.py" />
+   </request>
+</aegis>

@@ -1,0 +1,40 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#InverseFunctionalProperty">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1401</tracker:modified>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1427</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#">
+	</tracker:Ontology >
+</rdf:RDF>

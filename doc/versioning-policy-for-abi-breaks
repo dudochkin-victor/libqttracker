@@ -1,0 +1,206 @@
+ == Handling unstable ABI breaks with a strong integration system == 
+
+    Every binary API (ABI) break needs a properly managed transition in 
+  our environment.  We can not afford to do it ad-hoc.  A managed ABI 
+  transition requires a SONAME bump everytime.  Still, we do not want to
+  let the SONAMEs spiral out of control and we do want to arrive with a
+  SONAME major version of "1" when a ABI is first declared stable, and
+  afterwards we want to allow ourselves to break ABI a couple of times
+  until we move to major version "2".
+
+    Thus, we need intermediate major SONAME versions.  This text gives 
+  the details about that. All of this is to lessen the requirements for 
+  precise, fragile cooperation, but all the while still getting the job 
+  done well.
+
+Requirements:
+  #1 ABI break introduces major version bump allowing for runtime packages 
+     from two versions to coexist
+  #2 In unstable phase, version is less than 1.0.0 (by debian policy)
+  #3 SONAME of binaries and the debian version match
+  #4 The dev package name does not change
+
+Solution:
+    Have major versions like 0+3 (in 0+3.1.0) or 1~3 (in 1~3.1.0) and bump 
+  to 0+4.0.0 or 1~4.0.0 when ABI breaks. Have the runtime packages be named 
+  with the major version, and have the dev packages named without the
+  major version.  
+    When major version is bumped, a new runtime package is introduced to the
+  integration, thus old runtime package dependencies are not broken. The dev
+  package however is replaced, thus when application developers next time 
+  fetch packages and start developing, they're developing against the new 
+  ABI.
+
+    The "0+x" major version is read as "x'th major unstable version" and is 
+  the preferred scheme for unstable interfaces below 1.0.0. 
+    If next major stable revision can't be reached without intermediate ABI 
+  breaks, the "x~y" scheme is used, where "x~y" is read as "the x'th major 
+  prerelease of the stable release y". 
+  Also, this scheme is used also when migrating from a regular 0.x.y 
+  unstable scheme by using 1~x.y.0 as the full version. 0+x can't be used 
+  because "0+5.0" < "0.4.0" by debian version comparison ("+" < ".").
+
+Notes on source level API breaks:  
+    Sometimes the ABI break is accompanied by a source API break even after 
+  appropriate deprecation policy and early warning tactics have been used. 
+  In these cases application developers can take their time to migrate by
+  avoiding taking the newest dev packages or by pinning the old dev package,
+  until a time they're ready to begin the migration. 
+    More elaborate source API break transitions schemes can be reached by 
+  introducing a numbering scheme for the dev packages, but that is outside 
+  the scope of this document. 
+  
+
+Library versioning summary:
+
+  1.   Begin using this versioning scheme, when
+    a. starting project from scratch, by using major SONAME version "0+1".
+    b. migrating from regular 0.x.y scheme, by using SONAME "1~x".
+
+  2.   Whenever you need a transition in the unstable phase, increase 
+     the second digit.  (I.e. "0+0" -> "0+1", "0+1" -> "0+2".)
+  
+  3.   Repeat the last step until you are ready to make the first stable
+     ABI release.  At that point, your SONAME is "0+X".  Change it to 
+     "1" and release.
+  
+  4.   If you can't reach major version "2" without intermediate,
+     experimental ABI breaks, change the major SONAME version to "2~0"
+     on the first break.  Then go through "2~1", "2~2", etc until you 
+     have reached "2".
+  
+  5. Repeat step 4. with major version "3", "4", etc.
+
+
+Integration workflow summary:
+
+  1.   A newly named library runtime package (libqttracker0+4) is 
+     introduced into integration, beside existing libqttracker0+3. 
+     As nothing depends on it yet, it passes integration. However, the
+     development package (libqttracker-dev) name stays the same and is
+     upgraded, containing correct dependency to the new libqttracker0+4.
+
+  2.  The new package is announced with the ABI/API breakage. For each
+     package that depends on libqttracker-dev, if the break was  
+    a. ABI break, depending team upgrades libqttracker-dev and 
+       painlessly rebuilds their package.
+    b. ABI break, integrator rebuilds the depending package.
+    
+    c. API break, depending team upgrades libqttracker-dev, migrates to
+       the new API and rebuilds their package.
+    d. API break, depending team pins the old libqttracker-dev package, 
+       to postpone the migration.
+     
+  3.   After the application package is built successfully (and was not 
+     built against old pinned libqttracker-dev), it now depends on the 
+     new libqttracker0+4 and is integrated against it correctly. If the
+     libqttracker-dev was pinned, the old dependency to libqttracker0+3
+     remains, pending future migration.
+     
+  4.   After all depending packages have been migrated by developers or 
+     updated by integrators, the old libqttracker0+3 package can be 
+     removed from the integration.
+  
+Examples:
+
+  When starting from scratch:
+
+  Package                     Changelog     qmake VERSION    SONAME
+                              and resulting and resulting  
+  type    debian/control name deb version   .so filenames 
+
+First version:                0+1.0.0       0+1.0.0          0+1
+  dev     libqttracker-dev    0+1.0.0       libqttracker.so
+  runtime libqttracker0+1     0+1.0.0       libqttracker.so.0+1.0.0
+                              0+1.0.0       libqttracker.so.0+1.0
+                              0+1.0.0       libqttracker.so.0+1
+
+... 
+                              
+Current version:              0+3.1.0       0+3.1.0          0+3
+  dev     libqttracker-dev    0+3.1.0       libqttracker.so
+  runtime libqttracker0+3     0+3.1.0       libqttracker.so.0+3.1.0
+                              0+3.1.0       libqttracker.so.0+3.1
+                              0+3.1.0       libqttracker.so.0+3
+
+Minor bugfix version:         0+3.1.1       0+3.1.1          0+3
+  dev     libqttracker-dev    0+3.1.1       libqttracker.so
+  runtime libqttracker0+3     0+3.1.1       libqttracker.so.0+3.1.1
+                              0+3.1.1       libqttracker.so.0+3.1
+                              0+3.1.1       libqttracker.so.0+3
+                              
+ABI break in unstable:        0+4.0.0       0+4.0.0          0+4
+  dev     libqttracker-dev    0+4.0.0       libqttracker.so
+  runtime libqttracker0+4     0+4.0.0       libqttracker.so.0+4.0.0
+                              0+4.0.0       libqttracker.so.0+4.0
+                              0+4.0.0       libqttracker.so.0+4
+                              
+New version w/o ABI break:    0+4.1.0       0+4.1.0          0+4
+  dev     libqttracker-dev    0+4.1.0       libqttracker.so
+  runtime libqttracker0+4     0+4.1.0       libqttracker.so.0+4.1.0
+                              0+4.1.0       libqttracker.so.0+4.1
+                              0+4.1.0       libqttracker.so.0+4
+                              
+Release to stable:            1.0.0         1.0.0            1
+  dev     libqttracker-dev    1.0.0         libqttracker.so
+  runtime libqttracker1       1.0.0         libqttracker.so.1.0.0
+                              1.0.0         libqttracker.so.1.0
+                              1.0.0         libqttracker.so.1
+
+New version w/o ABI break:    1.1.0         1.1.0            1
+  dev     libqttracker-dev    1.1.0         libqttracker.so
+  runtime libqttracker1       1.1.0         libqttracker.so.1.1.0
+                              1.1.0         libqttracker.so.1.1
+                              1.1.0         libqttracker.so.1
+                              
+ABI breaking prerelease of 2: 2~0.0.0       2~0.0.0          2~0
+  dev     libqttracker-dev    2~0.0.0       libqttracker.so
+  runtime libqttracker1       2~0.0.0       libqttracker.so.2~0.0.0
+                              2~0.0.0       libqttracker.so.2~0.0
+                              2~0.0.0       libqttracker.so.2~0
+
+New version w/o ABI break:    2~0.1.0       2~0.1.0          2~0
+  dev     libqttracker-dev    2~0.1.0       libqttracker.so
+  runtime libqttracker2~0     2~0.1.0       libqttracker.so.2~0.1.0
+                              2~0.1.0       libqttracker.so.2~0.1
+                              2~0.1.0       libqttracker.so.2~0
+
+Release to 2:                 2.0.0         2.0.0            2
+  dev     libqttracker-dev    2.0.0         libqttracker.so
+  runtime libqttracker2       2.0.0         libqttracker.so.2.0.0
+                              2.0.0         libqttracker.so.2.0
+                              2.0.0         libqttracker.so.2
+
+
+  When migrating from a basic 0.x.y scheme:
+
+  Package                     Changelog     qmake VERSION    SONAME
+                              and resulting and resulting  
+  type    debian/control name deb version   .so filenames 
+  
+Current version:              0.3.1         0.3.1            0
+  dev     libqttracker-dev    0.3.1         libqttracker.so
+  runtime libqttracker0       0.3.1         libqttracker.so.0.3.1
+                              0.3.1         libqttracker.so.0.3
+                              0.3.1         libqttracker.so.0
+
+Migration:                    1~3.1.0       1~3.1.0          1~3
+  dev     libqttracker-dev    1~3.1.0       libqttracker.so
+  runtime libqttracker1~3     1~3.1.0       libqttracker.so.1~3.1.0
+                              1~3.1.0       libqttracker.so.1~3.1
+                              1~3.1.0       libqttracker.so.1~3
+
+ABI break in unstable:        1~4.0.0       1~4.0.0          1~4
+  dev     libqttracker-dev    1~4.0.0       libqttracker.so
+  runtime libqttracker1~4     1~4.0.0       libqttracker.so.1~4.0.0
+                              1~4.0.0       libqttracker.so.1~4.0
+                              1~4.0.0       libqttracker.so.1~4
+
+Release to stable:            1.0.0         1.0.0            1
+  dev     libqttracker-dev    1.0.0         libqttracker.so
+  runtime libqttracker1       1.0.0         libqttracker.so.1.0.0
+                              1.0.0         libqttracker.so.1.0
+                              1.0.0         libqttracker.so.1
+                              
+  And then onward as normally.
+

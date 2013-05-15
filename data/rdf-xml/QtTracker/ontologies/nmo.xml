@@ -1,0 +1,763 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Attachment">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1877</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Call">
+		<rdfs:comment>Phone call. Voice communication with the user with somebody else.</rdfs:comment>
+		<rdfs:label>Call</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1613</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#duration">
+		<rdfs:comment>Duration of the call in seconds</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1539</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Call"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#CommunicationChannel">
+		<rdfs:comment>A communication channel. The container for all messages between participants of a specific group or in a persistent channel.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1285</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#lastMessageDate">
+		<rdfs:comment>nmo:sentDate of the most recent message in this channel.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1611</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#CommunicationChannel"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<tracker:indexed>true</tracker:indexed>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#hasParticipant">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1079</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#CommunicationChannel"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Conversation">
+		<rdfs:comment>A conversation. An exchange of one or multiple messages within a time frame or about a specific topic.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1789</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#DeliveryStatus">
+		<rdfs:comment>Predefined set of delivery status instances</rdfs:comment>
+		<rdfs:label>Delivery statuses</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1456</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email">
+		<rdfs:comment>Root node in a MIME Email</rdfs:comment>
+		<rdfs:label>Email envelope</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1717</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#hasContent">
+		<rdfs:comment>Link between the root node and the first MIME node in the Email tree</rdfs:comment>
+		<rdfs:label>Has content</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1754</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isFlagged">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1713</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isRecent">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1185</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#status">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1476</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#responseType">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1148</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#contentMimeType">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1738</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#IMMessage">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1986</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MMSMessage">
+		<rdfs:comment>An MMS message is basically a Email with different envelop. It inherits also from SMS the folders and delivery status</rdfs:comment>
+		<rdfs:label>MMS Message</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1583</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#mmsHasContent">
+		<rdfs:comment>Link to the mimeparts with the multimedia content (miming nmo:hasContent)</rdfs:comment>
+		<rdfs:label>MMS has content</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1281</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MMSMessage"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailAccount">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1220</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#accountName">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1695</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailAccount"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#accountDisplayName">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1690</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailAccount"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#fromAddress">
+		<rdfs:comment>From address of an account</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1320</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailAccount"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#EmailAddress"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#signature">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1907</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailAccount"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailFolder">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1682</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#folderName">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1100</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailFolder"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#serverCount">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1229</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailFolder"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#serverUnreadCount">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1748</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailFolder"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Mailbox">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1632</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailAccount"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailboxDataObject">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1262</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message">
+		<rdfs:comment>A message. Could be an email, instant messanging message, SMS message etc.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1715</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#recipient">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1723</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#from">
+		<rdfs:comment>The sender of the message.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1040</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:indexed>true</tracker:indexed>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isAnswered">
+		<rdfs:comment>True when the user has sent a replay to this message</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1491</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isDeleted">
+		<rdfs:comment>True when the user has removed the Email in the UI but still exists in the DB. Usually a purge or confirmation from the user will actually remove the data.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1991</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isDraft">
+		<rdfs:comment>The user hasn't finished editing the message and might want to continue later</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1594</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isRead">
+		<rdfs:comment>The messsage has been readed. The user has opened the message or has marked it directly as readed</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1207</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isSent">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1997</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#isEmergency">
+		<rdfs:comment>Special message from the network, probably coming via Cell broadcasting with emergency information</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1671</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#plainTextMessageContent">
+		<rdfs:comment>nmo:plainTextMessageContent is deprecated, use nie:plainTextContent instead</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1166</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#htmlMessageContent">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1669</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#references">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1855</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#inReplyTo">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1143</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#references"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#messageHeader">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1423</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MessageHeader"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#messageId">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1536</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#messageSubject">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1739</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#receivedDate">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1503</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#replyTo">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1913</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sender">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1678</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#recipient"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:indexed>true</tracker:indexed>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate">
+		<rdfs:comment>Date when this message was sent.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1699</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<tracker:indexed>true</tracker:indexed>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#to">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1655</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#bcc">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1817</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#cc">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1426</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#conversation">
+		<rdfs:comment>Connects this message to a conversation. Every message must only be part of a single conversation.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1118</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Conversation"/>
+		<tracker:indexed>true</tracker:indexed>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#communicationChannel">
+		<rdfs:comment>Connects this message to a communication channel. Every message must only be in a single channel.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1138</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#CommunicationChannel"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:secondaryIndex rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#hasAttachment">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1371</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#deliveryStatus">
+		<rdfs:label>deliveryStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1473</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#DeliveryStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#reportDelivery">
+		<rdfs:comment>Report delivery has been requested for the message</rdfs:comment>
+		<rdfs:label>Report delivery</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1323</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentWithReportRead">
+		<rdfs:comment>The message has been send with a flag indicating that we want to receive a confirmation when the recipient reads it</rdfs:comment>
+		<rdfs:label>Report read</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1161</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#reportReadStatus">
+		<rdfs:comment>If the message was sent with report read enable, this property stores the status of that message: if the recipient has read it, delete it, or we are still waiting for an answer</rdfs:comment>
+		<rdfs:label>reportReadStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1492</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#ReportReadStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#mustAnswerReportRead">
+		<rdfs:comment>The message came with the report-read flag enabled, and somebody must be send the answer back. Once the report is sent, this property goes to False.</rdfs:comment>
+		<rdfs:label>Report read requested</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1579</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#mmsId">
+		<rdfs:comment>Unique identifier of an MMS message. It comes from the server</rdfs:comment>
+		<rdfs:label>mms id</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1845</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MessageHeader">
+		<rdfs:comment>Pairs key=value to store arbitrary message header. Note that if a property exists already in the ontology for those headers it should be used. This is just a safe guard mechanism.</rdfs:comment>
+		<rdfs:label>Message header</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1357</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#headerName">
+		<rdfs:comment>Key of the message header key-value pair</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1605</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MessageHeader"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#headerValue">
+		<rdfs:comment>Value of the message header key-value pair</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1903</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MessageHeader"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1890</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#charSet">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1556</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#contentId">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1006</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#contentTransferEncoding">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1841</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#contentDescription">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1557</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#contentDisposition">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1487</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#mimeHeader">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1889</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimePart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Multipart">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1084</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#partBoundary">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1049</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Multipart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PermanentChannel">
+		<rdfs:comment>Well-known stable channel like an IRC room in a specific server. Predefined URL schema for the instances is recommended</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1809</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#CommunicationChannel"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage">
+		<rdfs:comment>Superclass with shared properties between SMS and MMS.</rdfs:comment>
+		<rdfs:label>Phone messages (sms and mms)</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1340</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#toVCard">
+		<rdfs:comment>Reference to a VCard in the filesystem, containing the Contact information of 'to' recipients</rdfs:comment>
+		<rdfs:label>fromVCard</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1418</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#fromVCard">
+		<rdfs:comment>Reference to a VCard in the filesystem, containing the Contact information of the 'from' recipient</rdfs:comment>
+		<rdfs:label>fromVCard</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1696</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#encoding">
+		<rdfs:comment>Encoding of the message</rdfs:comment>
+		<rdfs:label>enconding</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1194</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#phoneMessageId">
+		<rdfs:comment>Id assigned in the system when the phone message is received</rdfs:comment>
+		<rdfs:label>Phone message Id</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1963</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#smsId">
+		<rdfs:comment>Id assigned in the system when the message is received. Use phoneMessageId instead</rdfs:comment>
+		<rdfs:label>sms Id</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1449</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#phoneMessageId"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#validityPeriod">
+		<rdfs:comment>Validity period of an SMS in seconds. It is a value coming from the network</rdfs:comment>
+		<rdfs:label>Validity period</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1821</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessageFolder">
+		<rdfs:comment>Folder for phone message (SMS and MMS). Not a subclass of nfo:Folder because it would confuse filesystem folders</rdfs:comment>
+		<rdfs:label>Phone message Folder</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1275</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#phoneMessageFolderId">
+		<rdfs:comment>Id assigned to the folder for sync purpouses</rdfs:comment>
+		<rdfs:label>folder id</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1422</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessageFolder"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#containsPhoneMessageFolder">
+		<rdfs:comment>To link and reconstruct a hierarchy of folders</rdfs:comment>
+		<rdfs:label>contains Phone Message Folder</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1918</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessageFolder"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessageFolder"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#containsPhoneMessage">
+		<rdfs:comment>Link between an Phone Message and a Folder</rdfs:comment>
+		<rdfs:label>Contains Phone Message</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1766</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessageFolder"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#ReportReadStatus">
+		<rdfs:comment>Predefined set of read status instances</rdfs:comment>
+		<rdfs:label>Read statuses</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1610</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#SMSFolder">
+		<rdfs:comment>Folder for SMS. Not a subclass of nfo:Folder because it would confuse filesystem folders. Use the superclass PhoneMessageFolder and its predefined instances.</rdfs:comment>
+		<rdfs:label>SMS Folder</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1178</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessageFolder"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#smsFolderId">
+		<rdfs:comment>Id assigned to the folder for sync purpouses</rdfs:comment>
+		<rdfs:label>folder id</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1933</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#phoneMessageFolderId"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#SMSFolder"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#containsSMSFolder">
+		<rdfs:comment>To link and reconstruct a hierarchy of folders. Use containsPhoneMessageFolder instead.</rdfs:comment>
+		<rdfs:label>contains SMS Folder</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1667</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#containsPhoneMessageFolder"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#SMSFolder"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#SMSFolder"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#containsSMS">
+		<rdfs:comment>Link between an Phone Message and a Folder. Use containsPhoneMessage instead</rdfs:comment>
+		<rdfs:label>Contains SMS</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1716</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#containsPhoneMessage"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#SMSFolder"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#SMSMessage">
+		<rdfs:comment>Plain SMS Message</rdfs:comment>
+		<rdfs:label>SMS Message</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1245</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#PhoneMessage"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#TransientChannel">
+		<rdfs:comment>Channel created ad-hoc for the communication like a multi chat in some systems</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1303</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#CommunicationChannel"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#VOIPCall">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1742</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Call"/>
+	</rdfs:Class>
+	<tracker:Ontology rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#">
+	</tracker:Ontology >
+	<nmo:SMSFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#default-sms-folder-draft">
+	</nmo:SMSFolder >
+	<nmo:SMSFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#default-sms-folder-inbox">
+	</nmo:SMSFolder >
+	<nmo:SMSFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#default-sms-folder-myfolder">
+	</nmo:SMSFolder >
+	<nmo:SMSFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#default-sms-folder-outbox">
+	</nmo:SMSFolder >
+	<nmo:SMSFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#default-sms-folder-sent">
+	</nmo:SMSFolder >
+	<nmo:DeliveryStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#delivery-status-delivered">
+	</nmo:DeliveryStatus >
+	<nmo:DeliveryStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#delivery-status-permanently-failed">
+	</nmo:DeliveryStatus >
+	<nmo:DeliveryStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#delivery-status-sent">
+	</nmo:DeliveryStatus >
+	<nmo:DeliveryStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#delivery-status-temporarily-failed">
+	</nmo:DeliveryStatus >
+	<nmo:PhoneMessageFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#predefined-phone-msg-folder-draft">
+	</nmo:PhoneMessageFolder >
+	<nmo:PhoneMessageFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#predefined-phone-msg-folder-inbox">
+	</nmo:PhoneMessageFolder >
+	<nmo:PhoneMessageFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#predefined-phone-msg-folder-myfolder">
+	</nmo:PhoneMessageFolder >
+	<nmo:PhoneMessageFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#predefined-phone-msg-folder-outbox">
+	</nmo:PhoneMessageFolder >
+	<nmo:PhoneMessageFolder rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#predefined-phone-msg-folder-sent">
+	</nmo:PhoneMessageFolder >
+	<nmo:ReportReadStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#read-status-deleted">
+	</nmo:ReportReadStatus >
+	<nmo:ReportReadStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#read-status-read">
+	</nmo:ReportReadStatus >
+	<nmo:ReportReadStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#read-status-unknown">
+	</nmo:ReportReadStatus >
+</rdf:RDF>

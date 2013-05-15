@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	qmake -r PREFIX=/usr $(QMAKEFLAGS)
+	touch configure-stamp
+
+build: build-stamp
+build-stamp: configure-stamp
+	dh_testdir
+	make
+	make doc
+	make -C tests/unit-tests tests.xml
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	make clean || true
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	make INSTALL_ROOT=$(CURDIR)/debian/tmp install
+
+binary-indep: build install
+
+binary-arch: build install
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_install --sourcedir=$(CURDIR)/debian/tmp
+	dh_link
+	dh_strip --dbg-package="libqttracker1pre6-dbg"
+	dh_compress -Xexample
+	dh_fixperms
+	dh_makeshlibs -V
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+	aegis-deb-add -control debian/libqttracker-tests/DEBIAN/control .. debian/libqttracker-tests.aegis=_aegis
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

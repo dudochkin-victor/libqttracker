@@ -1,0 +1,202 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/ontologies/tracker#Namespace">
+		<rdfs:label>Namespace</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1421</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#prefix">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1532</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/ontologies/tracker#Namespace"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/ontologies/tracker#Ontology">
+		<rdfs:label>Ontology</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1781</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/ontologies/tracker#Volume">
+		<rdfs:label>Storage media</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1862</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataSource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#isMounted">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1562</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/ontologies/tracker#Volume"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#unmountDate">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1864</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/ontologies/tracker#Volume"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#mountPoint">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1016</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/ontologies/tracker#Volume"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#isRemovable">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1417</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/ontologies/tracker#Volume"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#isOptical">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1976</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/ontologies/tracker#Volume"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#added">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1733</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:isAnnotation>true</tracker:isAnnotation>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#available">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1183</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#defaultValue">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1880</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#domainIndex">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1602</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#fulltextIndexed">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1832</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#fulltextNoLimit">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1917</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#indexed">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1615</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#isAnnotation">
+		<rdfs:comment>The property is never embedded on physical files</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1098</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#isDefaultTag">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1853</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#Tag"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#modified">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1980</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<tracker:isAnnotation>true</tracker:isAnnotation>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#notify">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1714</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#secondaryIndex">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1852</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#tagRelatedTo">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1225</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#Tag"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#transient">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1791</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#weight">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1820</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#writeback">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1111</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.tracker-project.org/ontologies/tracker#">
+	</tracker:Ontology >
+</rdf:RDF>

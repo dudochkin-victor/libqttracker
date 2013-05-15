@@ -1,0 +1,3 @@
+// hack, ensure that tracker types are defined
+#include "../sopranolive/liveautogenerationbase.h"
+#include "tracker_common.h"

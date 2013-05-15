@@ -1,0 +1,330 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#GeoBoundingBox">
+		<rdfs:comment>Bounding box for a region in the space, defined with 2 points in 2D. We assume that the box is always aligned with parallels and meridians.</rdfs:comment>
+		<rdfs:label>Bounding box</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1574</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#bbNorthWest">
+		<rdfs:comment>North west corner of a bounding box. The GeoPoint is interpreted in 2D</rdfs:comment>
+		<rdfs:label>North west corner</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1117</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoBoundingBox"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#bbSouthEast">
+		<rdfs:comment>South east corner of a bounding box. The GeoPoint is interpreted in 2D</rdfs:comment>
+		<rdfs:label>South east corner</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1064</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoBoundingBox"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#GeoLocation">
+		<rdfs:comment>A place in the space, can be defined by coordinates, text or box</rdfs:comment>
+		<rdfs:label>Location</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1484</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#asBoundingBox">
+		<rdfs:comment>Representation of the location as bounding box</rdfs:comment>
+		<rdfs:label>As bounding box</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1580</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoLocation"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoBoundingBox"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#asGeoPoint">
+		<rdfs:comment>Representation of the location as geo point</rdfs:comment>
+		<rdfs:label>As geo point</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1999</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoLocation"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#asPostalAddress">
+		<rdfs:comment>Representation of the location as text address</rdfs:comment>
+		<rdfs:label>As postal address</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1369</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoLocation"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#GeoPoint">
+		<rdfs:comment>The inherited properties from InformationElement can be used to add details.</rdfs:comment>
+		<rdfs:label>Point on the earth</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1631</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#latitude">
+		<rdfs:comment>Positive values for the north hemisphere, negative for the south</rdfs:comment>
+		<rdfs:label>Latitude</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1925</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#longitude">
+		<rdfs:comment>Positive to the East of the Greenwich meridian, negative to the West (following WGS-84)</rdfs:comment>
+		<rdfs:label>Longitude</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1228</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#altitude">
+		<rdfs:comment>Altitude following WGS 84 reference</rdfs:comment>
+		<rdfs:label>Altitude</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1776</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#timestamp">
+		<rdfs:comment>Timestamp when the geopoint is referenced. Create subproperties for certain use cases</rdfs:comment>
+		<rdfs:label>Timestamp</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1888</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#city">
+		<rdfs:label>City</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1321</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#country">
+		<rdfs:label>Country</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>2000</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#state">
+		<rdfs:label>State</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1905</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#address">
+		<rdfs:label>Address</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1348</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#GeoSphere">
+		<rdfs:comment>Point and radius to define an area in the space</rdfs:comment>
+		<rdfs:label>Spherical space</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1614</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#radius">
+		<rdfs:comment>Radius from the center to define an area. Some applications can use it in 2D sense, making then a circle instead of a sphere</rdfs:comment>
+		<rdfs:label>Radius</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1693</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#GeoSphere"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#Landmark">
+		<rdfs:comment>Use the nie title, description, ... properties</rdfs:comment>
+		<rdfs:label>Point with special relevance for the user</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1953</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#belongsToCategory">
+		<rdfs:comment>Relation of a landmark with a landmark category</rdfs:comment>
+		<rdfs:label>Belongs to category</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1215</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#Landmark"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#LandmarkCategory"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#poiLocation">
+		<rdfs:comment>Coordinates of the point (Use the mlo:location property inherited from IE</rdfs:comment>
+		<rdfs:label>POI Location</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1368</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#Landmark"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#LandmarkCategory">
+		<rdfs:comment>Predefined set of instances for categories of landmarks</rdfs:comment>
+		<rdfs:label>Landmark category</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1872</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#isRemovable">
+		<rdfs:comment>Flag to indicate if this instance is removable. This restriction is not enforced by tracker; it is API responsability to honor the value</rdfs:comment>
+		<rdfs:label>Is removable</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1743</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#LandmarkCategory"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#LocationBoundingBox">
+		<rdfs:label>Box containing a relevant location (places that cannot be described in one concrete point)</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1859</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mlo#GeoBoundingBox"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#boxSouthWestCorner">
+		<rdfs:label>South-west corner of the bounding box</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1930</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#LocationBoundingBox"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#boxEastLimit">
+		<rdfs:label>Length of the box in the East direction</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1096</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#LocationBoundingBox"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#boxVerticalLimit">
+		<rdfs:label>Length of the box in the Up direction (height)</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1298</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#LocationBoundingBox"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#boxNorthLimit">
+		<rdfs:label>Length of the box in the North direction</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1160</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#LocationBoundingBox"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoPoint"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#PointOfInterest">
+		<rdfs:comment>Use the nie title, description, ...  properties</rdfs:comment>
+		<rdfs:label>Use mlo:Landmark instead</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1827</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mlo#Landmark"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mlo#Route">
+		<rdfs:label>Minimum box containing all the points traversed in sequence.</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1637</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mlo#GeoBoundingBox"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#startTime">
+		<rdfs:label>Time when the first point in the route was saved</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1772</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#Route"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#endTime">
+		<rdfs:label>Time when the last point in the route was saved</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1665</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#Route"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#routeDetails">
+		<rdfs:comment>FIXME Domain can be resource if we handle map-files correctly in the ontology</rdfs:comment>
+		<rdfs:label>Pointer to a file containing route details (e.g. KML file).</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1106</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mlo#Route"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#location">
+		<rdfs:comment>This can be subclassed to add semantics</rdfs:comment>
+		<rdfs:label>Property linking something to a location</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1386</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoLocation"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.tracker-project.org/temp/mlo#">
+	</tracker:Ontology >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-accommodation">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-business">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-communication">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-educational-institute">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-entertainment">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-food-beverage">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-geographical-area">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-outdoor-activities">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-people">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-public-service">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-religious-places">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-shopping">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-sightseeing">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-sports">
+	</mlo:LandmarkCategory >
+	<mlo:LandmarkCategory rdf:about="http://www.tracker-project.org/temp/mlo#predefined-landmark-category-transport">
+	</mlo:LandmarkCategory >
+</rdf:RDF>

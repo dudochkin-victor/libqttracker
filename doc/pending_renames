@@ -1,0 +1,13 @@
+setServiceAttribute -> setAttribute
+Unboundtor::VariableLink::link -> Unboundtor::VariableLink::target
+QHasBackReferencedProperty::Owner_ -> QHasBackReferencedProperty::One
+QHasBackReferencedProperty::Property_ -> QHasBackReferencedProperty::Many
+Backend -> BackEnd
+isInPlacePending -> areOthersPending
+RerfreshModeFlags::Flush -> Invalidate (?)
+propertyData -> property
+refPropertyData -> refProperty
+Dependends -> Deriveds
+refDependents -> refDeriveds
+baseAndProperty -> baseAndDerived
+fromObject/SubjectOf -> something better

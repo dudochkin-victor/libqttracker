@@ -1,0 +1,1283 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AccessClassification">
+		<rdfs:comment>Access classification of a calendar component. Introduced to express the set of values for the ncal:class property. The user may use instances provided with this ontology or create his/her own with desired semantics. See the documentation of ncal:class for details.</rdfs:comment>
+		<rdfs:label>AccessClassification</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1497</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Alarm">
+		<rdfs:comment>Provide a grouping of component properties that define an alarm.</rdfs:comment>
+		<rdfs:label>Alarm</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1109</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#action">
+		<rdfs:comment>This property defines the action to be invoked when an alarm is triggered. Inspired by RFC 2445 sec 4.8.6.1. Originally this property had a limited set of values. They are expressed as instances of the AlarmAction class.</rdfs:comment>
+		<rdfs:label>action</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1807</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Alarm"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AlarmAction"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#repeat">
+		<rdfs:comment>This property defines the number of time the alarm should be repeated, after the initial trigger. Inspired by RFC 2445 sec. 4.8.6.2</rdfs:comment>
+		<rdfs:label>repeat</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1419</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Alarm"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AlarmAction">
+		<rdfs:comment>Action to be performed on alarm. This class has been introduced to express the limited set of values of the ncal:action property. Please refer to the documentation of ncal:action for details.</rdfs:comment>
+		<rdfs:label>AlarmAction</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1788</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment">
+		<rdfs:comment>An object attached to a calendar entity. This class has been introduced to serve as a structured value of the ncal:attach property. See the documentation of ncal:attach for details.</rdfs:comment>
+		<rdfs:label>Attachment</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1513</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#attachmentUri">
+		<rdfs:comment>The uri of the attachment. Created to express the actual value of the ATTACH property defined in RFC 2445 sec. 4.8.1.1. This property expresses the default URI datatype of that property. see ncal:attachmentContents for the BINARY datatype.</rdfs:comment>
+		<rdfs:label>attachmentUri</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1512</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#fmttype">
+		<rdfs:comment>To specify the content type of a referenced object. Inspired by RFC 2445 sec. 4.2.8. The value of this property should be an IANA-registered content type (e.g. application/binary)</rdfs:comment>
+		<rdfs:label>fmttype</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1592</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#encoding">
+		<rdfs:comment>To specify an alternate inline encoding for the property value. Inspired by RFC 2445 sec. 4.2.7. Originally this property had a limited vocabulary. ('8BIT' and 'BASE64'). The terms of this vocabulary have been expressed as instances of the AttachmentEncoding class</rdfs:comment>
+		<rdfs:label>encoding</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1470</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttachmentEncoding"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#attachmentContent">
+		<rdfs:comment>The uri of the attachment. Created to express the actual value of the ATTACH property defined in RFC 2445 sec. 4.8.1.1. This property expresses the BINARY datatype of that property. see ncal:attachmentUri for the URI datatype.</rdfs:comment>
+		<rdfs:label>attachmentContent</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1130</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttachmentEncoding">
+		<rdfs:comment>Attachment encoding. This class has been introduced to express the limited vocabulary of values for the ncal:encoding property. See the documentation of ncal:encoding for details.</rdfs:comment>
+		<rdfs:label>AttachmentEncoding</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1014</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee">
+		<rdfs:comment>An attendee of an event. This class has been introduced to serve as the range for ncal:attendee property. See documentation of ncal:attendee for details.</rdfs:comment>
+		<rdfs:label>Attendee</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1567</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeOrOrganizer"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#delegatedTo">
+		<rdfs:comment>To specify the calendar users to whom the calendar user specified by the property has delegated participation. Inspired by RFC 2445 sec. 4.2.5. Originally the value type for this parameter was CAL-ADDRESS. This has been expressed as nco:Contact to promote integration between NCAL and NCO.</rdfs:comment>
+		<rdfs:label>delegatedTo</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1255</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#delegatedFrom">
+		<rdfs:comment>To specify the calendar users that have delegated their participation to the calendar user specified by the property. Inspired by RFC 2445 sec. 4.2.4. Originally the value type for this property was CAL-ADDRESS. This has been expressed as nco:Contact to promote integration between NCAL and NCO.</rdfs:comment>
+		<rdfs:label>delegatedFrom</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1926</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#cutype">
+		<rdfs:comment>To specify the type of calendar user specified by the property. Inspired by RFC 2445 sec. 4.2.3. This parameter has a limited vocabulary. The terms that may serve as values for this property have been expressed as instances of CalendarUserType class. The user may use instances provided with this ontology or create his own.</rdfs:comment>
+		<rdfs:label>cutype</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1620</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarUserType"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#member">
+		<rdfs:comment>To specify the group or list membership of the calendar user specified by the property. Inspired by RFC 2445 sec. 4.2.11. Originally this parameter had a value type of CAL-ADDRESS. This has been expressed as nco:Contact to promote integration between NCAL and NCO</rdfs:comment>
+		<rdfs:label>member</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1326</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#role">
+		<rdfs:comment>To specify the participation role for the calendar user specified by the property. Inspired by the RFC 2445 sec. 4.2.16. Originally this property had a limited vocabulary for values. The terms of that vocabulary have been expressed as instances of the AttendeeRole class.</rdfs:comment>
+		<rdfs:label>role</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1951</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeRole"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#rsvp">
+		<rdfs:comment>To specify whether there is an expectation of a favor of a reply from the calendar user specified by the property value. Inspired by RFC 2445 sec. 4.2.17</rdfs:comment>
+		<rdfs:label>rsvp</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1001</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#partstat">
+		<rdfs:comment>To specify the participation status for the calendar user specified by the property. Inspired by RFC 2445 sec. 4.2.12. Originally this parameter had three sets of allowed values. Which set applied to a particular case - depended on the type of calendar entity this parameter occured in. (event, todo, journal entry). This would be awkward to model in RDF so a single ParticipationStatus class has been introduced. Terms of the values vocabulary are expressed as instances of this class. Users are advised to pay attention which instances they use.</rdfs:comment>
+		<rdfs:label>partstat</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1431</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#ParticipationStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeOrOrganizer">
+		<rdfs:comment>A common superclass for ncal:Attendee and ncal:Organizer.</rdfs:comment>
+		<rdfs:label>AttendeeOrOrganizer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1085</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#dir">
+		<rdfs:comment>Specifies a reference to a directory entry associated with the calendar user specified by the property. Inspired by RFC 2445 sec. 4.2.6. Originally the data type of the value of this parameter was URI (Usually an LDAP URI). This has been expressed as rdfs:resource.</rdfs:comment>
+		<rdfs:label>dir</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1288</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeOrOrganizer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#involvedContact">
+		<rdfs:comment>A contact of the Attendee or the organizer involved in an event or other calendar entity. This property has been introduced to express the actual value of the ATTENDEE and ORGANIZER properties. The contact will also represent the CN parameter of those properties. See documentation of ncal:attendee or ncal:organizer for more details.</rdfs:comment>
+		<rdfs:label>involvedContact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1366</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeOrOrganizer"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#sentBy">
+		<rdfs:comment>To specify the calendar user that is acting on behalf of the calendar user specified by the property. Inspired by RFC 2445 sec. 4.2.18. The original data type of this property was a mailto: URI. This has been changed to nco:Contact to promote integration between NCO and NCAL.</rdfs:comment>
+		<rdfs:label>sentBy</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1549</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeOrOrganizer"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeRole">
+		<rdfs:comment>A role the attendee is going to play during an event. This class has been introduced to express the limited vocabulary for the values of ncal:role property. Please refer to the documentation of ncal:role for details.</rdfs:comment>
+		<rdfs:label>AttendeeRole</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1522</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#BydayRulePart">
+		<rdfs:comment>Expresses the compound value of a byday part of a recurrence rule. It stores the weekday and the integer modifier. Inspired by RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>BydayRulePart</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1099</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#bydayModifier">
+		<rdfs:comment>A n integer modifier for the BYDAY rule part. Each BYDAY value can also be preceded by a positive (+n) or negative  (-n) integer. If present, this indicates the nth occurrence of the specific day within the MONTHLY or YEARLY RRULE. For example, within a MONTHLY rule, +1MO (or simply 1MO) represents the first Monday within the month, whereas -1MO represents the last Monday of the month. If an integer modifier is not present, it means all days of this type within the specified frequency. For example, within a MONTHLY rule, MO represents all Mondays within the month. Inspired by RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>bydayModifier</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1352</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#BydayRulePart"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#bydayWeekday">
+		<rdfs:comment>Connects a BydayRulePath with a weekday.</rdfs:comment>
+		<rdfs:label>bydayWeekday</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1624</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#BydayRulePart"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Weekday"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar">
+		<rdfs:comment>A calendar. Inspirations for this class can be traced to the VCALENDAR component defined in RFC 2445 sec. 4.4, but it may just as well be used to represent any kind of Calendar.</rdfs:comment>
+		<rdfs:label>Calendar</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1310</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#component">
+		<rdfs:comment>Links the Vcalendar instance with the calendar components. This property has no direct equivalent in the RFC specification. It has been introduced to express the containmnent relations.</rdfs:comment>
+		<rdfs:label>component</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1616</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarDataObject"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#method">
+		<rdfs:comment>This property defines the iCalendar object method associated with the calendar object. Defined in RFC 2445 sec. 4.7.2</rdfs:comment>
+		<rdfs:label>method</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1552</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#calscale">
+		<rdfs:comment>This property defines the calendar scale used for the calendar information specified in the iCalendar object. Defined in RFC 2445 sec. 4.7.1</rdfs:comment>
+		<rdfs:label>calscale</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1483</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarScale"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#prodid">
+		<rdfs:comment>This property specifies the identifier for the product that created the iCalendar object. Defined in RFC 2445 sec. 4.7.2</rdfs:comment>
+		<rdfs:label>prodid</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1921</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#generator"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#version">
+		<rdfs:comment>This property specifies the identifier corresponding to the highest version number or the minimum and maximum range of the iCalendar specification that is required in order to interpret the iCalendar object. Defined in RFC 2445 sec. 4.7.4</rdfs:comment>
+		<rdfs:label>version</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1351</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarDataObject">
+		<rdfs:comment>A DataObject found in a calendar. It is usually interpreted as one of the calendar entity types (e.g. Event, Journal, Todo etc.)</rdfs:comment>
+		<rdfs:label>CalendarDataObject</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1339</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarScale">
+		<rdfs:comment>A calendar scale. This class has been introduced to provide the limited vocabulary for the ncal:calscale property.</rdfs:comment>
+		<rdfs:label>CalendarScale</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1432</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarUserType">
+		<rdfs:comment>A calendar user type. This class has been introduced to express the limited vocabulary for the ncal:cutype property. See documentation of ncal:cutype for details.</rdfs:comment>
+		<rdfs:label>CalendarUserType</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1010</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event">
+		<rdfs:comment>Provide a grouping of component properties that describe an event.</rdfs:comment>
+		<rdfs:label>Event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1768</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#eventStatus">
+		<rdfs:comment>Defines the overall status or confirmation for an Event. Based on the STATUS property defined in RFC 2445 sec. 4.8.1.11.</rdfs:comment>
+		<rdfs:label>status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1089</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#EventStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#transp">
+		<rdfs:comment>Defines whether an event is transparent or not  to busy time searches. Inspired by RFC 2445 sec.4.8.2.7. Values for this property can be chosen from a limited vocabulary. To express this a TimeTransparency class has been introduced.</rdfs:comment>
+		<rdfs:label>transp</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1399</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimeTransparency"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#EventStatus">
+		<rdfs:comment>A status of an event. This class has been introduced to express the limited set of values for the ncal:status property. The user may use the instances provided with this ontology or create his/her own. See the documentation for ncal:eventStatus for details.</rdfs:comment>
+		<rdfs:label>EventStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1054</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Freebusy">
+		<rdfs:comment>Provide a grouping of component properties that describe either a request for free/busy time, describe a response to a request for free/busy time or describe a published set of busy time.</rdfs:comment>
+		<rdfs:label>Freebusy</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1936</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#freebusy">
+		<rdfs:comment>The property defines one or more free or busy time intervals. Inspired by RFC 2445 sec. 4.8.2.6. Note that the periods specified by this property can only be expressed with UTC times. Originally this property could have many comma-separated values. Please use a separate triple for each value.</rdfs:comment>
+		<rdfs:label>freebusy</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1088</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Freebusy"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#FreebusyPeriod"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#FreebusyPeriod">
+		<rdfs:comment>An aggregate of a period and a freebusy type. This class has been introduced to serve as a range of the ncal:freebusy property. See documentation for ncal:freebusy for details. Note that the specification of freebusy property states that the period is to be expressed using UTC time, so the timezone properties should NOT be used for instances of this class.</rdfs:comment>
+		<rdfs:label>FreebusyPeriod</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1886</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalPeriod"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#fbtype">
+		<rdfs:comment>To specify the free or busy time type. Inspired by RFC 2445 sec. 4.2.9. The RFC specified a limited vocabulary for the values of this property. The terms of this vocabulary have been expressed as instances of the FreebusyType class. The user can use instances provided with this ontology or create his own.</rdfs:comment>
+		<rdfs:label>fbtype</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1354</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#FreebusyPeriod"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#FreebusyType"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#FreebusyType">
+		<rdfs:comment>Type of a Freebusy indication. This class has been introduced to serve as a limited set of values for the ncal:fbtype property. See the documentation of ncal:fbtype for details.</rdfs:comment>
+		<rdfs:label>FreebusyType</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1162</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Journal">
+		<rdfs:comment>Provide a grouping of component properties that describe a journal entry.</rdfs:comment>
+		<rdfs:label>Journal</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1270</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#journalStatus">
+		<rdfs:comment>Defines the overall status or confirmation for a journal entry. Based on the STATUS property defined in RFC 2445 sec. 4.8.1.11.</rdfs:comment>
+		<rdfs:label>status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1960</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Journal"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#JournalStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#JournalStatus">
+		<rdfs:comment>A status of a journal entry. This class has been introduced to express the limited set of values for the ncal:status property. The user may use the instances provided with this ontology or create his/her own. See the documentation for ncal:journalStatus for details.</rdfs:comment>
+		<rdfs:label>JournalStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1247</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime">
+		<rdfs:label>NcalDateTime</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1680</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalTimeEntity"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#ncalTimezone">
+		<rdfs:comment>The timezone instance that should be used to interpret an NcalDateTime. The purpose of this property is similar to the TZID parameter specified in RFC 2445 sec. 4.2.19</rdfs:comment>
+		<rdfs:label>ncalTimezone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1184</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#date">
+		<rdfs:comment>Date an instance of NcalDateTime refers to. It was conceived to express values in DATE datatype specified in RFC 2445 4.3.4</rdfs:comment>
+		<rdfs:label>date</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1928</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#dateTime">
+		<rdfs:comment>Representation of a date an instance of NcalDateTime actually refers to. It's purpose is to express values in DATE-TIME datatype, as defined in RFC 2445 sec. 4.3.5</rdfs:comment>
+		<rdfs:label>dateTime</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1466</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalPeriod">
+		<rdfs:comment>A period of time. Inspired by the PERIOD datatype specified in RFC 2445 sec. 4.3.9</rdfs:comment>
+		<rdfs:label>NcalPeriod</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1834</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalTimeEntity"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#periodBegin">
+		<rdfs:comment>Beginng of a period. Inspired by the first part of a structured value of the PERIOD datatype specified in RFC 2445 sec. 4.3.9</rdfs:comment>
+		<rdfs:label>periodBegin</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1367</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalPeriod"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#periodDuration">
+		<rdfs:comment>Duration of a period of time. Inspired by the second part of a structured value of the PERIOD datatype specified in RFC 2445 sec. 4.3.9. Note that a single NcalPeriod instance shouldn't have the periodEnd and periodDuration properties specified simultaneously.</rdfs:comment>
+		<rdfs:label>periodDuration</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1806</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalPeriod"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#periodEnd">
+		<rdfs:comment>End of a period of time. Inspired by the second part of a structured value of a PERIOD datatype specified in RFC 2445 sec. 4.3.9. Note that a single NcalPeriod instance shouldn't have the periodEnd and periodDuration properties specified simultaneously.</rdfs:comment>
+		<rdfs:label>periodEnd</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1157</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalPeriod"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalTimeEntity">
+		<rdfs:comment>A time entity. Conceived as a common superclass for NcalDateTime and NcalPeriod. According to RFC 2445 both DateTime and Period can be interpreted in different timezones. The first case is explored in many properties. The second case is theoretically possible in ncal:rdate property. Therefore the timezone properties have been defined at this level.</rdfs:comment>
+		<rdfs:label>NcalTimeEntity</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1996</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Organizer">
+		<rdfs:comment>An organizer of an event. This class has been introduced to serve as a range of ncal:organizer property. See documentation of ncal:organizer for details.</rdfs:comment>
+		<rdfs:label>Organizer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1879</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AttendeeOrOrganizer"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#ParticipationStatus">
+		<rdfs:comment>Participation Status. This class has been introduced to express the limited vocabulary of values for the ncal:partstat property. See the documentation of ncal:partstat for details.</rdfs:comment>
+		<rdfs:label>ParticipationStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1703</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceFrequency">
+		<rdfs:comment>Frequency of a recurrence rule. This class has been introduced to express a limited set of allowed values for the ncal:freq property. See the documentation of ncal:freq for details.</rdfs:comment>
+		<rdfs:label>RecurrenceFrequency</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1965</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceIdentifier">
+		<rdfs:comment>Recurrence Identifier. Introduced to provide a structure for the value of ncal:recurrenceId property. See the documentation of ncal:recurrenceId for details.</rdfs:comment>
+		<rdfs:label>RecurrenceIdentifier</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1967</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#range">
+		<rdfs:comment>To specify the effective range of recurrence instances from the instance specified by the recurrence identifier specified by the property. It is intended to express the RANGE parameter specified in RFC 2445 sec. 4.2.13. The set of possible values for this property is limited. See also the documentation for ncal:recurrenceId for more details.</rdfs:comment>
+		<rdfs:label>range</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1848</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceIdentifier"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceIdentifierRange"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#recurrenceIdDateTime">
+		<rdfs:comment>The date and time of a recurrence identifier. Provided to express the actual value of the ncal:recurrenceId property. See documentation for ncal:recurrenceId for details.</rdfs:comment>
+		<rdfs:label>recurrenceIdDateTime</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1902</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceIdentifier"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceIdentifierRange">
+		<rdfs:comment>Recurrence Identifier Range. This class has been created to provide means to express the limited set of values for the ncal:range property. See documentation for ncal:range for details.</rdfs:comment>
+		<rdfs:label>RecurrenceIdentifierRange</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1441</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule">
+		<rdfs:label>RecurrenceRule</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1119</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#until">
+		<rdfs:comment>The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner. If the value specified by UNTIL is synchronized with the specified recurrence, this date or date-time becomes the last instance of the recurrence. If specified as a date-time value, then it MUST be specified in an UTC time format. If not present, and the COUNT rule part is also not present, the RRULE is considered to repeat forever.</rdfs:comment>
+		<rdfs:label>until</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1458</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#bysecond">
+		<rdfs:comment>Second of a recurrence. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>bysecond</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1912</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#wkst">
+		<rdfs:comment>The day that's counted as the start of the week. It is used to disambiguate the byweekno rule. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>wkst</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1265</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Weekday"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#interval">
+		<rdfs:comment>The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats. The default value is '1', meaning every second for a SECONDLY rule, or every minute for a MINUTELY rule, every hour for an HOURLY rule, every day for a DAILY rule, every week for a WEEKLY rule, every month for a MONTHLY rule andevery year for a YEARLY rule. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>interval</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1380</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#byday">
+		<rdfs:comment>Weekdays the recurrence should occur. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>byday</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1861</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#BydayRulePart"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#byweekno">
+		<rdfs:comment>The number of the week an event should recur. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>byweekno</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1409</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#bymonthday">
+		<rdfs:comment>Day of the month when the event should recur. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>bymonthday</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1356</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#bysetpos">
+		<rdfs:comment>The BYSETPOS rule part specify values which correspond to the nth occurrence within the set of events specified by the rule. Valid values are 1 to 366 or -366 to -1. It MUST only be used in conjunction with another BYxxx rule part. For example 'the last work day of the month' could be represented as: RRULE: FREQ=MONTHLY; BYDAY=MO', 'TU', 'WE', 'TH', 'FR; BYSETPOS=-1. Each BYSETPOS value can include a positive (+n) or negative (-n)  integer. If present, this indicates the nth occurrence of the  specific occurrence within the set of events specified by the rule. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>bysetpos</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1790</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#byhour">
+		<rdfs:comment>Hour of recurrence. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>byhour</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1596</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#byminute">
+		<rdfs:comment>Minute of recurrence. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>byminute</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1586</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#byyearday">
+		<rdfs:comment>Day of the year the event should occur. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>byyearday</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1762</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#count">
+		<rdfs:comment>How many times should an event be repeated. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>count</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1885</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#bymonth">
+		<rdfs:comment>Number of the month of the recurrence. Valid values are integers from 1 (January) to 12 (December). Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>bymonth</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1234</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#freq">
+		<rdfs:comment>Frequency of a recurrence rule. Defined in RFC 2445 sec. 4.3.10</rdfs:comment>
+		<rdfs:label>freq</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1942</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceFrequency"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RequestStatus">
+		<rdfs:comment>Request Status. A class that was introduced to provide a structure for the value of ncal:requestStatus property. See documentation for ncal:requestStatus for details.</rdfs:comment>
+		<rdfs:label>RequestStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1372</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#statusDescription">
+		<rdfs:comment>Longer return status description. Inspired by the second part of the structured value of the REQUEST-STATUS property defined in RFC 2445 sec. 4.8.8.2</rdfs:comment>
+		<rdfs:label>statusDescription</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1642</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RequestStatus"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#returnStatus">
+		<rdfs:comment>Short return status. Inspired by the first element of the structured value of the REQUEST-STATUS property described in RFC 2445 sec. 4.8.8.2.</rdfs:comment>
+		<rdfs:label>returnStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1048</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RequestStatus"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#requestStatusData">
+		<rdfs:comment>Additional data associated with a request status. Inspired by the third part of the structured value for the REQUEST-STATUS property defined in RFC 2445 sec. 4.8.8.2 ('Textual exception data. For example, the offending property name and value or complete property line')</rdfs:comment>
+		<rdfs:label>requestStatusData</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1104</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RequestStatus"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimeTransparency">
+		<rdfs:comment>Time transparency. Introduced to provide a way to express the limited vocabulary for the values of ncal:transp property. See documentation of ncal:transp for details.</rdfs:comment>
+		<rdfs:label>TimeTransparency</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1752</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone">
+		<rdfs:comment>Provide a grouping of component properties that defines a time zone.</rdfs:comment>
+		<rdfs:label>Timezone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1463</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#tzurl">
+		<rdfs:comment>The TZURL provides a means for a VTIMEZONE component to point to a network location that can be used to retrieve an up-to- date version of itself. Inspired by RFC 2445 sec. 4.8.3.5. Originally the range of this property had been specified as URI.</rdfs:comment>
+		<rdfs:label>tzurl</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1465</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#standard">
+		<rdfs:comment>Links the timezone with the standard timezone observance. This property has no direct equivalent in the RFC 2445. It has been inspired by the structure of the Vtimezone component defined in sec.4.6.5</rdfs:comment>
+		<rdfs:label>standard</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1261</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimezoneObservance"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#daylight">
+		<rdfs:comment>Links a timezone with it's daylight observance. This property has no direct equivalent in the RFC 2445. It has been inspired by the structure of the Vtimezone component defined in sec.4.6.5</rdfs:comment>
+		<rdfs:label>daylight</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1646</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimezoneObservance"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#tzid">
+		<rdfs:comment>This property specifies the text value that uniquely identifies the 'VTIMEZONE' calendar component. Inspired by RFC 2445 sec 4.8.3.1</rdfs:comment>
+		<rdfs:label>tzid</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1347</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimezoneObservance">
+		<rdfs:label>TimezoneObservance</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1735</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#tzoffsetfrom">
+		<rdfs:comment>This property specifies the offset which is in use prior to this time zone observance. Inspired by RFC 2445 sec. 4.8.3.3. The original domain was underspecified. It said that this property must appear within a Timezone component. In this ontology a TimezoneObservance class has been introduced to clarify this specification. The original range was UTC-OFFSET. There is no equivalent among the XSD datatypes so plain string was chosen.</rdfs:comment>
+		<rdfs:label>tzoffsetfrom</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1966</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimezoneObservance"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#tzoffsetto">
+		<rdfs:comment>This property specifies the offset which is in use in this time zone observance. nspired by RFC 2445 sec. 4.8.3.4. The original domain was underspecified. It said that this property must appear within a Timezone component. In this ontology a TimezoneObservance class has been introduced to clarify this specification. The original range was UTC-OFFSET. There is no equivalent among the XSD datatypes so plain string was chosen.</rdfs:comment>
+		<rdfs:label>tzoffsetto</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1670</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimezoneObservance"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#tzname">
+		<rdfs:comment>Specifies the customary designation for a timezone description. Inspired by RFC 2445 sec. 4.8.3.2 The LANGUAGE parameter has been discarded. Please xml:lang literals to express languages. Original specification for the domain of this property stated that it must appear within the timezone component. In this ontology the TimezoneObservance class has been itroduced to clarify this specification.</rdfs:comment>
+		<rdfs:label>tzname</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1515</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TimezoneObservance"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Todo">
+		<rdfs:comment>Provide a grouping of calendar properties that describe a to-do.</rdfs:comment>
+		<rdfs:label>Todo</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1525</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#percentComplete">
+		<rdfs:comment>This property is used by an assignee or delegatee of a to-do to convey the percent completion of a to-do to the Organizer. Inspired by RFC 2445 sec. 4.8.1.8</rdfs:comment>
+		<rdfs:label>percentComplete</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1732</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Todo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#completed">
+		<rdfs:comment>This property defines the date and time that a to-do was actually completed. Inspired by RFC 2445 sec. 4.8.2.1. Note that the RFC allows ONLY UTC time values for this property.</rdfs:comment>
+		<rdfs:label>completed</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1294</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Todo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#todoStatus">
+		<rdfs:comment>Defines the overall status or confirmation for a todo. Based on the STATUS property defined in RFC 2445 sec. 4.8.1.11.</rdfs:comment>
+		<rdfs:label>status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1915</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Todo"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TodoStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#due">
+		<rdfs:comment>This property defines the date and time that a to-do is expected to be completed. Inspired by RFC 2445 sec. 4.8.2.3</rdfs:comment>
+		<rdfs:label>due</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1457</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Todo"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TodoStatus">
+		<rdfs:comment>A status of a calendar entity. This class has been introduced to express the limited set of values for the ncal:status property. The user may use the instances provided with this ontology or create his/her own. See the documentation for ncal:todoStatus for details.</rdfs:comment>
+		<rdfs:label>TodoStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1828</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Trigger">
+		<rdfs:comment>An alarm trigger. This class has been created to serve as the range of ncal:trigger property. See the documentation for ncal:trigger for more details.</rdfs:comment>
+		<rdfs:label>Trigger</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1019</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#related">
+		<rdfs:comment>To specify the relationship of the alarm trigger with respect to the start or end of the calendar component. Inspired by RFC 2445 4.2.14. The RFC has specified two possible values for this property ('START' and 'END') they have been expressed as instances of the TriggerRelation class.</rdfs:comment>
+		<rdfs:label>related</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1712</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Trigger"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TriggerRelation"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#triggerDateTime">
+		<rdfs:comment>The exact date and time of the trigger. This property has been created to express the VALUE=DATE, and VALUE=DATE-TIME parameters of the TRIGGER property. See the documentation for ncal:trigger for more details</rdfs:comment>
+		<rdfs:label>triggerDateTime</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1243</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Trigger"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#triggerDuration">
+		<rdfs:comment>The duration of a trigger. This property has been created to express the VALUE=DURATION parameter of the TRIGGER property. See documentation for ncal:trigger for more details.</rdfs:comment>
+		<rdfs:label>triggerDuration</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1582</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Trigger"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#TriggerRelation">
+		<rdfs:comment>The relation between the trigger and its parent calendar component. This class has been introduced to express the limited vocabulary for the ncal:related property. See the documentation for ncal:related for more details.</rdfs:comment>
+		<rdfs:label>TriggerRelation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1944</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass">
+		<rdfs:label>UnionParentClass</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1030</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#attach">
+		<rdfs:comment>The property provides the capability to associate a document object with a calendar component. Defined in the RFC 2445 sec. 4.8.1.1</rdfs:comment>
+		<rdfs:label>attach</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1623</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#lastModified">
+		<rdfs:comment>The property specifies the date and time that the information associated with the calendar component was last revised in the calendar store. Note: This is analogous to the modification date and time for a file in the file system. Inspired by RFC 2445 sec. 4.8.7.3. Note that the RFC allows ONLY UTC time values for this property.</rdfs:comment>
+		<rdfs:label>lastModified</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1984</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#trigger">
+		<rdfs:comment>This property specifies when an alarm will trigger. Inspired by RFC 2445 sec. 4.8.6.3 Originally the value of this property could accept two types : duration and date-time. To express this fact a Trigger class has been introduced. It also has a related property to account for the RELATED parameter.</rdfs:comment>
+		<rdfs:label>trigger</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1343</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Trigger"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created">
+		<rdfs:comment>This property specifies the date and time that the calendar information was created by the calendar user agent in the calendar store. Note: This is analogous to the creation date and time for a file in the file system. Inspired by RFC 2445 sec. 4.8.7.1. Note that this property is a subproperty of nie:created. The domain of nie:created is nie:DataObject. It is not a superclass of UnionOf_Vevent_Vjournal_Vtodo, but since that union is conceived as an 'abstract' class, and in real-life all resources referenced by this property will also be DataObjects, than this shouldn't cause too much of a problem. Note that RFC allows ONLY UTC time values for this property.</rdfs:comment>
+		<rdfs:label>created</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1564</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#url">
+		<rdfs:comment>This property defines a Uniform Resource Locator (URL) associated with the iCalendar object. Inspired by the RFC 2445 sec. 4.8.4.6. Original range had been specified as URI.</rdfs:comment>
+		<rdfs:label>url</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1434</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment">
+		<rdfs:comment>Non-processing information intended to provide a comment to the calendar user. Inspired by RFC 2445 sec. 4.8.1.4 with the following reservations:  the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language. For the ALTREP parameter use the commentAltRep property.</rdfs:comment>
+		<rdfs:label>comment</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1045</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#summaryAltRep">
+		<rdfs:comment>Alternate representation of the comment. Introduced to cover the ALTREP parameter of the SUMMARY property. See documentation of ncal:summary for details.</rdfs:comment>
+		<rdfs:label>summaryAltRep</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1204</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#priority">
+		<rdfs:comment>The property defines the relative priority for a calendar component. Inspired by RFC 2445 sec. 4.8.1.9</rdfs:comment>
+		<rdfs:label>priority</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1725</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#resources">
+		<rdfs:comment>Defines the equipment or resources anticipated for an activity specified by a calendar entity. Inspired by RFC 2445 sec. 4.8.1.10 with the following reservations:  the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language. For the ALTREP parameter use the resourcesAltRep property. This property specifies multiple resources. The order is not important. it is recommended to introduce a separate triple for each resource.</rdfs:comment>
+		<rdfs:label>resources</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1908</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#location">
+		<rdfs:comment>Defines the intended venue for the activity defined by a calendar component. Inspired by RFC 2445 sec 4.8.1.7 with the following reservations:  the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language.  For the ALTREP parameter use the locationAltRep property.</rdfs:comment>
+		<rdfs:label>location</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1858</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#uid">
+		<rdfs:comment>This property defines the persistent, globally unique identifier for the calendar component. Inspired by the RFC 2445 sec 4.8.4.7</rdfs:comment>
+		<rdfs:label>uid</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1289</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#requestStatus">
+		<rdfs:comment>This property defines the status code returned for a scheduling request. Inspired by RFC 2445 sec. 4.8.8.2. Original value of this property was a four-element structure. The RequestStatus class has been introduced to express it. In RFC 2445 this property could have the LANGUAGE parameter. This has been discarded in this ontology. Use xml:lang literals to express it if necessary.</rdfs:comment>
+		<rdfs:label>requestStatus</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1439</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RequestStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#recurrenceId">
+		<rdfs:label>recurrenceId</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1076</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceIdentifier"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#dtstamp">
+		<rdfs:comment>The property indicates the date/time that the instance of the iCalendar object was created. Inspired by RFC 2445 sec. 4.8.7.1. Note that the RFC allows ONLY UTC values for this property.</rdfs:comment>
+		<rdfs:label>dtstamp</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1070</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#class">
+		<rdfs:comment>Defines the access classification for a calendar component. Inspired by RFC 2445 sec. 4.8.1.3 with the following reservations:  this property has limited vocabulary. Possible values are:  PUBLIC, PRIVATE and CONFIDENTIAL. The default is PUBLIC. Those values are expressed as instances of the AccessClassification class. The user may create his/her own if necessary.</rdfs:comment>
+		<rdfs:label>class</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1697</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#AccessClassification"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#organizer">
+		<rdfs:comment>The property defines the organizer for a calendar component. Inspired by RFC 2445 sec. 4.8.4.3. Originally this property accepted many parameters. The Organizer class has been introduced to express them all. Note that NCAL is aligned with NCO. The actual value (of the CAL-ADDRESS type) is expressed as an instance of nco:Contact. Remember that the CN parameter has been removed from NCAL. Instead that value should be expressed using nco:fullname property of the above mentioned nco:Contact instance.</rdfs:comment>
+		<rdfs:label>organizer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1866</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Organizer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#attendee">
+		<rdfs:comment>The property defines an 'Attendee' within a calendar component. Inspired by RFC 2445 sec. 4.8.4.1. Originally this property accepted many parameters. The Attendee class has been introduced to express them all. Note that NCAL is aligned with NCO. The actual value (of the CAL-ADDRESS type) is expressed as an instance of nco:Contact. Remember that the CN parameter has been removed from NCAL. Instead that value should be expressed using nco:fullname property of the above mentioned nco:Contact instance. The RFC stated that whenever this property is attached to a Valarm instance', 'the Attendee cannot have any parameters apart from involvedContact.']</rdfs:comment>
+		<rdfs:label>attendee</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1726</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attendee"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#rrule">
+		<rdfs:comment>This property defines a rule or repeating pattern for recurring events, to-dos, or time zone definitions. sec. 4.8.5.4</rdfs:comment>
+		<rdfs:label>rrule</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1601</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#dtend">
+		<rdfs:comment>This property specifies the date and time that a calendar component ends. Inspired by RFC 2445 sec. 4.8.2.2</rdfs:comment>
+		<rdfs:label>dtend</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1346</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#ncalRelation">
+		<rdfs:comment>A common superproperty for all types of ncal relations. It is not to be used directly.</rdfs:comment>
+		<rdfs:label>ncalRelation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1273</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#exdate">
+		<rdfs:comment>This property defines the list of date/time exceptions for a recurring calendar component. Inspired by RFC 2445 sec. 4.8.5.1</rdfs:comment>
+		<rdfs:label>exdate</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1949</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#summary">
+		<rdfs:comment>Defines a short summary or subject for the calendar component. Inspired by RFC 2445 sec 4.8.1.12 with the following reservations: the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language. For the ALTREP parameter use the summaryAltRep property.</rdfs:comment>
+		<rdfs:label>summary</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1896</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#descriptionAltRep">
+		<rdfs:comment>Alternate representation of the calendar entity description. Introduced to cover the ALTREP parameter of the DESCRIPTION property. See documentation of ncal:description for details.</rdfs:comment>
+		<rdfs:label>descriptionAltRep</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1499</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#commentAltRep">
+		<rdfs:comment>Alternate representation of the comment. Introduced to cover the ALTREP parameter of the COMMENT property. See documentation of ncal:comment for details.</rdfs:comment>
+		<rdfs:label>commentAltRep</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1750</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#sequence">
+		<rdfs:comment>This property defines the revision sequence number of the calendar component within a sequence of revisions. Inspired by RFC 2445 sec. 4.8.7.4</rdfs:comment>
+		<rdfs:label>sequence</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1280</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#contact">
+		<rdfs:comment>The property is used to represent contact information or alternately a reference to contact information associated with the calendar component. Inspired by RFC 2445 sec. 4.8.4.2 with the following reservations: the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language. For the ALTREP parameter use the contactAltRep property.RFC doesn't define any format for the string.</rdfs:comment>
+		<rdfs:label>contact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1218</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#contactAltRep">
+		<rdfs:comment>Alternate representation of the contact property. Introduced to cover the ALTREP parameter of the CONTACT property. See documentation of ncal:contact for details.</rdfs:comment>
+		<rdfs:label>contactAltRep</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1442</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#rdate">
+		<rdfs:comment>This property defines the list of date/times for a recurrence set. Inspired by RFC 2445 sec. 4.8.5.3. Note that RFC allows both DATE, DATE-TIME and PERIOD values for this property. That's why the range has been set to NcalTimeEntity.</rdfs:comment>
+		<rdfs:label>rdate</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1751</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalTimeEntity"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#locationAltRep">
+		<rdfs:comment>Alternate representation of the event or todo location. Introduced to cover the ALTREP parameter of the LOCATION property. See documentation of ncal:location for details.</rdfs:comment>
+		<rdfs:label>locationAltRep</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1315</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#hasAlarm">
+		<rdfs:comment>Links an event or a todo with a DataObject that can be interpreted as an alarm. This property has no direct equivalent in the RFC 2445. It has been provided to express this relation.</rdfs:comment>
+		<rdfs:label>hasAlarm</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1638</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarDataObject"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#exrule">
+		<rdfs:comment>This property defines a rule or repeating pattern for an exception to a recurrence set. Inspired by RFC 2445 sec. 4.8.5.2.</rdfs:comment>
+		<rdfs:label>exrule</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1808</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#RecurrenceRule"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#geo">
+		<rdfs:comment>This property specifies information related to the global position for the activity specified by a calendar component. Inspired by RFC 2445 sec. 4.8.1.6</rdfs:comment>
+		<rdfs:label>geo</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1603</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#resourcesAltRep">
+		<rdfs:comment>Alternate representation of the resources needed for an event or todo. Introduced to cover the ALTREP parameter of the resources property. See documentation for ncal:resources for details.</rdfs:comment>
+		<rdfs:label>resourcesAltRep</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1034</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#dtstart">
+		<rdfs:comment>This property specifies when the calendar component begins. Inspired by RFC 2445 sec. 4.8.2.4</rdfs:comment>
+		<rdfs:label>dtstart</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1170</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#NcalDateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#description">
+		<rdfs:comment>A more complete description of the calendar component, than that provided by the ncal:summary property.Inspired by RFC 2445 sec. 4.8.1.5 with following reservations:  the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language. For the ALTREP parameter use the descriptionAltRep property.</rdfs:comment>
+		<rdfs:label>description</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1541</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#description"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#relatedToSibling">
+		<rdfs:comment>The property is used to represent a relationship or reference between one calendar component and another. Inspired by RFC 2445 sec. 4.8.4.5. Originally this property had a RELTYPE parameter. It has been decided that it is more natural to introduce three different properties to express the values of that parameter. This property expresses the RELATED-TO property with RELTYPE=SIBLING parameter.</rdfs:comment>
+		<rdfs:label>relatedToSibling</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1080</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#ncalRelation"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#duration">
+		<rdfs:comment>The property specifies a positive duration of time. Inspired by RFC 2445 sec. 4.8.2.5</rdfs:comment>
+		<rdfs:label>duration</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1803</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#categories">
+		<rdfs:comment>Categories for a calendar component. Inspired by RFC 2445 sec 4.8.1.2 with the following reservations: The LANGUAGE parameter has been discarded. Please use xml:lang literals to express multiple languages. This property can specify multiple comma-separated categories. The order of categories doesn't matter. Please use a separate triple for each category.</rdfs:comment>
+		<rdfs:label>categories</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1365</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#relatedToChild">
+		<rdfs:comment>The property is used to represent a relationship or reference between one calendar component and another. Inspired by RFC 2445 sec. 4.8.4.5. Originally this property had a RELTYPE parameter. It has been decided to introduce three different properties to express the values of that parameter. This property expresses the RELATED-TO property with RELTYPE=CHILD parameter.</rdfs:comment>
+		<rdfs:label>relatedToChild</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1033</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#ncalRelation"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#relatedToParent">
+		<rdfs:comment>The property is used to represent a relationship or reference between one calendar component and another. Inspired by RFC 2445 sec. 4.8.4.5. Originally this property had a RELTYPE parameter. It has been decided that it is more natural to introduce three different properties to express the values of that parameter. This property expresses the RELATED-TO property with no RELTYPE parameter (the default value is PARENT), or with explicit RELTYPE=PARENT parameter.</rdfs:comment>
+		<rdfs:label>relatedToParent</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1662</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#ncalRelation"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionParentClass"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Weekday">
+		<rdfs:comment>Day of the week. This class has been created to provide the limited vocabulary for ncal:byday property. See the documentation for ncal:byday for details.</rdfs:comment>
+		<rdfs:label>Weekday</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1698</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#anniversary">
+		<rdfs:comment>links a contact with the calendar event of an anniversary. (NCAL version)</rdfs:comment>
+		<rdfs:label>anniversary event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1448</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#birthday">
+		<rdfs:comment>links a contact with the calendar event of his birthday. (NCAL version)</rdfs:comment>
+		<rdfs:label>birthday event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1464</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event"/>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#">
+	</tracker:Ontology >
+</rdf:RDF>

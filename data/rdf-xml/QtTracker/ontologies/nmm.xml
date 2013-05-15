@@ -1,0 +1,719 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#AnalogRadio">
+		<rdfs:comment>FM Radio carrier signal data. Basically the frequency</rdfs:comment>
+		<rdfs:label>AM/FM Radio carrier signal</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1993</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#modulation">
+		<rdfs:comment>Modulation used in the frequency (AM or FM)</rdfs:comment>
+		<rdfs:label>Signal modulation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1411</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#AnalogRadio"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#RadioModulation"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#frequency">
+		<rdfs:comment>Frequency in the Radio spectrum in Khz (note that usually FM frequencies are in MHz)</rdfs:comment>
+		<rdfs:label>Frequency</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1406</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#AnalogRadio"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#Artist">
+		<rdfs:comment>An artist.</rdfs:comment>
+		<rdfs:label>Artist</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1770</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#artistName">
+		<rdfs:comment>Name of the artist</rdfs:comment>
+		<rdfs:label>fullname</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1528</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>6</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#DigitalRadio">
+		<rdfs:comment>Online Radio Stream data object (i.e. as a raw flow of bytes)</rdfs:comment>
+		<rdfs:label>Online Radio Stream</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1659</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#streamingBitrate">
+		<rdfs:comment>Bitrate indicating the quality of the stream in Kbits (usual values 32, 64, 128...)</rdfs:comment>
+		<rdfs:label>Streaming bitrate</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1559</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#DigitalRadio"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#encoding">
+		<rdfs:comment>Encoding of the radio. It is a property of the streaming, that it is known before hand, so the applications can choose the encoding they understand.</rdfs:comment>
+		<rdfs:label>Encoding of the radio</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1090</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#DigitalRadio"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#protocol">
+		<rdfs:comment>Protocol used for the streaming (HTTP, RTSP)</rdfs:comment>
+		<rdfs:label>Protocol</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1954</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#DigitalRadio"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#Flash">
+		<rdfs:comment>Enumeration of the possible values of flash property</rdfs:comment>
+		<rdfs:label>Flash values</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1691</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#ImageList">
+		<rdfs:comment>An album of images</rdfs:comment>
+		<rdfs:label>Image album</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1553</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#MeteringMode">
+		<rdfs:comment>Enumeration of different ways a camera determines exposure.</rdfs:comment>
+		<rdfs:label>Metering mode values</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1155</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#MusicAlbum">
+		<rdfs:label>Music album</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1514</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList"/>
+		<tracker:domainIndex rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#title"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#albumArtist">
+		<rdfs:comment>main artists of the album</rdfs:comment>
+		<rdfs:label>artist</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1978</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<tracker:weight>6</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#musicCDIdentifier">
+		<rdfs:comment>Music CD identifier to for databases like FreeDB.org. This frame is intended for music that comes from a CD, so that the CD can be identified in databases such as the CDDB. The frame consists of a binary dump of the Table Of Contents, TOC, from the CD, which is a header of 4 bytes and then 8 bytes/track on the CD plus 8 bytes for the 'lead out' making a maximum of 804 bytes. The offset to the beginning of every track on the CD should be described with a four bytes absolute CD-frame address per track, and not with absolute time.</rdfs:comment>
+		<rdfs:label>Music CD identifier</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1221</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#internationalStandardRecordingCode">
+		<rdfs:comment>ISRC ID. Format: 'CC-XXX-YY-NNNNN'</rdfs:comment>
+		<rdfs:label>International Standard Recording Code</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1924</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#albumTrackCount">
+		<rdfs:comment>Track count of album</rdfs:comment>
+		<rdfs:label>Track count</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1029</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#albumTitle">
+		<rdfs:comment>nmm:albumTitle is deprecated, use nie:title instead, extractors still need updating</rdfs:comment>
+		<rdfs:label>Title</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1850</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#title"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>6</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#albumDuration">
+		<rdfs:comment>Duration of the album</rdfs:comment>
+		<rdfs:label>Album duration</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1311</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#albumGain">
+		<rdfs:comment>Gain of album</rdfs:comment>
+		<rdfs:label>Gain</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1267</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#albumPeakGain">
+		<rdfs:comment>Peak Gain of album</rdfs:comment>
+		<rdfs:label>Peak Gain</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1947</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#setNumber">
+		<rdfs:comment>Disk number of album</rdfs:comment>
+		<rdfs:label>Disk number</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1405</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#MusicPiece">
+		<rdfs:label>Music</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1737</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"/>
+		<tracker:domainIndex rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#title"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#musicAlbum">
+		<rdfs:comment>album the music belongs to</rdfs:comment>
+		<rdfs:label>album</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1599</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isLogicalPartOf"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#MusicAlbum"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:weight>6</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#beatsPerMinute">
+		<rdfs:comment>beats per minute</rdfs:comment>
+		<rdfs:label>Beats per minute</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1511</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#performer">
+		<rdfs:comment>Performer</rdfs:comment>
+		<rdfs:label>Performer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1572</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#length">
+		<rdfs:comment>Length or duration (in seconds)</rdfs:comment>
+		<rdfs:label>Length</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1971</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#composer">
+		<rdfs:comment>Composer</rdfs:comment>
+		<rdfs:label>Composer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1459</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#lyricist">
+		<rdfs:comment>Lyricist</rdfs:comment>
+		<rdfs:label>Lyricist</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1857</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#lyrics">
+		<rdfs:label>File with the lyrics for the music piece</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1676</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#SynchronizedText"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#trackNumber">
+		<rdfs:comment>Track number of the music in its album</rdfs:comment>
+		<rdfs:label>Track number</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1031</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#MusicPiece"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#Photo">
+		<rdfs:comment>A photo</rdfs:comment>
+		<rdfs:label>Photo</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1159</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#camera">
+		<rdfs:comment>The maker and model of the camera used to take the photograph. DEPRECATED (check nfo:device)</rdfs:comment>
+		<rdfs:label>Camera</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1649</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#exposureTime">
+		<rdfs:comment>Exposure time of the photo</rdfs:comment>
+		<rdfs:label>Exposure time</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1069</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#flash">
+		<rdfs:comment>Specifies whether flash was used</rdfs:comment>
+		<rdfs:label>Flash</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1435</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Flash"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#fnumber">
+		<rdfs:comment>The diameter of the entrance pupil in terms of the focal length of the lens</rdfs:comment>
+		<rdfs:label>F number</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1147</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#focalLength">
+		<rdfs:comment>A measure of how strongly the lens converges light</rdfs:comment>
+		<rdfs:label>Focal length</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1205</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#isoSpeed">
+		<rdfs:comment>Measure of a photographic film's sensitivity to light as ISO value</rdfs:comment>
+		<rdfs:label>ISO speed</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1805</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#meteringMode">
+		<rdfs:comment>Metering mode refers to the way in which a camera determines the exposure.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1495</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#MeteringMode"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#whiteBalance">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1007</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#WhiteBalance"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#isCropped">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1216</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#isColorCorrected">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1530</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Photo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#Playlist">
+		<rdfs:comment>Specific class to split MediaList in Albums and playlists.</rdfs:comment>
+		<rdfs:label>Media playlist</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1116</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#RadioModulation">
+		<rdfs:comment>Set of instances for analog radio modulation</rdfs:comment>
+		<rdfs:label>Radio modulation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1589</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#RadioStation">
+		<rdfs:comment>The Radio station in user terms: BBC3, Radio5, YLEX, ... It is linked with 1 or more carriers (different FM frenquencies, online sources in different qualities, etc.). Some RDS information is represented with nie properties, nie:identifier for PI, nie:title for PS</rdfs:comment>
+		<rdfs:label>Radio station</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1565</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#radioIcon">
+		<rdfs:comment>Image used as logo for a radio station</rdfs:comment>
+		<rdfs:label>Radio station icon</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1702</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#RadioStation"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#radioPTY">
+		<rdfs:comment>PTY Code (content description) as integer. RDS specs define the translations into human readable descriptions for various languages</rdfs:comment>
+		<rdfs:label>PTY</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1504</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#RadioStation"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#carrier">
+		<rdfs:comment>Signal where a radio can be tuned in. There can be more than one.</rdfs:comment>
+		<rdfs:label>Carrier</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1677</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#RadioStation"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#SynchronizedText">
+		<rdfs:label>Synchronized text (use nie:language to set the language). Valid for subtitles and lyrics</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1593</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#isForHearingImpaired">
+		<rdfs:comment>Does text stream contain helper tags for hearing-impaired such as &amp;lt;steps in hallway&amp;gt;</rdfs:comment>
+		<rdfs:label>Is for hearing-impaired</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1383</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#SynchronizedText"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#Video">
+		<rdfs:label>Video</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1914</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#videoAlbum">
+		<rdfs:label>Album</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1758</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#isSeries">
+		<rdfs:label>Is series</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1478</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#season">
+		<rdfs:label>Season</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1073</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#episodeNumber">
+		<rdfs:label>Episode number</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1232</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#runTime">
+		<rdfs:label>Run time</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1176</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#synopsis">
+		<rdfs:label>Synopsis</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1256</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#MPAARating">
+		<rdfs:label>MPAA Rating</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1217</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#category">
+		<rdfs:label>Category</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1829</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#director">
+		<rdfs:label>Director</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1062</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<tracker:weight>4</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#producedBy">
+		<rdfs:label>Produced by</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1072</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#leadActor">
+		<rdfs:label>Lead actor</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1250</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#Artist"/>
+		<tracker:weight>4</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#hasSubtitle">
+		<rdfs:label>Has subtitle</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1021</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#subtitle">
+		<rdfs:label>Subtitle file relevant for the video</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1666</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/nmm#SynchronizedText"/>
+		<tracker:weight>5</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#isContentEncrypted">
+		<rdfs:label>Is content encrypted FIXME: defined already in IE in this ontology!</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1350</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mtp#scantype">
+		<rdfs:comment>Scan type of a video file (MTP requirement. FIXME Maybe should be move to a different ontology)</rdfs:comment>
+		<rdfs:label>Scan type</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1167</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mtp#ScanType"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mtp#fourCC">
+		<rdfs:comment>These codes are used to uniquely identify video formats, and are used in various legacy and current software development kits (SDKs), including those for Microsoft Video for Windows (VfW), Microsoft DirectShow, and Microsoft Windows Media Format.</rdfs:comment>
+		<rdfs:label>MTP fourCC code</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1025</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mtp#waveformat">
+		<rdfs:comment>the WAVE formats reserved with Microsoft as of June 1, 2003. These codes are used to uniquely identify audio formats, and are used in various legacy and current software development kits (SDKs), including MCI, Microsoft Video for Windows, Microsoft DirectShow, Microsoft DirectSound, and Microsoft Windows Media Format.</rdfs:comment>
+		<rdfs:label>Wave format</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1055</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/nmm#Video"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/nmm#WhiteBalance">
+		<rdfs:comment>Camera's white balance setting</rdfs:comment>
+		<rdfs:label>White balance</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1673</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#alternativeMedia">
+		<rdfs:comment>Link between to different version of the same media. This is used for instances in uPnp where the server can provide the same video in different resolutions and codecs</rdfs:comment>
+		<rdfs:label>Alternative media</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1078</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#dlnaProfile">
+		<rdfs:comment>DLNA profile of the content, like MP3, MPEG_TS_HD_US, LPCM etc</rdfs:comment>
+		<rdfs:label>DLNA profile</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1300</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#genre">
+		<rdfs:label>Genre</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1179</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#skipCounter">
+		<rdfs:label>Increase if the media is skip while playing</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1191</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/nmm#uPnPShared">
+		<rdfs:comment>Tells the uPnP MediaServer (e.g. Rygel) whether to export/share the resource or not</rdfs:comment>
+		<rdfs:label>uPnP shared</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1633</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.tracker-project.org/temp/nmm#">
+	</tracker:Ontology >
+	<nmm:Flash rdf:about="http://www.tracker-project.org/temp/nmm#flash-off">
+	</nmm:Flash >
+	<nmm:Flash rdf:about="http://www.tracker-project.org/temp/nmm#flash-on">
+	</nmm:Flash >
+	<nmm:MeteringMode rdf:about="http://www.tracker-project.org/temp/nmm#metering-mode-average">
+	</nmm:MeteringMode >
+	<nmm:MeteringMode rdf:about="http://www.tracker-project.org/temp/nmm#metering-mode-center-weighted-average">
+	</nmm:MeteringMode >
+	<nmm:MeteringMode rdf:about="http://www.tracker-project.org/temp/nmm#metering-mode-multispot">
+	</nmm:MeteringMode >
+	<nmm:MeteringMode rdf:about="http://www.tracker-project.org/temp/nmm#metering-mode-other">
+	</nmm:MeteringMode >
+	<nmm:MeteringMode rdf:about="http://www.tracker-project.org/temp/nmm#metering-mode-partial">
+	</nmm:MeteringMode >
+	<nmm:MeteringMode rdf:about="http://www.tracker-project.org/temp/nmm#metering-mode-pattern">
+	</nmm:MeteringMode >
+	<nmm:MeteringMode rdf:about="http://www.tracker-project.org/temp/nmm#metering-mode-spot">
+	</nmm:MeteringMode >
+	<nmm:RadioModulation rdf:about="http://www.tracker-project.org/temp/nmm#radio-modulation-am">
+	</nmm:RadioModulation >
+	<nmm:RadioModulation rdf:about="http://www.tracker-project.org/temp/nmm#radio-modulation-fm">
+	</nmm:RadioModulation >
+	<nmm:WhiteBalance rdf:about="http://www.tracker-project.org/temp/nmm#white-balance-auto">
+	</nmm:WhiteBalance >
+	<nmm:WhiteBalance rdf:about="http://www.tracker-project.org/temp/nmm#white-balance-manual">
+	</nmm:WhiteBalance >
+</rdf:RDF>

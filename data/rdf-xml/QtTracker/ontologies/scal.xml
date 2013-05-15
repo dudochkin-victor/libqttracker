@@ -1,0 +1,571 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#AccessLevel">
+		<rdfs:comment>Access classification for a calendar item: public, private or confidential. Use the predefined instances in the ontology</rdfs:comment>
+		<rdfs:label>Access level</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1201</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#AttendanceStatus">
+		<rdfs:comment>Predefined set of instances: needs-action, accepted...</rdfs:comment>
+		<rdfs:label>Attendance status values (partstat in ical spec)</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1410</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#Attendee">
+		<rdfs:comment>Contact related with a calendar item</rdfs:comment>
+		<rdfs:label>Event attendee</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1629</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#attendanceStatus">
+		<rdfs:comment>Status of contact's assitance to the event</rdfs:comment>
+		<rdfs:label>Attendance status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1274</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#AttendanceStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#attendeeRole">
+		<rdfs:comment>Property to link with an attendee role instance</rdfs:comment>
+		<rdfs:label>Attendee role in the event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1598</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#AttendeeRole"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#attendeeContact">
+		<rdfs:comment>Link from the attendee to the actual contact</rdfs:comment>
+		<rdfs:label>Link to contact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1252</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#rsvp">
+		<rdfs:comment>Link an attendee with his rsvp status</rdfs:comment>
+		<rdfs:label>rsvp</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1609</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#RSVPValues"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#calendarUserType">
+		<rdfs:comment>Link an attendee instance with a cutype</rdfs:comment>
+		<rdfs:label>Calendar user type</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1571</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#CalendarUserType"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#member">
+		<rdfs:comment>To specify the group or list membership of the calendar user specified by the property</rdfs:comment>
+		<rdfs:label>Member</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1759</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#delegated-to">
+		<rdfs:comment>to indicate the calendar users that the original request was delegated to</rdfs:comment>
+		<rdfs:label>Delegated-to</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1057</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#delegated-from">
+		<rdfs:comment>to indicate the calendar users whom the request was delegated from</rdfs:comment>
+		<rdfs:label>Delegated-from</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1136</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#sent-by">
+		<rdfs:comment>to indicate whom is acting on behalf of the ATTENDEE</rdfs:comment>
+		<rdfs:label>Sent-by</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1741</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#AttendeeRole">
+		<rdfs:comment>Predefined set of instances: chain, req-participant...</rdfs:comment>
+		<rdfs:label>Attendee role in the event (Role in ical spec)</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1296</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#Calendar">
+		<rdfs:comment>Group calendar items</rdfs:comment>
+		<rdfs:label>Calendar</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1379</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#CalendarAlarm">
+		<rdfs:comment>An alam according to the ical definition</rdfs:comment>
+		<rdfs:label>Alarm</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1266</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#alarmOffset">
+		<rdfs:comment>Offset of the alarm respect to the Calendar item start time. In minutes</rdfs:comment>
+		<rdfs:label>Alarm offset</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1798</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarAlarm"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#alarmAttendee">
+		<rdfs:comment>Alarms can have attendees. RFC has told</rdfs:comment>
+		<rdfs:label>Alarm attendee</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1927</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarAlarm"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#CalendarItem">
+		<rdfs:comment>Superclass of the calendar entities</rdfs:comment>
+		<rdfs:label>Calendar item</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1540</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#belongsToCalendar">
+		<rdfs:comment>Relation between a calendar item and a calendar.</rdfs:comment>
+		<rdfs:label>Belongs to calentar</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1722</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isLogicalPartOf"/>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Calendar"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#textLocation">
+		<rdfs:comment>Textual description of location for an item. Sec. 4.8.1.7. Use better mlo:location</rdfs:comment>
+		<rdfs:label>Text Location</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1787</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#resources">
+		<rdfs:comment>Resources required for the calendar item (equipment, installations...)</rdfs:comment>
+		<rdfs:label>Resources</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1783</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#transparency">
+		<rdfs:comment>Time transparency for the item (busy time or transparent)</rdfs:comment>
+		<rdfs:label>Transparency</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1271</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#TransparencyValues"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#attendee">
+		<rdfs:comment>Link of an Calendar item with an attendee, that can have different status</rdfs:comment>
+		<rdfs:label>Attendee</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1796</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#contact">
+		<rdfs:comment>Contact related with the Calendar Item (spec 4.8.4.2)</rdfs:comment>
+		<rdfs:label>Contact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1075</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Attendee"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#calendarItemAlarm">
+		<rdfs:comment>Link between calendar item and alarm</rdfs:comment>
+		<rdfs:label>CalendarItem-alarm link</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1353</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#CalendarAlarm"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#access">
+		<rdfs:comment>Access classification: public private...</rdfs:comment>
+		<rdfs:label>Access</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1053</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#AccessLevel"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#start">
+		<rdfs:comment>Start time of a calendar item</rdfs:comment>
+		<rdfs:label>start time</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1641</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#TimePoint"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#end">
+		<rdfs:comment>End time of a calendar item. Set always a value to avoid OPTIONALS</rdfs:comment>
+		<rdfs:label>end time</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1058</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#TimePoint"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#isAllDay">
+		<rdfs:comment>True if the event applies to the whole day</rdfs:comment>
+		<rdfs:label>Whole day calendar item</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1180</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#priority">
+		<rdfs:comment>Relative priority of th event</rdfs:comment>
+		<rdfs:label>Priority</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1794</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#attachment">
+		<rdfs:comment>Item attached to a calendar item</rdfs:comment>
+		<rdfs:label>Attachment</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1517</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#rrule">
+		<rdfs:comment>Repeating pattern for recurring CalendarItems</rdfs:comment>
+		<rdfs:label>recurrence rule</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1825</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#RecurrenceRule"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#rdate">
+		<rdfs:comment>One of more concrete ocurrences of the calendar item using ';' as separator. Included for backward compatibility. Use rrule instead</rdfs:comment>
+		<rdfs:label>Recurrence date</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1968</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#exceptionRDate">
+		<rdfs:comment>One of more concrete exceptions of the calendar item using ';' as separator. Included for backward compatibility. Use rrule with exception='true' instead</rdfs:comment>
+		<rdfs:label>Recurrence date exception</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1856</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#CalendarUserType">
+		<rdfs:comment>Predefined set of instance for calendar user types</rdfs:comment>
+		<rdfs:label>Calendar user type instances (CUTYPE in ical spec)</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1705</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#Event">
+		<rdfs:comment>An Event according the ical definition</rdfs:comment>
+		<rdfs:label>Event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1989</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#eventStatus">
+		<rdfs:comment>Link of an event with its status</rdfs:comment>
+		<rdfs:label>event status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1017</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Event"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#EventStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#EventStatus">
+		<rdfs:comment>Predefined instances of status for events</rdfs:comment>
+		<rdfs:label>Calendar event status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1657</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#Journal">
+		<rdfs:comment>A Journal entry according to the ical definition</rdfs:comment>
+		<rdfs:label>Journal</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1122</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#journalStatus">
+		<rdfs:comment>Link of an journal with its status</rdfs:comment>
+		<rdfs:label>journal status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1923</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Journal"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#JournalStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#JournalStatus">
+		<rdfs:comment>Predefined instances of status for journals</rdfs:comment>
+		<rdfs:label>Calendar journal status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1869</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#RSVPValues">
+		<rdfs:comment>Predefined set of instances: Yes/No (not boolean to allow undefined values)</rdfs:comment>
+		<rdfs:label>RSVP Values</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1061</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#RecurrenceRule">
+		<rdfs:comment>Representation of repeating patterns</rdfs:comment>
+		<rdfs:label>Recurrence rule</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1212</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#recurrencePattern">
+		<rdfs:comment>Recurrence pattern enforcing all (14) the fields in RFC2445/4.3.10, with ';' as separator: freq;until;count;interval;bysecond;byminute;byhour;byday;bymonthday;byyearday;byweekno;bymonth;bysetpos;wkst </rdfs:comment>
+		<rdfs:label>Recurrence pattern</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1576</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#recurrenceStartDate">
+		<rdfs:comment>Reuse here the start-date instance of the base event for this recurrence rule. This property makes possible to retrieve all required data to expand the recurrence rule in one short query</rdfs:comment>
+		<rdfs:label>Recurrence pattern start date</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1153</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#TimePoint"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#exception">
+		<rdfs:comment>True if this recurrence rules must be interpreted as an exception</rdfs:comment>
+		<rdfs:label>recurrence rule exception</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1617</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#RecurrenceRule"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#TimePoint">
+		<rdfs:comment>Point in time</rdfs:comment>
+		<rdfs:label>Time item</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1531</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#dateTime">
+		<rdfs:comment>Date and time in UTC</rdfs:comment>
+		<rdfs:label>Time</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1206</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#TimePoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#TimeZone">
+		<rdfs:comment>Timezone in the OLSON DB used as reference in the time. Use 'floating' for floating times or study the convenience of a boolean 'isFloating' attribute.</rdfs:comment>
+		<rdfs:label>Reference time zone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1961</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#TimePoint"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#Todo">
+		<rdfs:comment>A ToDo according the ical definition</rdfs:comment>
+		<rdfs:label>Todo</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1133</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/scal#CalendarItem"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#todoStatus">
+		<rdfs:comment>Link of an todo with its status</rdfs:comment>
+		<rdfs:label>todo status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1833</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Todo"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#TodoStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#due">
+		<rdfs:comment>Due time for a task to be completed</rdfs:comment>
+		<rdfs:label>Due</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1692</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Todo"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#TimePoint"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#completed">
+		<rdfs:comment>Time when the task was completed</rdfs:comment>
+		<rdfs:label>Completed</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1145</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Todo"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#TimePoint"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#percentComplete">
+		<rdfs:comment>% of the task completed</rdfs:comment>
+		<rdfs:label>Percentage completed</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1474</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/scal#Todo"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#TodoStatus">
+		<rdfs:comment>Predefined instances of status for todos</rdfs:comment>
+		<rdfs:label>Calendar todo status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1056</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/scal#TransparencyValues">
+		<rdfs:comment>Predefined instances of time transparency for the calendar items</rdfs:comment>
+		<rdfs:label>Transparency values</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1606</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#anniversary">
+		<rdfs:comment>links a contact with the calendar event of an anniversary. (SCAL version)</rdfs:comment>
+		<rdfs:label>anniversary event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1361</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Event"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#birthday">
+		<rdfs:comment>links a contact with the calendar event of his birthday. (SCAL version)</rdfs:comment>
+		<rdfs:label>birthday event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1510</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Event"/>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.tracker-project.org/temp/scal#">
+	</tracker:Ontology >
+	<scal:AccessLevel rdf:about="http://www.tracker-project.org/temp/scal#access-level-confidential">
+	</scal:AccessLevel >
+	<scal:AccessLevel rdf:about="http://www.tracker-project.org/temp/scal#access-level-private">
+	</scal:AccessLevel >
+	<scal:AccessLevel rdf:about="http://www.tracker-project.org/temp/scal#access-level-public">
+	</scal:AccessLevel >
+	<scal:AttendanceStatus rdf:about="http://www.tracker-project.org/temp/scal#attendance-accepted">
+	</scal:AttendanceStatus >
+	<scal:AttendanceStatus rdf:about="http://www.tracker-project.org/temp/scal#attendance-completed">
+	</scal:AttendanceStatus >
+	<scal:AttendanceStatus rdf:about="http://www.tracker-project.org/temp/scal#attendance-declined">
+	</scal:AttendanceStatus >
+	<scal:AttendanceStatus rdf:about="http://www.tracker-project.org/temp/scal#attendance-delegated">
+	</scal:AttendanceStatus >
+	<scal:AttendanceStatus rdf:about="http://www.tracker-project.org/temp/scal#attendance-in-process">
+	</scal:AttendanceStatus >
+	<scal:AttendanceStatus rdf:about="http://www.tracker-project.org/temp/scal#attendance-needs-action">
+	</scal:AttendanceStatus >
+	<scal:AttendanceStatus rdf:about="http://www.tracker-project.org/temp/scal#attendance-tentative">
+	</scal:AttendanceStatus >
+	<scal:AttendeeRole rdf:about="http://www.tracker-project.org/temp/scal#attendee-role-chair">
+	</scal:AttendeeRole >
+	<scal:AttendeeRole rdf:about="http://www.tracker-project.org/temp/scal#attendee-role-non-participant">
+	</scal:AttendeeRole >
+	<scal:AttendeeRole rdf:about="http://www.tracker-project.org/temp/scal#attendee-role-opt-participant">
+	</scal:AttendeeRole >
+	<scal:AttendeeRole rdf:about="http://www.tracker-project.org/temp/scal#attendee-role-req-participant">
+	</scal:AttendeeRole >
+	<scal:CalendarUserType rdf:about="http://www.tracker-project.org/temp/scal#cutype-group">
+	</scal:CalendarUserType >
+	<scal:CalendarUserType rdf:about="http://www.tracker-project.org/temp/scal#cutype-individual">
+	</scal:CalendarUserType >
+	<scal:CalendarUserType rdf:about="http://www.tracker-project.org/temp/scal#cutype-resource">
+	</scal:CalendarUserType >
+	<scal:CalendarUserType rdf:about="http://www.tracker-project.org/temp/scal#cutype-room">
+	</scal:CalendarUserType >
+	<scal:CalendarUserType rdf:about="http://www.tracker-project.org/temp/scal#cutype-unknown">
+	</scal:CalendarUserType >
+	<scal:EventStatus rdf:about="http://www.tracker-project.org/temp/scal#event-status-cancelled">
+	</scal:EventStatus >
+	<scal:EventStatus rdf:about="http://www.tracker-project.org/temp/scal#event-status-confirmed">
+	</scal:EventStatus >
+	<scal:EventStatus rdf:about="http://www.tracker-project.org/temp/scal#event-status-tentative">
+	</scal:EventStatus >
+	<scal:JournalStatus rdf:about="http://www.tracker-project.org/temp/scal#journal-status-cancelled">
+	</scal:JournalStatus >
+	<scal:JournalStatus rdf:about="http://www.tracker-project.org/temp/scal#journal-status-completed">
+	</scal:JournalStatus >
+	<scal:JournalStatus rdf:about="http://www.tracker-project.org/temp/scal#journal-status-in-process">
+	</scal:JournalStatus >
+	<scal:JournalStatus rdf:about="http://www.tracker-project.org/temp/scal#journal-status-needs-action">
+	</scal:JournalStatus >
+	<scal:RSVPValues rdf:about="http://www.tracker-project.org/temp/scal#rsvp-value-false">
+	</scal:RSVPValues >
+	<scal:RSVPValues rdf:about="http://www.tracker-project.org/temp/scal#rsvp-value-true">
+	</scal:RSVPValues >
+	<scal:TodoStatus rdf:about="http://www.tracker-project.org/temp/scal#todo-status-cancelled">
+	</scal:TodoStatus >
+	<scal:TodoStatus rdf:about="http://www.tracker-project.org/temp/scal#todo-status-completed">
+	</scal:TodoStatus >
+	<scal:TodoStatus rdf:about="http://www.tracker-project.org/temp/scal#todo-status-in-process">
+	</scal:TodoStatus >
+	<scal:TodoStatus rdf:about="http://www.tracker-project.org/temp/scal#todo-status-needs-action">
+	</scal:TodoStatus >
+	<scal:TransparencyValues rdf:about="http://www.tracker-project.org/temp/scal#transparency-opaque">
+	</scal:TransparencyValues >
+	<scal:TransparencyValues rdf:about="http://www.tracker-project.org/temp/scal#transparency-transparent">
+	</scal:TransparencyValues >
+</rdf:RDF>

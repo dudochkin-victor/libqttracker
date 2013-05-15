@@ -1,0 +1,4 @@
+usr/bin/*
+usr/share/libqttracker-tests/tests.xml
+usr/share/libqttracker-tests/data/*
+usr/share/libqttracker-tests/benchmarking/*

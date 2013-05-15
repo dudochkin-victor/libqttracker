@@ -1,0 +1,29 @@
+NEW in 1~6.12.6 - 2010-12-07
+============================
+
+The changes are:
+
+  * Refactor libqttracker test suites for increasing reliability
+  * Fixes: NB#203725 - Slow streaming query performance
+  * Fixes: NB#191946 - Memory leaks when adding SMS messages
+  * Fixes: NB#206261 - Signals for inserted, removed or updated videos aren't emitted
+  * Fixes: NB#207809 - [browser-blocker] Hang in SopranoLive::SequenceOperation::waitForStarted
+  * Fixes: NB#202932 - call-ui is leaking memory during NFT-call tests
+
+NEW in 1~6.12.5 - 2010-12-01
+============================
+
+The changes are:
+
+  * Benchmark tests no longer fail, only warn, on incorrect result counts
+  * Query counts disabled by default in unit tests.
+  * Updates tracker ontologies to tracker 0.9.29
+  * Implements direct access to tracker with QSparql backend
+    The direct access method should provide better performance, but libqttracker performance test results have still been inconclusive.
+    Libqttracker passes all of its automated tests when using the new access method, but it is still possible that using it exposes new problems.
+    Because of this the new access method has to be explicitily activated by setting libqttracker service attribute like below.
+    By default the still fully operational DBUS access to tracker is used.
+    ::tracker()->setServiceAttribute("tracker_access_method", "QSPARQL_DIRECT");
+
+
+

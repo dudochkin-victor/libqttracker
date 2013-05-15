@@ -1,0 +1,57 @@
+
+# Instructions
+
+** Importing test data
+
+To run these benchmarks you will need the test data. This
+is part of the tracker source code which can be found at:
+
+git://git.gnome.org/tracker
+
+To generate the test data go to the 'test/functional-tests'
+directory within the tracker source tree. Call the shell
+script:
+
+        > bash helper-test-data.sh
+
+This script generates many ttl files in the 'ttl' folder.
+To import this in to tracker call:
+
+        > tracker-import ttl/*.ttl
+
+It is best that the tracker database is empty before this
+import to ensure clean results.
+
+        ** WARNING: This will remove all the data in
+           your tracker database. **
+
+        > tracker-control -r
+
+## Getting the Tracker test data.
+
+The runall script needs a copy of the HTML results from the
+tracker tests. You will need to look at the tracker repository
+for information on running these tests.
+
+Once you have the html file run:
+
+        > python tidyup.py tracker-results.html > tracker-results.xhtml
+
+This is to fix any formatting errors in the html.
+
+## Running the tests
+
+To run all the tests and print a html report to the standard
+output call:
+
+        > python runall.py tracker-results.xhtml
+
+## Debugging the tests
+
+To debug the tests it is best to run them individually. Placing
+`::tracker()->setVerbosity(2);` at the beginning of a test will
+cause the raw SPARQL to be output during testing. It is best
+to run only a single iteration during testing and sometimes only
+a single faulty benchmark.
+
+        > rtcom/rtcom-benchmark test_rtcom_002 -iterations 1

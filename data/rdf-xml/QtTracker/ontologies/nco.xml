@@ -1,0 +1,1184 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation">
+		<rdfs:comment>Aggregates three properties defined in RFC2426. Originally all three were attached directly to a person. One person could have only one title and one role within one organization. This class is intended to lift this limitation.</rdfs:comment>
+		<rdfs:label>Affiliation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1059</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#department">
+		<rdfs:comment>Department. The organizational unit within the organization.</rdfs:comment>
+		<rdfs:label>department</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1819</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#org">
+		<rdfs:comment>Name of an organization or a unit within an organization the object represented by a Contact is associated with. An equivalent of the 'ORG' property defined in RFC 2426 Sec. 3.5.5</rdfs:comment>
+		<rdfs:label>org</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1043</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#OrganizationContact"/>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#title">
+		<rdfs:label>title</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1815</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>10</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#role">
+		<rdfs:label>role</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1413</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#AuthorizationStatus">
+		<rdfs:comment>Predefined instances to indicate the auth status: yes, no, requested</rdfs:comment>
+		<rdfs:label>IM Address approval status</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1650</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#BbsNumber">
+		<rdfs:comment>A Bulletin Board System (BBS) phone number. Inspired by the (TYPE=bbsl) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</rdfs:comment>
+		<rdfs:label>BbsNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1931</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ModemNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#CarPhoneNumber">
+		<rdfs:comment>A car phone number. Inspired by the (TYPE=car) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</rdfs:comment>
+		<rdfs:label>CarPhoneNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1937</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VoicePhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#CellPhoneNumber">
+		<rdfs:comment>A cellular phone number. Inspired by the (TYPE=cell) parameter of the TEL property as defined in RFC 2426 sec  3.3.1. Usually a cellular phone can accept voice calls as well as textual messages (SMS), therefore this class has two superclasses.</rdfs:comment>
+		<rdfs:label>CellPhoneNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1488</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#MessagingNumber"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VoicePhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact">
+		<rdfs:comment>A Contact. A piece of data that can provide means to identify or communicate with an entity.</rdfs:comment>
+		<rdfs:label>Contact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1836</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#key">
+		<rdfs:comment>An encryption key attached to a contact. Inspired by the KEY property defined in RFC 2426 sec. 3.7.2</rdfs:comment>
+		<rdfs:label>key</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1970</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contactUID">
+		<rdfs:comment>A value that represents a globally unique  identifier corresponding to the individual or resource associated with the Contact. An equivalent of the 'UID' property defined in RFC 2426 Sec. 3.6.7</rdfs:comment>
+		<rdfs:label>contactUID</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1501</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contactLocalUID">
+		<rdfs:comment>Unique ID for the contact in the local storage</rdfs:comment>
+		<rdfs:label>local contact UID</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1316</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasLocation">
+		<rdfs:comment>Geographical location of the contact. Inspired by the 'GEO' property specified in RFC 2426 Sec. 3.4.2</rdfs:comment>
+		<rdfs:label>hasLocation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1554</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nickname">
+		<rdfs:comment>A nickname of the Object represented by this Contact. This is an equivalen of the 'NICKNAME' property as defined in RFC 2426 Sec. 3.1.3.</rdfs:comment>
+		<rdfs:label>nickname</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1290</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note">
+		<rdfs:comment>A note about the object represented by this Contact. An equivalent for the 'NOTE' property defined in RFC 2426 Sec. 3.6.2</rdfs:comment>
+		<rdfs:label>note</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1052</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>4</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#representative">
+		<rdfs:comment>An object that represent an object represented by this Contact. Usually this property is used to link a Contact to an organization, to a contact to the representative of this organization the user directly interacts with. An equivalent for the 'AGENT' property defined in RFC 2426 Sec. 3.5.4</rdfs:comment>
+		<rdfs:label>representative</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1778</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname">
+		<rdfs:comment>To specify the formatted text corresponding to the name of the object the Contact represents. An equivalent of the FN property as defined in RFC 2426 Sec. 3.1.1.</rdfs:comment>
+		<rdfs:label>fullname</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1909</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>6</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#photo">
+		<rdfs:comment>Photograph attached to a Contact. The DataObject refered to by this property is usually interpreted as an nfo:Image. Inspired by the PHOTO property defined in RFC 2426 sec. 3.1.4</rdfs:comment>
+		<rdfs:label>photo</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1287</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate">
+		<rdfs:comment>Birth date of the object represented by this Contact. An equivalent of the 'BDAY' property as defined in RFC 2426 Sec. 3.1.5.</rdfs:comment>
+		<rdfs:label>birthDate</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1134</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#belongsToGroup">
+		<rdfs:comment>Links a Contact with a ContactGroup it belongs to.</rdfs:comment>
+		<rdfs:label>addressLocation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1240</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#sound">
+		<rdfs:comment>Sound clip attached to a Contact. The DataObject refered to by this property is usually interpreted as an nfo:Audio. Inspired by the SOUND property defined in RFC 2425 sec. 3.6.6.</rdfs:comment>
+		<rdfs:label>sound</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1047</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#birthday">
+		<rdfs:comment>links a contact with the calendar event of his birthday. (NCAL version)</rdfs:comment>
+		<rdfs:label>birthday event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1464</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#anniversary">
+		<rdfs:comment>links a contact with the calendar event of an anniversary. (NCAL version)</rdfs:comment>
+		<rdfs:label>anniversary event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1448</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#birthday">
+		<rdfs:comment>links a contact with the calendar event of his birthday. (SCAL version)</rdfs:comment>
+		<rdfs:label>birthday event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1510</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Event"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/scal#anniversary">
+		<rdfs:comment>links a contact with the calendar event of an anniversary. (SCAL version)</rdfs:comment>
+		<rdfs:label>anniversary event</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1361</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/scal#Event"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup">
+		<rdfs:comment>A group of Contacts. Could be used to express a group in an addressbook or on a contact list of an IM application. One contact can belong to many groups.</rdfs:comment>
+		<rdfs:label>ContactGroup</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1688</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contactGroupName">
+		<rdfs:comment>The name of the contact group. This property was NOT defined in the VCARD standard. See documentation of the 'ContactGroup' class for details</rdfs:comment>
+		<rdfs:label>contactGroupName</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1268</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#contactGroupAudioRingtone">
+		<rdfs:comment>Audio file linked with a contact group</rdfs:comment>
+		<rdfs:label>Audio ringtone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1226</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#contactGroupVideoRingtone">
+		<rdfs:comment>Video file linked with a contact group</rdfs:comment>
+		<rdfs:label>Video ringtone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>2053</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#contactGroupVibrationRingtone">
+		<rdfs:comment>File linked with a contact group to vibrate on a pleasant frequency</rdfs:comment>
+		<rdfs:label>Vibration ringtone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>2066</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactList">
+		<rdfs:comment>A contact list, this class represents an addressbook or a contact list of an IM application. Contacts inside a contact list can belong to contact groups.</rdfs:comment>
+		<rdfs:label>ContactList</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1683</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#containsContact">
+		<rdfs:comment>A property used to group contacts into contact groups. This property was NOT defined in the VCARD standard. See documentation for the 'ContactList' class for details</rdfs:comment>
+		<rdfs:label>containsContact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1063</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactList"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactListDataObject"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactListDataObject">
+		<rdfs:comment>An entity occuring on a contact list (usually interpreted as an nco:Contact)</rdfs:comment>
+		<rdfs:label>ContactListDataObject</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1087</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactMedium">
+		<rdfs:comment>A superclass for all contact media - ways to contact an entity represented by a Contact instance. Some of the subclasses of this class (the various kinds of telephone numbers and postal addresses) have been inspired by the values of the TYPE parameter of ADR and TEL properties defined in RFC 2426 sec. 3.2.1. and 3.3.1 respectively. Each value is represented by an appropriate subclass with two major exceptions TYPE=home and TYPE=work. They are to be expressed by the roles these contact media are attached to i.e. contact media with TYPE=home parameter are to be attached to the default role (nco:Contact or nco:PersonContact), whereas media with TYPE=work parameter should be attached to nco:Affiliation or nco:OrganizationContact.</rdfs:comment>
+		<rdfs:label>ContactMedium</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1527</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contactMediumComment">
+		<rdfs:comment>A comment about the contact medium.</rdfs:comment>
+		<rdfs:label>contactMediumComment</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1952</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactMedium"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#DomesticDeliveryAddress">
+		<rdfs:comment>Domestic Delivery Addresse. Class inspired by TYPE=dom parameter of the ADR property defined in RFC 2426 sec. 3.2.1</rdfs:comment>
+		<rdfs:label>DomesticDeliveryAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1597</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#EmailAddress">
+		<rdfs:comment>An email address. The recommended best practice is to use mailto: uris for instances of this class.</rdfs:comment>
+		<rdfs:label>EmailAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1561</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactMedium"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#emailAddress">
+		<rdfs:label>emailAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1892</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#EmailAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#FaxNumber">
+		<rdfs:comment>A fax number. Inspired by the (TYPE=fax) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</rdfs:comment>
+		<rdfs:label>FaxNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1325</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Gender">
+		<rdfs:comment>Gender. Instances of this class may include male and female.</rdfs:comment>
+		<rdfs:label>Gender</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1830</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount">
+		<rdfs:comment>An account in an Instant Messaging system. This refers to IM accounts of the user 'me'.</rdfs:comment>
+		<rdfs:label>IMAccount</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1681</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasIMContact">
+		<rdfs:comment>Indicates that this Instant Messaging account has the specified Instant Messaging address in the contact list.</rdfs:comment>
+		<rdfs:label>hasIMAccount</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1203</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imAccountAddress">
+		<rdfs:comment>Instant Messaging address of this IM account. The user 'me' can send and receive messages from this IM address.</rdfs:comment>
+		<rdfs:label>imAccountAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1358</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imAccountType">
+		<rdfs:comment>Type of the IM account. This may be the name of the service that provides the IM functionality. Examples might include Jabber, ICQ, MSN etc</rdfs:comment>
+		<rdfs:label>imAccountType</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1508</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imDisplayName">
+		<rdfs:comment>The user-visible name of this account. This SHOULD be chosen by the user at account creation time. The account creation user interface is responsible for setting a reasonable default value in the user's locale; something like	'Jabber (bob@example.com)' would be sensible.</rdfs:comment>
+		<rdfs:label>displayname</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1026</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imEnabled">
+		<rdfs:comment></rdfs:comment>
+		<rdfs:label>enabled</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1985</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imAccountAvatar">
+		<rdfs:comment>The picture the user wants to show to others in this account. This has been replaced by nco:imAvatar.</rdfs:comment>
+		<rdfs:label>account avatar</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1172</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress">
+		<rdfs:comment>An instant messaging address such as xmpp:foo@bar.com.</rdfs:comment>
+		<rdfs:label>IM Address</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1755</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactMedium"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imID">
+		<rdfs:comment>Identifier of the IM account. Examples of such identifier might include ICQ UINs, Jabber IDs, Skype names etc.</rdfs:comment>
+		<rdfs:label>imID</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1425</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#identifier"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imNickname">
+		<rdfs:comment>A nickname attached to a particular IM address.</rdfs:comment>
+		<rdfs:label>imNickname</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1387</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imAvatar">
+		<rdfs:comment>A picture attached to a particular IM address.</rdfs:comment>
+		<rdfs:label>imAvatar</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1345</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imProtocol">
+		<rdfs:comment>Protocol of the account ('skype', 'gtalk', 'icq', ...)</rdfs:comment>
+		<rdfs:label>imProtocol</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1893</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imStatusMessage">
+		<rdfs:comment>A feature common in most IM systems. A message left by the user for all his/her contacts to see.</rdfs:comment>
+		<rdfs:label>imStatusMessage</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1451</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imPresence">
+		<rdfs:label>imPresence</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1731</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PresenceStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presenceLastModified">
+		<rdfs:comment>Timestamp of the last change in the presence status</rdfs:comment>
+		<rdfs:label>Presence last modified</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1718</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imCapability">
+		<rdfs:comment>Capabilities of an IM Contact, what can we interact with him</rdfs:comment>
+		<rdfs:label>imContact Capability</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1814</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMCapability"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imAddressAuthStatusFrom">
+		<rdfs:comment>Has the other end authorize to receive information about his changes</rdfs:comment>
+		<rdfs:label>IM Address authorization status in the remote end</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1694</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#AuthorizationStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imAddressAuthStatusTo">
+		<rdfs:comment>Do i authorize this im Account to receive my information</rdfs:comment>
+		<rdfs:label>IM Address authorization status in the local end</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1211</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#AuthorizationStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMCapability">
+		<rdfs:comment>Features of a certain IM connection (depends on the IMAccount implementation used by the Contact)</rdfs:comment>
+		<rdfs:label>IM Capabilities</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1108</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMContact">
+		<rdfs:comment>Contact coming from an IM Account. This has been deprecated in favor of using nco:PersonContact with nco:hasIMAddress.</rdfs:comment>
+		<rdfs:label>IM Contact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1446</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fromIMAccount">
+		<rdfs:comment>Indicates that an Instant Messaging account owned by an entity represented by this contact. This has been replaced by nco:fromIMAccount.</rdfs:comment>
+		<rdfs:label>hasIMAccount</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1301</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imContactId">
+		<rdfs:comment>ID of the contact in the service like my.friend@xmail.com. This has been replaced by nco:imId.</rdfs:comment>
+		<rdfs:label>imContactId</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1324</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imContactNickname">
+		<rdfs:comment>Visible nickname of the user in a service. This has been replaced by nco:imNickname.</rdfs:comment>
+		<rdfs:label>imContactNickname</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1308</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imContactStatusMessage">
+		<rdfs:comment>Status message of the user in a service. This has been replaced by nco:imStatusMessage.</rdfs:comment>
+		<rdfs:label>imContactStatusMessage</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1645</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imContactPresence">
+		<rdfs:comment>Online availability of the user in a service. This has been replaced by nco:imPresence.</rdfs:comment>
+		<rdfs:label>imContactPresence</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1640</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PresenceStatus"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imContactCapability">
+		<rdfs:comment>Capabilities of an IM Contact, what can we interact with him. This has been replaced by nco:imCapability.</rdfs:comment>
+		<rdfs:label>imContact Capability</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1854</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMCapability"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#InternationalDeliveryAddress">
+		<rdfs:comment>International Delivery Addresse. Class inspired by TYPE=intl parameter of the ADR property defined in RFC 2426 sec. 3.2.1</rdfs:comment>
+		<rdfs:label>InternationalDeliveryAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1044</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IsdnNumber">
+		<rdfs:comment>An ISDN phone number. Inspired by the (TYPE=isdn) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</rdfs:comment>
+		<rdfs:label>IsdnNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1884</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VoicePhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#MessagingNumber">
+		<rdfs:comment>A number that can accept textual messages.</rdfs:comment>
+		<rdfs:label>MessagingNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1428</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#MetaContact">
+		<rdfs:comment>A metacontact groups PersonContacts and IMContacts coming from different sources, indicating that are the same entity in the real world. This has been deprecated in favor of merged contacts. Linking multiple contacts to a single person without merging is the task of pimo:Person and pimo:groundingOccurrence.</rdfs:comment>
+		<rdfs:label>MetaContact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1028</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ModemNumber">
+		<rdfs:comment>A modem phone number. Inspired by the (TYPE=modem) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</rdfs:comment>
+		<rdfs:label>ModemNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1200</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#OrganizationContact">
+		<rdfs:comment>A Contact that denotes on Organization.</rdfs:comment>
+		<rdfs:label>OrganizationContact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1009</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#logo">
+		<rdfs:comment>Logo of a company. Inspired by the LOGO property defined in RFC 2426 sec. 3.5.3</rdfs:comment>
+		<rdfs:label>logo</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1635</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#OrganizationContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PagerNumber">
+		<rdfs:comment>A pager phone number. Inspired by the (TYPE=pager) parameter of the TEL property as defined in RFC 2426 sec  3.3.1.</rdfs:comment>
+		<rdfs:label>PagerNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1258</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#MessagingNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ParcelDeliveryAddress">
+		<rdfs:comment>Parcel Delivery Addresse. Class inspired by TYPE=parcel parameter of the ADR property defined in RFC 2426 sec. 3.2.1</rdfs:comment>
+		<rdfs:label>ParcelDeliveryAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1795</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PcsNumber">
+		<rdfs:comment>Personal Communication Services Number. A class inspired by the TYPE=pcs parameter of the TEL property defined in RFC 2426 sec. 3.3.1</rdfs:comment>
+		<rdfs:label>PcsNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1102</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VoicePhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact">
+		<rdfs:comment>A Contact that denotes a Person. A person can have multiple Affiliations.</rdfs:comment>
+		<rdfs:label>PersonContact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1535</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#metacontact">
+		<rdfs:comment>Link a single contact with a metacontact</rdfs:comment>
+		<rdfs:label>metacontact</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1389</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#MetaContact"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificSuffix">
+		<rdfs:comment>A suffix for the name of the Object represented by the given object. See documentation for the 'nameFamily' for details.</rdfs:comment>
+		<rdfs:label>nameHonorificSuffix</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1546</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameFamily">
+		<rdfs:comment>The family name of an Object represented by this Contact. These applies to people that have more than one given name. The 'first' one is considered 'the' given name (see nameGiven) property. All additional ones are considered 'additional' names. The name inherited from parents is the 'family name'. e.g. For Dr. John Phil Paul Stevenson Jr. M.D. A.C.P. we have contact with: honorificPrefix: 'Dr.', nameGiven: 'John', nameAdditional: 'Phil', nameAdditional: 'Paul', nameFamily: 'Stevenson', honorificSuffix: 'Jr.', honorificSuffix: 'M.D.', honorificSuffix: 'A.C.P.'. These properties form an equivalent of the compound 'N' property as defined in RFC 2426 Sec. 3.1.2</rdfs:comment>
+		<rdfs:label>nameFamily</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1661</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificPrefix">
+		<rdfs:comment>A prefix for the name of the object represented by this Contact. See documentation for the 'nameFamily' property for details.</rdfs:comment>
+		<rdfs:label>nameHonorificPrefix</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1812</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasIMAccount">
+		<rdfs:comment>Indicates that an Instant Messaging account owned by an entity represented by this contact.</rdfs:comment>
+		<rdfs:label>hasIMAccount</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1775</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAccount"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameGiven">
+		<rdfs:comment>The given name for the object represented by this Contact. See documentation for 'nameFamily' property for details.</rdfs:comment>
+		<rdfs:label>nameGiven</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1544</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameAdditional">
+		<rdfs:comment>Additional given name of an object represented by this contact. See documentation for 'nameFamily' property for details.</rdfs:comment>
+		<rdfs:label>nameAdditional</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1910</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hobby">
+		<rdfs:comment>A hobby associated with a PersonContact. This property can be used to express hobbies and interests.</rdfs:comment>
+		<rdfs:label>hobby</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1710</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#gender">
+		<rdfs:comment>Gender of the given contact.</rdfs:comment>
+		<rdfs:label>gender</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1799</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Gender"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasAffiliation">
+		<rdfs:comment>Links a PersonContact with an Affiliation.</rdfs:comment>
+		<rdfs:label>hasAffiliation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1784</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#contactAudioRingtone">
+		<rdfs:comment>Audio file linked with a contact</rdfs:comment>
+		<rdfs:label>Audio ringtone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1818</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#contactVideoRingtone">
+		<rdfs:comment>Video file linked with a contact</rdfs:comment>
+		<rdfs:label>Video ringtone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1236</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#contactVibrationRingtone">
+		<rdfs:comment>File linked with a contact to vibrate on a pleasant frequency</rdfs:comment>
+		<rdfs:label>Vibration ringtone</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1628</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber">
+		<rdfs:comment>A telephone number.</rdfs:comment>
+		<rdfs:label>PhoneNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1124</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactMedium"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#phoneNumber">
+		<rdfs:label>phoneNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1181</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#localPhoneNumber">
+		<rdfs:label>local phone number (last N digits)</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1863</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:indexed>true</tracker:indexed>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress">
+		<rdfs:comment>A postal address. A class aggregating the various parts of a value for the 'ADR' property as defined in RFC 2426 Sec. 3.2.1.</rdfs:comment>
+		<rdfs:label>PostalAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1767</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactMedium"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#region">
+		<rdfs:comment>Region. Inspired by the fifth part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1</rdfs:comment>
+		<rdfs:label>region</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1612</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#country">
+		<rdfs:comment>A part of an address specifying the country. Inspired by the seventh part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1</rdfs:comment>
+		<rdfs:label>country</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1151</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#extendedAddress">
+		<rdfs:comment>An extended part of an address. This field might be used to express parts of an address that aren't include in the name of the Contact but also aren't part of the actual location. Usually the streed address and following fields are enough for a postal letter to arrive. Examples may include ('University of California Campus building 45', 'Sears Tower 34th floor' etc.) Inspired by the second part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1</rdfs:comment>
+		<rdfs:label>extendedAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1876</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>6</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#addressLocation">
+		<rdfs:comment>The geographical location of a postal address.</rdfs:comment>
+		<rdfs:label>addressLocation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1355</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#streetAddress">
+		<rdfs:comment>The streed address. Inspired by the third part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1</rdfs:comment>
+		<rdfs:label>streetAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1438</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>6</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#postalcode">
+		<rdfs:comment>Postal Code. Inspired by the sixth part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1</rdfs:comment>
+		<rdfs:label>postalcode</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1584</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>6</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#locality">
+		<rdfs:comment>Locality or City. Inspired by the fourth part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1</rdfs:comment>
+		<rdfs:label>locality</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1538</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#pobox">
+		<rdfs:comment>Post office box. This is the first part of the value of the 'ADR' property as defined in RFC 2426, sec. 3.2.1</rdfs:comment>
+		<rdfs:label>pobox</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1360</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PresenceStatus">
+		<rdfs:comment>Predefined set of status level instances</rdfs:comment>
+		<rdfs:label>Presence statuses</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1039</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role">
+		<rdfs:comment>A role played by a contact. Contacts that denote people, can have many roles (e.g. see the hasAffiliation property and Affiliation class). Contacts that denote Organizations or other Agents usually have one role.  Each role can introduce additional contact media.</rdfs:comment>
+		<rdfs:label>Role</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1840</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasContactMedium">
+		<rdfs:comment>A superProperty for all properties linking a Contact to an instance of a contact medium.</rdfs:comment>
+		<rdfs:label>hasContactMedium</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1231</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactMedium"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#url">
+		<rdfs:comment>A uniform resource locator associated with the given role of a Contact. Inspired by the 'URL' property defined in RFC 2426 Sec. 3.6.8.</rdfs:comment>
+		<rdfs:label>url</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1881</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<tracker:weight>4</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPhoneNumber">
+		<rdfs:comment>A number for telephony communication with the object represented by this Contact. An equivalent of the 'TEL' property defined in RFC 2426 Sec. 3.3.1</rdfs:comment>
+		<rdfs:label>hasPhoneNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1849</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasContactMedium"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#websiteUrl">
+		<rdfs:comment>A url of a website.</rdfs:comment>
+		<rdfs:label>websiteUrl</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1477</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#url"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<tracker:weight>5</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress">
+		<rdfs:comment>An address for electronic mail communication with the object specified by this contact. An equivalent of the 'EMAIL' property as defined in RFC 2426 Sec. 3.3.1.</rdfs:comment>
+		<rdfs:label>hasEmailAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1838</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasContactMedium"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#EmailAddress"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#foafUrl">
+		<rdfs:comment>The URL of the FOAF file.</rdfs:comment>
+		<rdfs:label>foafUrl</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1636</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#url"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#blogUrl">
+		<rdfs:comment>A Blog url.</rdfs:comment>
+		<rdfs:label>blogUrl</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1165</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#url"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPostalAddress">
+		<rdfs:comment>The default Address for a Contact. An equivalent of the 'ADR' property as defined in RFC 2426 Sec. 3.2.1.</rdfs:comment>
+		<rdfs:label>hasPostalAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1475</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasContactMedium"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PostalAddress"/>
+		<tracker:indexed>true</tracker:indexed>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasIMAddress">
+		<rdfs:comment>An address for communication using instant messages with the object specified by this contact.</rdfs:comment>
+		<rdfs:label>imAddress</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1851</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasContactMedium"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#IMAddress"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#video">
+		<rdfs:comment>Video avatar of a contact. Note that is an icon/avatar, not a generic 'present in video' property</rdfs:comment>
+		<rdfs:label>Contact video</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1024</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VideoTelephoneNumber">
+		<rdfs:comment>A Video telephone number. A class inspired by the TYPE=video parameter of the TEL property defined in RFC 2426 sec. 3.3.1</rdfs:comment>
+		<rdfs:label>VideoTelephoneNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1824</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VoicePhoneNumber"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VoicePhoneNumber">
+		<rdfs:comment>A telephone number with voice communication capabilities. Class inspired by the TYPE=voice parameter of the TEL property defined in RFC 2426 sec. 3.3.1</rdfs:comment>
+		<rdfs:label>VoicePhoneNumber</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1868</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#voiceMail">
+		<rdfs:comment>Indicates if the given number accepts voice mail. (e.g. there is an answering machine). Inspired by TYPE=msg parameter of the TEL property defined in RFC 2426 sec. 3.3.1</rdfs:comment>
+		<rdfs:label>voiceMail</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1462</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#VoicePhoneNumber"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor">
+		<rdfs:comment>An entity responsible for making contributions to the content of the InformationElement.</rdfs:comment>
+		<rdfs:label>contributor</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1373</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator">
+		<rdfs:comment>Creator of a data object, an entity primarily responsible for the creation of the content of the data object.</rdfs:comment>
+		<rdfs:label>creator</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1639</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:weight>4</tracker:weight>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#publisher">
+		<rdfs:comment>An entity responsible for making the InformationElement available.</rdfs:comment>
+		<rdfs:label>publisher</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1983</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#">
+	</tracker:Ontology >
+	<nco:PersonContact rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#default-contact-emergency">
+	</nco:PersonContact >
+	<nco:PersonContact rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#default-contact-me">
+	</nco:PersonContact >
+	<nco:Gender rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#gender-female">
+	</nco:Gender >
+	<nco:Gender rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#gender-male">
+	</nco:Gender >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-audio-calls">
+	</nco:IMCapability >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-dbus-tubes">
+	</nco:IMCapability >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-file-transfers">
+	</nco:IMCapability >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-media-calls">
+	</nco:IMCapability >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-stream-tubes">
+	</nco:IMCapability >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-text-chat">
+	</nco:IMCapability >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-upgrading-calls">
+	</nco:IMCapability >
+	<nco:IMCapability rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#im-capability-video-calls">
+	</nco:IMCapability >
+	<nco:AuthorizationStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#predefined-auth-status-no">
+	</nco:AuthorizationStatus >
+	<nco:AuthorizationStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#predefined-auth-status-requested">
+	</nco:AuthorizationStatus >
+	<nco:AuthorizationStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#predefined-auth-status-yes">
+	</nco:AuthorizationStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-available">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-away">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-busy">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-error">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-extended-away">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-hidden">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-offline">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-unknown">
+	</nco:PresenceStatus >
+	<nco:PresenceStatus rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#presence-status-unset">
+	</nco:PresenceStatus >
+</rdf:RDF>

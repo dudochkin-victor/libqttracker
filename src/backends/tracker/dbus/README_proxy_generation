@@ -1,0 +1,19 @@
+
+
+
+1. get newest xml files from current tracker
+  You might want to backup the old files to do comparisons, but this list should be comprehensive
+
+2. insert correct annotations for qt types
+  2.1. for all type="aas" direction="out", follow the line with:
+	<annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="QVector&lt;QStringList&gt;"/>
+
+  2.2. for all type="a{sv}" direction="out", follow the line with:
+	<annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="QVariantList"/>
+
+  2.3. for all signals of type="aas", follow the line with:
+	 <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="QVector&lt;QStringList&gt;"/>
+
+
+3. run generateproxyclass
+ 

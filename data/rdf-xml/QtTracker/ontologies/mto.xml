@@ -1,0 +1,220 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mto#DownloadTransfer">
+		<rdfs:comment>Handles transfers of files outside the device into the device. This class will only refer to files downloaded from a website or recieved using BlueTooth etc. Files recieved with messages are not considered here. Those would be handled seperately using nmo:Message</rdfs:comment>
+		<rdfs:label>Download</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1920</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mto#State">
+		<rdfs:comment>Class with a restricted set of instances to enumarate transfer methods</rdfs:comment>
+		<rdfs:label>State value</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1440</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mto#SyncTransfer">
+		<rdfs:comment>Handles synchronization between the device and some server (a computer, or a website)</rdfs:comment>
+		<rdfs:label>Sync</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1230</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mto#Transfer">
+		<rdfs:comment>Represent a single transfer task, which could have multiple transfer elements</rdfs:comment>
+		<rdfs:label>Transfer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1555</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#transferState">
+		<rdfs:comment>Captures the state of the transfer. This is derived from the cumulative states of the transfer elements of this transfer. Applications are responsible to keep it up-to-date</rdfs:comment>
+		<rdfs:label>Transfer state</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1142</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mto#State"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#method">
+		<rdfs:comment>The method of transfer - Bluetooth, Web upload etc</rdfs:comment>
+		<rdfs:label>Method</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1785</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mto#TransferMethod"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#created">
+		<rdfs:comment>The date and time when the transfer was created</rdfs:comment>
+		<rdfs:label>Created</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1209</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#transferList">
+		<rdfs:comment>A list of transfer elements</rdfs:comment>
+		<rdfs:label>Transfer List</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1792</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mto#TransferElement"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#account">
+		<rdfs:comment>A reference to the account to which the web upload is to be done. This should at least contain information about the account and the service which is being used. For instance, Google/YouTube or Google/Picassa</rdfs:comment>
+		<rdfs:label>Account</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1086</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#starter">
+		<rdfs:comment>The application that actually triggered the transfer - e.g. Gallery, Content Manager etc</rdfs:comment>
+		<rdfs:label>Starter</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1443</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#agent">
+		<rdfs:comment>The application processing the transfer - e.g. Upload Engine etc</rdfs:comment>
+		<rdfs:label>Agent</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1299</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#transferPrivacyLevel">
+		<rdfs:comment>It will contain an string with the privacy level in the service. The exact string and its interpretation is service specific</rdfs:comment>
+		<rdfs:label>Privacy level</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1761</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mto#TransferElement">
+		<rdfs:comment>Gives information about the transfer of a single element - typically a file. The properties in this class would need to be changed if it has to handle sync elements as well</rdfs:comment>
+		<rdfs:label>Transfer element</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1875</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#source">
+		<rdfs:comment>The source for the transfer. If the transfer is an upload, it would be the URI for a file on the device. If the transfer is a (web) download, it will be a URL. Question: Does it make more sense to have two fields: uploadSource and downloadSource?</rdfs:comment>
+		<rdfs:label>Source</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1898</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#TransferElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#destination">
+		<rdfs:comment>The destination of the transfer. If the transfer is an download, it would be the URI for a file on the device. If the transfer is a (web) upload, it will be a URL, which will be filled once the upload is completed.</rdfs:comment>
+		<rdfs:label>Destination</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1575</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#TransferElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#startedTime">
+		<rdfs:comment>Captures the date and time when the transfer was started</rdfs:comment>
+		<rdfs:label>Started</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1479</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#TransferElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#completedTime">
+		<rdfs:comment>Captures the date and time when the transfer ended. It must be set only when the trasfer element is completed succesfully</rdfs:comment>
+		<rdfs:label>Completed</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1558</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#TransferElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#state">
+		<rdfs:comment>Captures the current state of the transfer element: Pending (not started), In Progress, Paused, Cancelled, Done</rdfs:comment>
+		<rdfs:label>State</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1110</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#TransferElement"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mto#State"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mto#TransferMethod">
+		<rdfs:comment>Class with a restricted set of instances to enumarate transfer methods</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1941</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mto#UploadTransfer">
+		<rdfs:comment>Handles transfers of files/data present on the device to some place outside the device. Upload methods include uploading to a website, sending via BlueTooth etc. </rdfs:comment>
+		<rdfs:label>Upload</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1121</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mto#Transfer"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mto#transferCategory">
+		<rdfs:comment>This can contain category / tag / album / folder in the destination service</rdfs:comment>
+		<rdfs:label>Category for the transfer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1736</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mto#UploadTransfer"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.tracker-project.org/temp/mto#">
+	</tracker:Ontology >
+	<mto:State rdf:about="http://www.tracker-project.org/temp/mto#state-active">
+	</mto:State >
+	<mto:State rdf:about="http://www.tracker-project.org/temp/mto#state-cancelled">
+	</mto:State >
+	<mto:State rdf:about="http://www.tracker-project.org/temp/mto#state-done">
+	</mto:State >
+	<mto:State rdf:about="http://www.tracker-project.org/temp/mto#state-error">
+	</mto:State >
+	<mto:State rdf:about="http://www.tracker-project.org/temp/mto#state-paused">
+	</mto:State >
+	<mto:State rdf:about="http://www.tracker-project.org/temp/mto#state-pending">
+	</mto:State >
+	<mto:TransferMethod rdf:about="http://www.tracker-project.org/temp/mto#transfer-method-bluetooth">
+	</mto:TransferMethod >
+	<mto:TransferMethod rdf:about="http://www.tracker-project.org/temp/mto#transfer-method-web">
+	</mto:TransferMethod >
+</rdf:RDF>

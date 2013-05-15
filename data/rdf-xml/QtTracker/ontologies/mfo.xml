@@ -1,0 +1,256 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mfo#Action">
+		<rdfs:comment>class with a restricted set of actions</rdfs:comment>
+		<rdfs:label>Action Requests</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1384</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mfo#Enclosure">
+		<rdfs:comment>Represents an enclosure of a feed message</rdfs:comment>
+		<rdfs:label>Message enclosure</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1844</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mfo#FeedElement"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#remoteLink">
+		<rdfs:comment>Used to store remote URL of enclosure</rdfs:comment>
+		<rdfs:label>Enclosure link</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1222</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#Enclosure"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemoteDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#groupDefault">
+		<rdfs:comment>Different enclosures can represent the same resource in different formats/resolutions. This representations are grouped using the nie:identifier property and this property identify the default between them.</rdfs:comment>
+		<rdfs:label>Default in group</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1765</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#Enclosure"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#localLink">
+		<rdfs:comment>Downloaded copy of the enclosure</rdfs:comment>
+		<rdfs:label>Local link</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1447</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#Enclosure"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#optional">
+		<rdfs:comment>The enclosure is mandatory to download or only optional</rdfs:comment>
+		<rdfs:label>Optional</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1038</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#Enclosure"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mfo#FeedChannel">
+		<rdfs:comment>Represents feed channel transfer, typically a download of RSS or ATOM. It is also a communication channel of Nepomuk Messaging Ontology so that feed sources could be treated as message sources</rdfs:comment>
+		<rdfs:label>Feed channel</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1390</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#CommunicationChannel"/>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mfo#FeedElement"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#updatedTime">
+		<rdfs:comment>Captures the updated date and time when the channel is updated</rdfs:comment>
+		<rdfs:label>Updated</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1202</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedChannel"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#unreadCount">
+		<rdfs:comment>Unread messages count within a channel</rdfs:comment>
+		<rdfs:label> Unread count</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1002</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedChannel"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#totalCount">
+		<rdfs:comment>Total messages count within a channel</rdfs:comment>
+		<rdfs:label> Total count</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1652</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedChannel"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#action">
+		<rdfs:comment>Captures the current action for the channel: Refresh Now</rdfs:comment>
+		<rdfs:label>Action</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1644</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedChannel"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mfo#Action"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#type">
+		<rdfs:comment> Feeds format type which is mapped to plugin used in engine: flickr,rss-atom </rdfs:comment>
+		<rdfs:label>Feed formats type</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1685</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedChannel"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mfo#FeedType"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mfo#FeedElement">
+		<rdfs:comment>Superclass for all elements related with feeds, to provide common configuration options</rdfs:comment>
+		<rdfs:label>Feed element</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1197</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#image">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1506</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#feedSettings">
+		<rdfs:comment>Settings </rdfs:comment>
+		<rdfs:label>Feed element settings</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1445</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedElement"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mfo#FeedSettings"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mfo#FeedMessage">
+		<rdfs:comment>Represents feed entry on top of Nepomuk Messaging Ontology's message. May have enclosures attached and certain settings that allow deviation from feed channel's setup</rdfs:comment>
+		<rdfs:label>Feed entry</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1239</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"/>
+		<rdfs:subClassOf rdf:resource="http://www.tracker-project.org/temp/mfo#FeedElement"/>
+		<tracker:notify>true</tracker:notify>
+		<sopranolive:BaseStrategyFlag>::SopranoLive::BackEnds::Tracker::Notify</sopranolive:BaseStrategyFlag>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#downloadedTime">
+		<rdfs:comment>Captures the time stamp when message was downloaded</rdfs:comment>
+		<rdfs:label>Downloaded</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1708</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedMessage"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#enclosureList">
+		<rdfs:comment>A list of enclosures</rdfs:comment>
+		<rdfs:label>Enclosure List</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1334</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedMessage"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mfo#Enclosure"/>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mfo#FeedSettings">
+		<rdfs:comment>Represents settings applied to a feed channel or a feed entry. How often it is updated, through which connection type it is delivered, when data expires and so on</rdfs:comment>
+		<rdfs:label>Resource settings</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1065</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#updateInterval">
+		<rdfs:comment>Update interval for a feed channel to get updated or refreshed. Interpreted as minutes</rdfs:comment>
+		<rdfs:label>Update Interval</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1284</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedSettings"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#expiryInterval">
+		<rdfs:comment>Expiry interval for feed channel, it tells time that a message in a channel can live. Interpreted as minutes</rdfs:comment>
+		<rdfs:label>Expiry Interval</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1847</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedSettings"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#downloadPath">
+		<rdfs:comment>Download path for enclosures in a message</rdfs:comment>
+		<rdfs:label>Download path</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1730</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedSettings"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#downloadFlag">
+		<rdfs:comment>To indicate whether enclosures will be downloaded or not</rdfs:comment>
+		<rdfs:label>Download</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1521</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedSettings"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#maxSize">
+		<rdfs:comment>Maximum size of enclosure that can be downloaded. Interpreted as KBs </rdfs:comment>
+		<rdfs:label>Size</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1208</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedSettings"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.tracker-project.org/temp/mfo#FeedType">
+		<rdfs:comment>class with a restricted set of feed types</rdfs:comment>
+		<rdfs:label>Feed fomat type </rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1455</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mfo#name">
+		<rdfs:comment>Feed format name like rss-atom,flickr,facebook</rdfs:comment>
+		<rdfs:label>Feed type name or plugin name</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1668</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.tracker-project.org/temp/mfo#FeedType"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.tracker-project.org/temp/mfo#">
+	</tracker:Ontology >
+	<mfo:Action rdf:about="http://www.tracker-project.org/temp/mfo#refresh-now">
+	</mfo:Action >
+</rdf:RDF>

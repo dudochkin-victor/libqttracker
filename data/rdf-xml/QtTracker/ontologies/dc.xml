@@ -1,0 +1,166 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/contributor">
+		<rdfs:comment>An entity responsible for making contributions to the resource.</rdfs:comment>
+		<rdfs:label>Contributor</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1068</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>4</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/coverage">
+		<rdfs:comment>The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+		<rdfs:label>Coverage</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1569</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/creator">
+		<rdfs:comment>An entity primarily responsible for making the resource.</rdfs:comment>
+		<rdfs:label>Creator</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1015</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/date">
+		<rdfs:comment>A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+		<rdfs:label>Date</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1865</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/description">
+		<rdfs:comment>An account of the resource.</rdfs:comment>
+		<rdfs:label>Description</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1460</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/format">
+		<rdfs:comment>The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+		<rdfs:label>Format</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1305</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/identifier">
+		<rdfs:comment>An unambiguous reference to the resource within a given context.</rdfs:comment>
+		<rdfs:label>Identifier</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1757</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/language">
+		<rdfs:comment>A language of the resource.</rdfs:comment>
+		<rdfs:label>Language</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1433</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/publisher">
+		<rdfs:comment>An entity responsible for making the resource available.</rdfs:comment>
+		<rdfs:label>Publisher</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1566</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>4</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/relation">
+		<rdfs:comment>A related resource.</rdfs:comment>
+		<rdfs:label>Relation</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1312</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/rights">
+		<rdfs:comment>Information about rights held in and over the resource.</rdfs:comment>
+		<rdfs:label>Rights</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1314</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/source">
+		<rdfs:comment>A related resource from which the described resource is derived.</rdfs:comment>
+		<rdfs:label>Source</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1622</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/subject">
+		<rdfs:comment>The topic of the resource.</rdfs:comment>
+		<rdfs:label>Subject</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1802</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/title">
+		<rdfs:comment>A name given to the resource.</rdfs:comment>
+		<rdfs:label>Title</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1370</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:weight>10</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://purl.org/dc/elements/1.1/type">
+		<rdfs:comment>The nature or genre of the resource.</rdfs:comment>
+		<rdfs:label>Type</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1883</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://purl.org/dc/elements/1.1/">
+	</tracker:Ontology >
+</rdf:RDF>

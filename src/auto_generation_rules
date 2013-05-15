@@ -1,0 +1,14 @@
+
+s/(.*\:)*(.*)/\2/
+s/has(.*)/\1/
+s/(.*)s/\1/ 
+
+if(multi) s//&s/
+
+if(property) 
+	s/(.)(.*)/toLower(\1)\2/
+else if(var)
+	s/(.)(.*)/toLower(\1)\2_/
+else // functionname
+	s/(.)(.*)/toUpper(\1)\2/
+	

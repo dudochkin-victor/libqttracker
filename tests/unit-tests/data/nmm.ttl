@@ -1,0 +1,5098 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#> .
+@prefix nco: <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
+@prefix nmm: <http://www.tracker-project.org/temp/nmm#> .
+@prefix nao: <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#> .
+@prefix codethink: <http://www.codethink.co.uk/tracker/test/uri#> .
+
+
+codethink:nmm-test-graph-001
+	a rdfs:Resource ;
+	a nie:InformationElement .
+
+codethink:5c5e5bc7b18943579a9dddb74dd77382
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Jane Mike Jeffrey" .
+
+codethink:1b953fc0a9ee49c5a91db11c241283d2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Luke Simpson Kilikstan" .
+
+codethink:c2d490bc874b48b8ad457e9de93f9254
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Mark David Simpson" .
+
+codethink:1f024e7fbadf43abb27c79843f2c1712
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Steve Homer Luke" .
+
+codethink:e76192900ab94ea8a1979aaa6509f9c7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Homer Dommer Homer" .
+
+codethink:52eb79f320ac4ced9a64086e79a1eafc
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Steve Mike J" .
+
+codethink:b05ce8487fa84ef48650c76900b24ba9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Mark Doe David" .
+
+codethink:d3dd95856f4648d4a51a3ade7e126973
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Dommer Luke Steve" .
+
+codethink:aa6e5295bc55433e9a19d81574f8e29c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "Jane John Steve" .
+
+codethink:9c4d2544d4e54ec2b26ab1dbe362ef94
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:Artist ;
+	nmm:artistName "John J Roberto" .
+
+codethink:92c5c53d46974560a51786b7ba0efdde
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Nevermind III Nevermind" ;
+	nmm:albumArtist codethink:c2d490bc874b48b8ad457e9de93f9254 .
+
+codethink:756e5be96da347d38e7d1a0ca35dd81e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Sgt Peppers Sgt Peppers I" ;
+	nmm:albumArtist codethink:1f024e7fbadf43abb27c79843f2c1712 .
+
+codethink:560bb99e467a44d5ab66065937886739
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Zepplin Zepplin III" ;
+	nmm:albumArtist codethink:5c5e5bc7b18943579a9dddb74dd77382 .
+
+codethink:13542106b54c4543901f9e7ed80b32d0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "III Thats what I'm not Sgt Peppers" ;
+	nmm:albumArtist codethink:9c4d2544d4e54ec2b26ab1dbe362ef94 .
+
+codethink:2d8f1e99ed514f0d95591bff599ecd42
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "II Bat out of hell I" ;
+	nmm:albumArtist codethink:52eb79f320ac4ced9a64086e79a1eafc .
+
+codethink:4a1372f0934c4a69a8b25e7c0a655ba1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Fool IV Sgt Peppers" ;
+	nmm:albumArtist codethink:5c5e5bc7b18943579a9dddb74dd77382 .
+
+codethink:cb9e40fb2be04adcaef189c1d0cd565a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Terry Sgt Peppers Thats what I'm not" ;
+	nmm:albumArtist codethink:1f024e7fbadf43abb27c79843f2c1712 .
+
+codethink:a26182d453db4023a9c415a789f25073
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Lillies IV Led" ;
+	nmm:albumArtist codethink:aa6e5295bc55433e9a19d81574f8e29c .
+
+codethink:1b00763914724235a469fd8bba4b353e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "I Thats what I'm not Thats what I'm not" ;
+	nmm:albumArtist codethink:aa6e5295bc55433e9a19d81574f8e29c .
+
+codethink:058ecda6e8ea481387ff3f25f4fa7c19
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "II Sgt Peppers White" ;
+	nmm:albumArtist codethink:52eb79f320ac4ced9a64086e79a1eafc .
+
+codethink:5e3b9dce55c2460ca808ac3995babed1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "White Zepplin Fool" ;
+	nmm:albumArtist codethink:c2d490bc874b48b8ad457e9de93f9254 .
+
+codethink:d25b169a8fab4f67b5effa52895d1002
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Lillies I White" ;
+	nmm:albumArtist codethink:d3dd95856f4648d4a51a3ade7e126973 .
+
+codethink:e5c9f5e036bb4f6992fc79186f74f618
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Fool III Thats what I'm not" ;
+	nmm:albumArtist codethink:e76192900ab94ea8a1979aaa6509f9c7 .
+
+codethink:d0acb43f31714c95a5a494a67ceff858
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "IV III III" ;
+	nmm:albumArtist codethink:52eb79f320ac4ced9a64086e79a1eafc .
+
+codethink:93190905b11242eba5311164d917bc93
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Terry Zepplin Lillies" ;
+	nmm:albumArtist codethink:b05ce8487fa84ef48650c76900b24ba9 .
+
+codethink:33eed4e21c5e4c4cb00fd6403600860e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "III Thats what I'm not Terry" ;
+	nmm:albumArtist codethink:d3dd95856f4648d4a51a3ade7e126973 .
+
+codethink:8b1234cc9e94427dba30f657bd2f1048
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "III Fool II" ;
+	nmm:albumArtist codethink:5c5e5bc7b18943579a9dddb74dd77382 .
+
+codethink:457667079b684db5b6fff895a8749349
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "White Led Sgt Peppers" ;
+	nmm:albumArtist codethink:aa6e5295bc55433e9a19d81574f8e29c .
+
+codethink:95e8ce05d9764150bff246e002e00dcb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Terry II Terry" ;
+	nmm:albumArtist codethink:9c4d2544d4e54ec2b26ab1dbe362ef94 .
+
+codethink:ff282ef5aafe486285e298d263e37163
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Sgt Peppers Zepplin Nevermind" ;
+	nmm:albumArtist codethink:b05ce8487fa84ef48650c76900b24ba9 .
+
+codethink:7e8b444fd0524daa8312303ea158afd8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "IV Zepplin Terry" ;
+	nmm:albumArtist codethink:c2d490bc874b48b8ad457e9de93f9254 .
+
+codethink:63b3f2496a264703b387ad16cf333602
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Thats what I'm not Zepplin II" ;
+	nmm:albumArtist codethink:9c4d2544d4e54ec2b26ab1dbe362ef94 .
+
+codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Coming on strong II Fool" ;
+	nmm:albumArtist codethink:aa6e5295bc55433e9a19d81574f8e29c .
+
+codethink:99b0267d5c004ae7b8edd5cb25e89b72
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Bat out of hell Thats what I'm not Coming on strong" ;
+	nmm:albumArtist codethink:5c5e5bc7b18943579a9dddb74dd77382 .
+
+codethink:80d195f66c7b46bdab3e3e75ffd372e6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Terry Whatever you say I am Thats what I'm not" ;
+	nmm:albumArtist codethink:9c4d2544d4e54ec2b26ab1dbe362ef94 .
+
+codethink:4e68189987df4a539ef917022f8ef0aa
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Zepplin Zepplin Sgt Peppers" ;
+	nmm:albumArtist codethink:1b953fc0a9ee49c5a91db11c241283d2 .
+
+codethink:53f7f75c190a427b88f93cd9c562101a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "II Lillies I" ;
+	nmm:albumArtist codethink:1b953fc0a9ee49c5a91db11c241283d2 .
+
+codethink:bbe0561b50864a8c95bb332ef20a524e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "II IV White" ;
+	nmm:albumArtist codethink:b05ce8487fa84ef48650c76900b24ba9 .
+
+codethink:84eaa57cf6e44da3b81feaa56714879d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Zepplin Thats what I'm not Coming on strong" ;
+	nmm:albumArtist codethink:e76192900ab94ea8a1979aaa6509f9c7 .
+
+codethink:6ad474927736426bbd2f148312a39ce7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "IV III Led" ;
+	nmm:albumArtist codethink:d3dd95856f4648d4a51a3ade7e126973 .
+
+codethink:dad2746a713a4590953ba34790bfe9c1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Nevermind IV Led" ;
+	nmm:albumArtist codethink:e76192900ab94ea8a1979aaa6509f9c7 .
+
+codethink:56a70834cf9f490db6a01fd8bddf7515
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Nevermind I White" ;
+	nmm:albumArtist codethink:b05ce8487fa84ef48650c76900b24ba9 .
+
+codethink:5c335829d79543348875344a660ccd14
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "IV I Thats what I'm not" ;
+	nmm:albumArtist codethink:5c5e5bc7b18943579a9dddb74dd77382 .
+
+codethink:fde7f74779fc46cabc2cb86bea47b543
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Zepplin Fool Fool" ;
+	nmm:albumArtist codethink:b05ce8487fa84ef48650c76900b24ba9 .
+
+codethink:85c774388fc34695b0d6fc52dd035078
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Whatever you say I am Terry Sgt Peppers" ;
+	nmm:albumArtist codethink:aa6e5295bc55433e9a19d81574f8e29c .
+
+codethink:53f4b304438e40f19d3b287dadcbeedb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Coming on strong Sgt Peppers Bat out of hell" ;
+	nmm:albumArtist codethink:52eb79f320ac4ced9a64086e79a1eafc .
+
+codethink:416e156e16244c71b0c55438cecf8aab
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Fool Sgt Peppers Thats what I'm not" ;
+	nmm:albumArtist codethink:aa6e5295bc55433e9a19d81574f8e29c .
+
+codethink:22aefbea567a44259bfa3bd60b6f5f5e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Coming on strong II Led" ;
+	nmm:albumArtist codethink:c2d490bc874b48b8ad457e9de93f9254 .
+
+codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Nevermind I IV" ;
+	nmm:albumArtist codethink:1f024e7fbadf43abb27c79843f2c1712 .
+
+codethink:88c092ff95fb4ea282fbbd1f16a49da0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nmm:MusicAlbum ;
+	nmm:albumTitle "Sgt Peppers III IV" ;
+	nmm:albumArtist codethink:1f024e7fbadf43abb27c79843f2c1712 .
+
+codethink:b3abad075ad24c87b7975d47dd97db74
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget consectetuer consectetuer dictum grate" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 1 ;
+	nmm:length 8 .
+
+codethink:1321b342254c4a958f5f660e1273638f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor amet consectetuer bar loreum" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 2 ;
+	nmm:length 4 .
+
+codethink:c7213e8cf410464c9749d002b7ac55c4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget vitae sit grate consectetuer" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 3 ;
+	nmm:length 9 .
+
+codethink:01bfaebe4ac44fefbf80b1fc9e87cc44
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum bar amet elit auctor" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 4 .
+
+codethink:91eeb4bde0434fa69c8dc4920948e957
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor tellus grate magna morbi" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 5 ;
+	nmm:length 5 .
+
+codethink:113060954fc347ad95b051194dbfdeb2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate baz ipsum vitae morbi" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 6 ;
+	nmm:length 7 .
+
+codethink:19e93b90a6eb4b16ae7e7c83aa67469b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit vitae eget dolor ipsum" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 7 ;
+	nmm:length 6 .
+
+codethink:04262e2b9e3f44f2bf92e33c85f12e15
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet tellus consectetuer bar baz" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 8 ;
+	nmm:length 5 .
+
+codethink:6cc3307943e243ac8f05f3fc912d8cd1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer baz loreum auctor baz" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 9 ;
+	nmm:length 6 .
+
+codethink:cbef1a63ade14e6d80960ecc8f61679b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar tellus baz tellus morbi" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 10 .
+
+codethink:b315618309a34eee932fdc87d14f9613
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate vitae tellus foo ipsum" ;
+	nmm:musicAlbum codethink:92c5c53d46974560a51786b7ba0efdde ;
+	nmm:trackNumber 11 ;
+	nmm:length 3 .
+
+codethink:1f8daa886bba46548846276d8f0bfb27
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum loreum magna auctor magna" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 1 .
+
+codethink:f967cbc7e7ec445f8c80166d2afdb521
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit dolor dolor auctor magna" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 2 .
+
+codethink:629d6b5a7a7243fe9baa86da7ab419d6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum magna foo dictum consectetuer" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 3 .
+
+codethink:c3dfd088740f4976ad2500814ed3b2f0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz elit dictum dolor foo" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 4 ;
+	nmm:length 0 .
+
+codethink:4ed6d9791c1c4c99ba3e493ea227223d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor dolor consectetuer sit foo" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 5 ;
+	nmm:length 4 .
+
+codethink:2169941f96534deebe53a60ab4aa5b31
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo amet dolor consectetuer dictum" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 6 ;
+	nmm:length 2 .
+
+codethink:6423f700ea744f0e80330d170de5649e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate auctor bar dolor amet" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 7 ;
+	nmm:length 8 .
+
+codethink:11669de92751435782ae06d79e08d915
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor vitae eget morbi auctor" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 8 ;
+	nmm:length 7 .
+
+codethink:003e4d93fb494476b043fd1507d413c6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae bar dolor morbi grate" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 9 ;
+	nmm:length 7 .
+
+codethink:2711723c08e94f138d1a17e1e9614f50
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz morbi vitae grate morbi" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 10 .
+
+codethink:56f2efdf82014d2099302d603824fab4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate baz grate morbi grate" ;
+	nmm:musicAlbum codethink:756e5be96da347d38e7d1a0ca35dd81e ;
+	nmm:trackNumber 11 ;
+	nmm:length 9 .
+
+codethink:f7f43f5ed08c4d49b735d39a42316759
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer morbi tellus amet loreum" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 1 ;
+	nmm:length 2 .
+
+codethink:23a281c7ef264250baedc280fba220cc
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz amet bar auctor ipsum" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 2 ;
+	nmm:length 6 .
+
+codethink:4a824b8a1c8548d58b84c10a2079a6bd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz loreum auctor baz loreum" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 3 .
+
+codethink:7b3cf1c43e36464dbf413adef42daf7f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus bar loreum bar morbi" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 4 ;
+	nmm:length 5 .
+
+codethink:4494b0338fc8420dbac2dfa450488fe4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz magna auctor foo consectetuer" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 5 .
+
+codethink:55f61cf521164bb5ab308283669357c3
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo sit sit foo sit" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 6 .
+
+codethink:91182fdae0f9455cb0f5eeff43b258cf
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer eget vitae dolor sit" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 7 ;
+	nmm:length 9 .
+
+codethink:34313aacd2fd4976ba20cd74cc7835e1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum vitae auctor consectetuer eget" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 8 .
+
+codethink:c49767bda2af4b2c8c77027ba9dd27ae
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit morbi sit amet auctor" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 9 .
+
+codethink:996cb3992ab84cde8ee95a18c63515f0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor loreum grate baz eget" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 10 .
+
+codethink:2fd17586d4864a9e9ab634d168da3865
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum loreum dolor dolor amet" ;
+	nmm:musicAlbum codethink:560bb99e467a44d5ab66065937886739 ;
+	nmm:trackNumber 11 .
+
+codethink:07ba4ce872ce496faca7501d56f83565
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet vitae tellus auctor bar" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 1 .
+
+codethink:fd6495b40c9743a2a6fc4b5cc5399864
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi grate tellus grate magna" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 2 ;
+	nmm:length 1 .
+
+codethink:05d7283fdee146f4a32734b64bacac17
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna eget eget consectetuer ipsum" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 3 .
+
+codethink:ea3d7b79c12a4f84971aa688f3f8b6c3
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz grate ipsum elit tellus" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 4 ;
+	nmm:length 7 .
+
+codethink:338091baa5954d8dbb7989c47327b9b7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae magna bar dictum tellus" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 5 .
+
+codethink:cc09602f02d14538abe80476316fb3ed
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor dictum baz elit baz" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 6 .
+
+codethink:fd60e1d395474faa8a58d0b0254b7b2e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate elit morbi amet consectetuer" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 7 ;
+	nmm:length 0 .
+
+codethink:1e16f1be12d9447ab0d399456664a9ee
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor morbi vitae sit tellus" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 8 .
+
+codethink:83e0a1b659f34afaa959576393abf710
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor amet eget ipsum ipsum" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 9 ;
+	nmm:length 2 .
+
+codethink:23b1825eb98149b9a6735eef460818d2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor morbi loreum dictum grate" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 10 .
+
+codethink:eb4a7ef9a033496e943647847975922e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit dictum loreum morbi magna" ;
+	nmm:musicAlbum codethink:13542106b54c4543901f9e7ed80b32d0 ;
+	nmm:trackNumber 11 ;
+	nmm:length 6 .
+
+codethink:2a1c7b946fab467983990585f265ec73
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate tellus loreum ipsum loreum" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 1 .
+
+codethink:acf515cb03e24663bfbcbfaf9d388e1c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi morbi amet morbi tellus" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 2 ;
+	nmm:length 9 .
+
+codethink:c816549eea1744cea2225ba3952dfbd4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate baz morbi magna consectetuer" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 3 ;
+	nmm:length 0 .
+
+codethink:b2d59c16f5874c12b75e45a48f0c3a84
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor foo tellus dolor sit" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 4 ;
+	nmm:length 5 .
+
+codethink:bfac6c99c82c4268a816de1a601a6605
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate auctor morbi loreum ipsum" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 5 ;
+	nmm:length 3 .
+
+codethink:2dc6721afc48489981b5d6ed52d05f03
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum amet baz sit dolor" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 6 ;
+	nmm:length 0 .
+
+codethink:8d400bdb636f400098deb2f88563a38f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate magna elit elit baz" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 7 ;
+	nmm:length 7 .
+
+codethink:bc74a7b8159c435682ed380b0eab02e1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae magna grate eget sit" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 8 .
+
+codethink:41bc69deac5743aaa6a295d137f3cf5d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi magna grate sit bar" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 9 .
+
+codethink:6003c376515d49648bf5f253f0d4fe26
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget foo dictum eget eget" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 10 ;
+	nmm:length 3 .
+
+codethink:2c0cfd443cf547e691d2ee4fd2cb0a24
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna magna foo vitae foo" ;
+	nmm:musicAlbum codethink:2d8f1e99ed514f0d95591bff599ecd42 ;
+	nmm:trackNumber 11 .
+
+codethink:36c125d25c474c16baf375f1683ddd3d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor amet grate ipsum auctor" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 1 ;
+	nmm:length 4 .
+
+codethink:f7188b602ef64eea82ca7dba9d28e1d4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor amet eget consectetuer dictum" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 2 ;
+	nmm:length 5 .
+
+codethink:bc754347e4fc47e6a767b4373bdfb117
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae dolor baz bar foo" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 3 .
+
+codethink:54f50fe97f5349879ceeb1237ea561d1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit bar grate dictum auctor" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 4 ;
+	nmm:length 6 .
+
+codethink:14d8156a3a0043d5af742330b90b99df
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum ipsum magna dolor dictum" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 5 ;
+	nmm:length 8 .
+
+codethink:32bd860de052436e92a05642c949e7ae
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo tellus loreum elit loreum" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 6 ;
+	nmm:length 0 .
+
+codethink:0cc25223ae154e30b97bf39d34b9cc31
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus amet foo grate magna" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 7 ;
+	nmm:length 7 .
+
+codethink:514003ec2ab248f093d7def6094514ad
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna vitae baz tellus vitae" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 8 ;
+	nmm:length 6 .
+
+codethink:8e6cff9e8c8044459f8abd30b88d1167
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna tellus grate grate sit" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 9 ;
+	nmm:length 3 .
+
+codethink:c3580d334a6d4f7c81ce5499884d745d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit ipsum auctor vitae loreum" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:6f7d33c7a75c40f0bea2e0367f5b63ed
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar baz loreum amet dictum" ;
+	nmm:musicAlbum codethink:4a1372f0934c4a69a8b25e7c0a655ba1 ;
+	nmm:trackNumber 11 .
+
+codethink:7d817577806f4cb882121bbf17dd1aa7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum grate tellus dictum dictum" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 1 .
+
+codethink:29568d71b28a4a93891e1897a8321b6a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi auctor bar loreum vitae" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 2 .
+
+codethink:fe8d6cf1de9347ebac6c1a8741e7e6ee
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus eget ipsum magna magna" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 3 ;
+	nmm:length 6 .
+
+codethink:92f4473d7eb941bc9ed67da59a2f01f5
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget magna magna dolor amet" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 4 ;
+	nmm:length 6 .
+
+codethink:b0a64be8c39c4a03a68ebeaa1b2fb695
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae foo dolor auctor baz" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 5 ;
+	nmm:length 8 .
+
+codethink:43349d8744ac4c9c9f14088155435124
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz elit tellus magna auctor" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 6 ;
+	nmm:length 0 .
+
+codethink:a88916c6cb20487eb89b871787604edd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget dictum grate amet dictum" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 7 .
+
+codethink:c79c35cda40b49e69c323f6d31752f18
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna grate baz baz vitae" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 8 ;
+	nmm:length 4 .
+
+codethink:8cc046c0b6ef448187a9bb17576ca64f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer morbi ipsum elit morbi" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 9 .
+
+codethink:95402d4c62ca413fbfab24e1b7d41e32
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor loreum bar magna eget" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 10 .
+
+codethink:eb4b293abcbc454baf6d1ff882f5cc7f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate grate dictum grate dictum" ;
+	nmm:musicAlbum codethink:cb9e40fb2be04adcaef189c1d0cd565a ;
+	nmm:trackNumber 11 ;
+	nmm:length 7 .
+
+codethink:d705e6708aff48e7a561abb1c23d582f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum amet bar bar magna" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 1 ;
+	nmm:length 7 .
+
+codethink:36c16fc8dc31464b931acdbecc4e29d4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae amet loreum vitae elit" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 2 ;
+	nmm:length 3 .
+
+codethink:8b336557e8f243779d4be95c80d180fb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum dolor sit tellus auctor" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 3 .
+
+codethink:22109e94990246719092c11166ff8bf7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet ipsum amet sit magna" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 4 ;
+	nmm:length 0 .
+
+codethink:46721103f9e04a62b63c462c1a694daf
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget magna bar amet dictum" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 5 ;
+	nmm:length 0 .
+
+codethink:e7d44eabd6bd4c99ac86927db55e2531
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer magna sit loreum eget" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 6 .
+
+codethink:c261f1d739324147b0ae8f31481a9557
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dictum auctor morbi vitae" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 7 ;
+	nmm:length 1 .
+
+codethink:a68e976f6e9349cfb8e36857b15e245a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor elit grate ipsum consectetuer" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 8 ;
+	nmm:length 9 .
+
+codethink:9b0cbafc02334427accb354f1ac68e43
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor dolor tellus foo morbi" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 9 ;
+	nmm:length 3 .
+
+codethink:98bf968f84a3460ba6e033bd5e932dac
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna baz tellus dolor morbi" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 10 ;
+	nmm:length 9 .
+
+codethink:49b0baa9127d43978e42e902913360f4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor dolor tellus amet consectetuer" ;
+	nmm:musicAlbum codethink:a26182d453db4023a9c415a789f25073 ;
+	nmm:trackNumber 11 ;
+	nmm:length 7 .
+
+codethink:dbc4a9a3e2224136bd1d78bd7b6d09e0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget amet grate morbi bar" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 1 .
+
+codethink:ca9f27f0cb034418a332af447085fd54
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor consectetuer baz vitae eget" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 2 .
+
+codethink:dcf69acca0b644ee99dff7f0102e2261
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo eget ipsum sit morbi" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 3 ;
+	nmm:length 9 .
+
+codethink:1b345e77498849b4bef320080292fda2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo foo bar eget magna" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 4 .
+
+codethink:623532521a1346a2929ab30c8e531fdf
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer elit foo elit loreum" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 5 ;
+	nmm:length 3 .
+
+codethink:baff2e4b843848069c2da81c22470ac2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo vitae sit baz amet" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 6 .
+
+codethink:2d63395ac127473cab8990fbfe6da2e9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget dictum eget consectetuer baz" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 7 .
+
+codethink:407aa1ea18d3431aa056b3e846a34046
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget grate ipsum dolor ipsum" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 8 ;
+	nmm:length 2 .
+
+codethink:8cc4ccc7a4914afd935f5a5dcf43396e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus baz amet sit tellus" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 9 ;
+	nmm:length 9 .
+
+codethink:5e0d07f36a8241b6ba366c99f6dad6db
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate morbi vitae morbi foo" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 10 ;
+	nmm:length 6 .
+
+codethink:775558ff341140668ebedddc4f528f82
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus loreum sit ipsum bar" ;
+	nmm:musicAlbum codethink:1b00763914724235a469fd8bba4b353e ;
+	nmm:trackNumber 11 .
+
+codethink:6266599b9e6146eaad139196b994fa40
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer eget vitae eget morbi" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 1 ;
+	nmm:length 7 .
+
+codethink:003671a190c1498f864bb3b7411d7c83
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz amet amet dolor auctor" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 2 .
+
+codethink:118104c921034a44b1535283a8d3c07f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget eget auctor auctor vitae" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 3 ;
+	nmm:length 1 .
+
+codethink:08bed1f2559840f688a7a47e6bfc4667
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor vitae elit loreum eget" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 4 ;
+	nmm:length 9 .
+
+codethink:f4c33e626714487ead069381c6f6950c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor eget bar bar ipsum" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 5 .
+
+codethink:4738c3abf4af4e808e1809ba5ccf9507
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit vitae magna tellus foo" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 6 ;
+	nmm:length 8 .
+
+codethink:b9e8f9534010409fb384a4b08bb1ee92
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit magna magna amet morbi" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 7 .
+
+codethink:4d8e6ede65464f1db292c8b8f5708ce8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dictum grate ipsum sit" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 8 ;
+	nmm:length 1 .
+
+codethink:4be88ec248874031a89153b0f4dfc394
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer ipsum vitae loreum vitae" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 9 ;
+	nmm:length 2 .
+
+codethink:123c4ab90f434e90b0f35d8428d3c44b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar loreum morbi dolor magna" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 10 ;
+	nmm:length 5 .
+
+codethink:67859bc252884215a24df7a5ff10966a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit grate dictum amet auctor" ;
+	nmm:musicAlbum codethink:058ecda6e8ea481387ff3f25f4fa7c19 ;
+	nmm:trackNumber 11 .
+
+codethink:4ec63c521d4d4f9fadd6f1a4aa809c37
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum morbi morbi ipsum sit" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 1 ;
+	nmm:length 9 .
+
+codethink:587186aa70c143569780b522139bb3ca
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer elit dictum ipsum foo" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 2 .
+
+codethink:25da4912340c4d8b82d19abe7239f406
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum amet auctor ipsum elit" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 3 ;
+	nmm:length 3 .
+
+codethink:80aaa89f082447549a416a83dbbd59dc
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit foo foo magna morbi" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 4 ;
+	nmm:length 2 .
+
+codethink:a62666d5fce94b5fbb4315e34bfba8e0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate bar sit vitae baz" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 5 .
+
+codethink:1fcda0a9f53a4c6f99c271f1b16dddbc
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor morbi grate sit amet" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 6 ;
+	nmm:length 6 .
+
+codethink:f6a44be85d5544daa6f3c507f17f2a7d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor sit sit consectetuer grate" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 7 ;
+	nmm:length 8 .
+
+codethink:75c9e53c7e294053ae22a3d603968bb8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit baz amet grate eget" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 8 ;
+	nmm:length 4 .
+
+codethink:33ea15f638644991b92f1d8e4905b2f8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor elit loreum vitae bar" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 9 ;
+	nmm:length 0 .
+
+codethink:3fe74351aa1641b8bed97c1c96897379
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar ipsum dolor ipsum amet" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 10 ;
+	nmm:length 5 .
+
+codethink:1d955fff64204414aa132e2e60171ff4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum loreum morbi baz elit" ;
+	nmm:musicAlbum codethink:5e3b9dce55c2460ca808ac3995babed1 ;
+	nmm:trackNumber 11 ;
+	nmm:length 9 .
+
+codethink:ef442d4e9f5b48b58c021bd4e3c40239
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar dictum loreum ipsum sit" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 1 ;
+	nmm:length 2 .
+
+codethink:f615e442572e4144b821a90e3b287226
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna magna auctor morbi magna" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 2 .
+
+codethink:c072d2063b094c0d85b39fb687e94b78
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz bar ipsum amet consectetuer" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 3 ;
+	nmm:length 8 .
+
+codethink:e189804ef19f46448ab6b1a785e75ae1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo consectetuer vitae magna vitae" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 4 ;
+	nmm:length 6 .
+
+codethink:422bc69900d94d4c812d9dfa856120e4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus dolor baz grate eget" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 5 ;
+	nmm:length 6 .
+
+codethink:ae435d34a9dd4bae97701bc8bef5dda0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor elit sit consectetuer baz" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 6 ;
+	nmm:length 7 .
+
+codethink:9f3d0a221c0e40b08cb0e0926a162a47
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo baz ipsum grate elit" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 7 .
+
+codethink:9e1fca3c8a91444c9ebc5d7df8576e55
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae grate baz baz auctor" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 8 .
+
+codethink:72265a6613b643b496f097ef4258fa0f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit loreum magna elit ipsum" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 9 ;
+	nmm:length 2 .
+
+codethink:e0d8bb464cc040c69629affd263f4d0c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum magna sit ipsum grate" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:7144d1bc6a1e48afbdc3f324941fe777
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget loreum vitae sit bar" ;
+	nmm:musicAlbum codethink:d25b169a8fab4f67b5effa52895d1002 ;
+	nmm:trackNumber 11 ;
+	nmm:length 4 .
+
+codethink:7cfb5774458243d5ab4b76e8ed643d81
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate eget amet consectetuer vitae" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 1 ;
+	nmm:length 2 .
+
+codethink:4ead701bdb51441c84aa5f2a91e6b6ac
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz loreum ipsum loreum ipsum" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 2 ;
+	nmm:length 2 .
+
+codethink:dc64bd1d4afc4cb39d28a5fc08b68ff8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor grate bar elit bar" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 3 ;
+	nmm:length 3 .
+
+codethink:3639cf94a8dc44e5a6ecfed140795115
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet elit dolor loreum vitae" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 4 .
+
+codethink:0fe1157f022c4d26b2b4358ca42b70bd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar dictum foo amet grate" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 5 ;
+	nmm:length 4 .
+
+codethink:aeab0a1125a94dcea22e7d0f69bb3ddb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi auctor magna bar amet" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 6 .
+
+codethink:f23a42c9fe8c4fe1aefe01efcb72174c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz sit dictum loreum baz" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 7 .
+
+codethink:d202afd890c14c0ba1f3ebe3a86fe02e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz auctor vitae ipsum morbi" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 8 ;
+	nmm:length 6 .
+
+codethink:f90ef5c92f2c41988cbcfbe98ed27750
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit bar amet baz loreum" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 9 ;
+	nmm:length 7 .
+
+codethink:c4c509afe89b4ce69ac40331e2726cbf
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget dolor foo sit loreum" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 10 ;
+	nmm:length 5 .
+
+codethink:7c24ad2ab03c4e328d1389a42348e3da
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum dolor ipsum magna ipsum" ;
+	nmm:musicAlbum codethink:e5c9f5e036bb4f6992fc79186f74f618 ;
+	nmm:trackNumber 11 ;
+	nmm:length 0 .
+
+codethink:cdcc273afe17494ba50dbc20f90b34dd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer morbi loreum magna baz" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 1 .
+
+codethink:533203d549c2496596a49aa3644fbd45
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor ipsum bar amet magna" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 2 ;
+	nmm:length 0 .
+
+codethink:e1fc75b889e64fa087227d2435fe23c6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna consectetuer bar ipsum loreum" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 3 ;
+	nmm:length 9 .
+
+codethink:e781c709fa4543348090f857f18f3b42
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi amet dictum dictum baz" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 4 ;
+	nmm:length 1 .
+
+codethink:bd4f92a837ef4f2ca2961bf80d1cc526
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae eget auctor ipsum bar" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 5 ;
+	nmm:length 0 .
+
+codethink:14348053b12d46b9b9c95582b2e77ea1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum loreum grate eget amet" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 6 ;
+	nmm:length 7 .
+
+codethink:c3e8d253cd40498480920204c8f8e82e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum dolor sit tellus loreum" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 7 .
+
+codethink:a684edfa8b7441f6be43db199778086e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum elit loreum vitae bar" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 8 ;
+	nmm:length 0 .
+
+codethink:501811f1c2d54de997bbf367a9533c1f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar bar grate foo elit" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 9 ;
+	nmm:length 3 .
+
+codethink:25fbe1a99bef459aa6832442f68f18a0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae dolor ipsum morbi magna" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 10 ;
+	nmm:length 4 .
+
+codethink:e49ffd9b726f47bf875bc781c8b31b60
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit morbi foo morbi consectetuer" ;
+	nmm:musicAlbum codethink:d0acb43f31714c95a5a494a67ceff858 ;
+	nmm:trackNumber 11 ;
+	nmm:length 8 .
+
+codethink:d25466ad81ab42b681df9092a7b7efd6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate dolor ipsum sit magna" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 1 ;
+	nmm:length 3 .
+
+codethink:c5305719bd6b4650a2799dcb24e81bef
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer baz auctor loreum consectetuer" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 2 ;
+	nmm:length 2 .
+
+codethink:5f24b04485224aa9a0b23b8d2f182de0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate magna consectetuer vitae dolor" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 3 .
+
+codethink:018e2439667e432cab5e7e705f345522
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor vitae eget dolor dictum" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 4 ;
+	nmm:length 1 .
+
+codethink:a5a10d6391da40ee8ec5ade62f02d6cd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum foo amet tellus dictum" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 5 .
+
+codethink:3a073270fc73475881d0cdc3eeb98928
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo elit grate vitae eget" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 6 ;
+	nmm:length 6 .
+
+codethink:d61ecfc14c024fc28cf1cdaaf3f8714b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo morbi bar morbi grate" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 7 ;
+	nmm:length 8 .
+
+codethink:83c016bdd5b046da853002b7a8bd9af6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit grate vitae magna sit" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 8 .
+
+codethink:850bbabea66947c387af984efe9f9ee8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit morbi vitae foo consectetuer" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 9 ;
+	nmm:length 1 .
+
+codethink:39f414423b2c4d06a3fbc902d51a3400
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet elit amet ipsum bar" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:14d771aeb15b4f26a7507a3a274f0ab8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet ipsum eget amet eget" ;
+	nmm:musicAlbum codethink:93190905b11242eba5311164d917bc93 ;
+	nmm:trackNumber 11 ;
+	nmm:length 7 .
+
+codethink:84157914fb7d497f9c48189cca453dc9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum ipsum morbi elit magna" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 1 ;
+	nmm:length 1 .
+
+codethink:7959c7e8e8c14530a6a2b366500d315f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna tellus dictum bar bar" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 2 ;
+	nmm:length 0 .
+
+codethink:37c16a3751864794a5b489123d6da14e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum magna baz dictum ipsum" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 3 ;
+	nmm:length 2 .
+
+codethink:53ef853ecd554ccc9b906324998a8e8d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate loreum dictum foo vitae" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 4 ;
+	nmm:length 0 .
+
+codethink:99da987d60ec41498a3f77bb21894915
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum magna grate eget foo" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 5 .
+
+codethink:c5ace81643174705b8be83165887a731
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar tellus ipsum consectetuer morbi" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 6 .
+
+codethink:bebedba8b5604c0ea6c6ecf9f953f17a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi eget baz grate dictum" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 7 ;
+	nmm:length 5 .
+
+codethink:39168bcc060749c8b89919a4743dabfc
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit vitae auctor bar grate" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 8 ;
+	nmm:length 7 .
+
+codethink:8e6906b22cc64f82b6281e7e7785cfa7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum eget ipsum consectetuer baz" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 9 ;
+	nmm:length 7 .
+
+codethink:afc406fcfa764d80a177b88a0ac5cc00
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer foo morbi auctor amet" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 10 ;
+	nmm:length 4 .
+
+codethink:d48b71051398402e889383ed60d0167c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum sit ipsum sit vitae" ;
+	nmm:musicAlbum codethink:33eed4e21c5e4c4cb00fd6403600860e ;
+	nmm:trackNumber 11 ;
+	nmm:length 6 .
+
+codethink:448f22ceee8c4dc5b689b44fe6be9a85
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum eget magna sit consectetuer" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 1 .
+
+codethink:884c6876700748f49ad789c23413b692
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit baz dolor baz baz" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 2 .
+
+codethink:403fb1792d41492c82fccd42d7250be2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna sit dictum grate elit" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 3 ;
+	nmm:length 8 .
+
+codethink:38e9360e72de49659df9f4eeab18ebf5
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna dictum tellus sit magna" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 4 ;
+	nmm:length 2 .
+
+codethink:e2252c42926340678951e40a3f372780
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet morbi dictum loreum dictum" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 5 .
+
+codethink:62de9f5d71c24df6b0200a925fef8d92
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit vitae auctor amet loreum" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 6 .
+
+codethink:b358bad1d9404b21ae070e45f86ef6ca
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus sit eget elit eget" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 7 ;
+	nmm:length 5 .
+
+codethink:fa2fbcd0c4a74c6aa3d755acbf1c471e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor ipsum auctor auctor morbi" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 8 ;
+	nmm:length 2 .
+
+codethink:7413d1e1d6f74fe987de11f05b0bfe80
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum magna dictum ipsum baz" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 9 ;
+	nmm:length 4 .
+
+codethink:a77e0052e0d74c628e3182d053986dee
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus sit vitae amet ipsum" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:b0e1d527085f4d32941ea7837b3195df
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit vitae dictum bar auctor" ;
+	nmm:musicAlbum codethink:8b1234cc9e94427dba30f657bd2f1048 ;
+	nmm:trackNumber 11 ;
+	nmm:length 8 .
+
+codethink:dd1790e7cdee4e4daf37292c989ea6c9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet grate baz elit eget" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 1 .
+
+codethink:4bbd0f44e28447f898d643ff61f5edad
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz consectetuer amet dictum ipsum" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 2 ;
+	nmm:length 2 .
+
+codethink:1351411daaae4b989ecce4e5db1bab5a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget tellus dictum loreum consectetuer" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 3 .
+
+codethink:ccd23be0ed7b4b9b9c5b3a2f6b64722d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz grate dolor loreum eget" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 4 ;
+	nmm:length 5 .
+
+codethink:8d44ddfc34b84b848be6e965b4819240
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae sit consectetuer vitae sit" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 5 ;
+	nmm:length 2 .
+
+codethink:c87d89b83682443a84122af796a65518
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit dictum tellus eget loreum" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 6 ;
+	nmm:length 1 .
+
+codethink:4f2fa15c96c241d2a7283ff6825ba7c4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit loreum tellus sit loreum" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 7 ;
+	nmm:length 0 .
+
+codethink:f3383e5eec454a6c969d95badde29f53
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo consectetuer consectetuer grate ipsum" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 8 ;
+	nmm:length 8 .
+
+codethink:10a0072305b34c89a18251dd2cd35086
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet ipsum baz bar auctor" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 9 ;
+	nmm:length 0 .
+
+codethink:d543a5db36124e14a2fdb14f44a3f1a0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor baz dictum loreum auctor" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 10 ;
+	nmm:length 7 .
+
+codethink:c92e77b4afb34973b8d5ada2640ba8f9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna sit bar grate foo" ;
+	nmm:musicAlbum codethink:457667079b684db5b6fff895a8749349 ;
+	nmm:trackNumber 11 ;
+	nmm:length 9 .
+
+codethink:7d68e7d746424f15aba0aa53a41aa2e4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit elit elit foo vitae" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 1 ;
+	nmm:length 0 .
+
+codethink:c2beda5edd344013bfcf2583cdc4e7fd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna grate morbi magna grate" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 2 ;
+	nmm:length 4 .
+
+codethink:0a460777cf15476a8f4aa4ef143a0906
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate grate sit dictum dolor" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 3 ;
+	nmm:length 9 .
+
+codethink:331ad14910bc4bb592e0cb87633d35ed
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor dolor foo dolor ipsum" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 4 ;
+	nmm:length 8 .
+
+codethink:009cf575e4e840c28d81c3c042bbebc4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar dolor dictum dolor consectetuer" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 5 ;
+	nmm:length 6 .
+
+codethink:9f40a81bd295427f83221eaf93d36a7f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet auctor dictum auctor magna" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 6 ;
+	nmm:length 9 .
+
+codethink:6517e2b720e748e5867f6a1e70d36490
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae tellus foo tellus sit" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 7 ;
+	nmm:length 1 .
+
+codethink:dd355105e21847238a3ac979fac8a0a7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate morbi dictum elit auctor" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 8 ;
+	nmm:length 7 .
+
+codethink:4df98df69ff64633895379cde31b385a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum dolor tellus amet magna" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 9 ;
+	nmm:length 6 .
+
+codethink:d15f100f65764a8bb5e654f26d44205a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna foo magna sit grate" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 10 ;
+	nmm:length 8 .
+
+codethink:ad2c9fd210fb44cf8f7e4e0b17fba19d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi morbi grate dolor baz" ;
+	nmm:musicAlbum codethink:95e8ce05d9764150bff246e002e00dcb ;
+	nmm:trackNumber 11 ;
+	nmm:length 6 .
+
+codethink:f8086b4540324feda4f09ef2526ca830
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum eget vitae eget grate" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 1 .
+
+codethink:d5e618c072d847c686541df35bc35b1a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet eget loreum tellus ipsum" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 2 ;
+	nmm:length 1 .
+
+codethink:bfee9dd86ffd4cc0897cd8837757b232
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus tellus elit consectetuer loreum" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 3 ;
+	nmm:length 0 .
+
+codethink:d28ceab82f7b4bed91395d28c5dd4b7e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum dictum elit amet bar" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 4 ;
+	nmm:length 8 .
+
+codethink:bcfe0373f21a45819cbfceffc662eb41
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo eget amet tellus auctor" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 5 ;
+	nmm:length 2 .
+
+codethink:44086704e56d44e68369d984bb955469
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet dictum baz eget foo" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 6 ;
+	nmm:length 3 .
+
+codethink:8faa8df78a894e0abfabadb353e0a430
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit loreum baz baz morbi" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 7 .
+
+codethink:3147c2e361fb48d885b6577b5a10ca06
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor baz dictum foo tellus" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 8 ;
+	nmm:length 3 .
+
+codethink:a4c7f58ac4474a14a2388ac314371799
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor sit magna morbi baz" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 9 .
+
+codethink:4da0dd1ac45547d0b59109ac0ce8aafb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor grate morbi auctor foo" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:14d1b55271ce4076a79279034e79aa7b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum foo sit auctor vitae" ;
+	nmm:musicAlbum codethink:ff282ef5aafe486285e298d263e37163 ;
+	nmm:trackNumber 11 .
+
+codethink:11ae65c1358b41d9b17de2533071084c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna morbi tellus magna grate" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 1 .
+
+codethink:865dd489f32d4da4ad47d898b12007ea
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus vitae vitae bar grate" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 2 ;
+	nmm:length 8 .
+
+codethink:fe4a9a9c2e2b4a89a5d1f420a73f0f7d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo dictum grate dictum ipsum" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 3 ;
+	nmm:length 9 .
+
+codethink:8dfb6eefe1854ab19a99d206e2064169
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna elit amet auctor baz" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 4 ;
+	nmm:length 8 .
+
+codethink:e35583f568104243b8c2d6ed4e715096
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate sit consectetuer morbi ipsum" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 5 .
+
+codethink:daccb9dbaccc4d25841a74fe7709b7d4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet auctor foo tellus morbi" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 6 .
+
+codethink:bc55327f7b5e4baa811fc6d8023468ad
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi grate consectetuer sit loreum" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 7 ;
+	nmm:length 9 .
+
+codethink:715a4ec9f2b24d929b777d3669db6abc
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor sit morbi vitae dolor" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 8 ;
+	nmm:length 0 .
+
+codethink:feb920e5a2494ec4a420e7a73fc3925a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar grate dolor foo baz" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 9 ;
+	nmm:length 6 .
+
+codethink:8c2705c4ee7146b7a13c10922469a409
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum magna magna elit sit" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 10 ;
+	nmm:length 9 .
+
+codethink:a9333d842cb84f33ab9310a5330d1914
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo ipsum morbi eget ipsum" ;
+	nmm:musicAlbum codethink:7e8b444fd0524daa8312303ea158afd8 ;
+	nmm:trackNumber 11 ;
+	nmm:length 2 .
+
+codethink:9c715beaf2e645359e62eb051d1ca078
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit loreum loreum auctor ipsum" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 1 .
+
+codethink:e71fea757e574b4498120987c522eb8c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz dictum morbi bar loreum" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 2 ;
+	nmm:length 4 .
+
+codethink:09930ae49fef4a018c0644a0ebce9655
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor vitae consectetuer foo dictum" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 3 ;
+	nmm:length 6 .
+
+codethink:4202081223e04cc083f3e5af1230e7b9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor grate loreum bar magna" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 4 ;
+	nmm:length 3 .
+
+codethink:f41e5ea8cf514eca88f65b401b1521ab
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet auctor foo ipsum dictum" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 5 ;
+	nmm:length 8 .
+
+codethink:f8a9d91d11a54ee085676a5ad5d48c4f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum foo elit ipsum bar" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 6 ;
+	nmm:length 8 .
+
+codethink:4fe430735ebc48e083ce7e9dc70174f9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum eget auctor sit elit" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 7 .
+
+codethink:f333f62bc59042b687649e8b91dd930a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dolor loreum morbi foo" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 8 .
+
+codethink:9120ce9b6d13400c8e79875e57c571be
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget vitae bar dictum eget" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 9 .
+
+codethink:06228323f59e4b808190167edb6b52f7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor auctor consectetuer loreum bar" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 10 .
+
+codethink:d49c1f82e23547acaefb47e1ee219a53
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet ipsum morbi auctor eget" ;
+	nmm:musicAlbum codethink:63b3f2496a264703b387ad16cf333602 ;
+	nmm:trackNumber 11 .
+
+codethink:db489c125c4d4d1aa21a1feb28db5731
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus elit morbi dictum bar" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 1 .
+
+codethink:4c949dc78010480eb562876758da5897
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget morbi eget bar auctor" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 2 ;
+	nmm:length 2 .
+
+codethink:e8fd44b2a3be4e5182f3eae77b822ad9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer eget morbi vitae grate" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 3 .
+
+codethink:780bd4d4547b42e297c118e12bee251e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum grate eget amet auctor" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 4 ;
+	nmm:length 9 .
+
+codethink:48d865a1f9e04cb284a917ec33bb4d78
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna baz dolor grate vitae" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 5 ;
+	nmm:length 1 .
+
+codethink:4547072ef46b44f5a8cda497663ac4ad
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae ipsum magna vitae morbi" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 6 .
+
+codethink:ee56a97ef7dd4b31af0f97d7baa212a5
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum magna bar baz grate" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 7 ;
+	nmm:length 1 .
+
+codethink:99276f9170e5405aabcdd8c36f21f14a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit loreum consectetuer amet morbi" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 8 .
+
+codethink:c19857577ba14808a800a33a7f582846
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum foo consectetuer loreum consectetuer" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 9 ;
+	nmm:length 7 .
+
+codethink:ddbe99915eb241b885843f3852db0192
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz magna consectetuer elit bar" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:8dda0fbe8aa94dc68fdcd1ea1c01dfcb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit ipsum consectetuer tellus amet" ;
+	nmm:musicAlbum codethink:9e8ffc6be3ef44fc9dece5e2f2eb2e98 ;
+	nmm:trackNumber 11 ;
+	nmm:length 5 .
+
+codethink:66cc02cb256945cd83a04e1cf495da3c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna magna magna dictum loreum" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 1 ;
+	nmm:length 6 .
+
+codethink:474ceca476714a6aa19b459cc365b586
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor eget ipsum magna dictum" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 2 .
+
+codethink:f06a5575f6ae4224aabbce8c6189882c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum consectetuer consectetuer loreum baz" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 3 .
+
+codethink:01dd2d4671f542f09317ebc68364680b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus tellus amet dictum vitae" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 4 .
+
+codethink:30d014a64bf44e63850f29630fe08580
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus morbi auctor morbi grate" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 5 .
+
+codethink:5e300f16387f47a890876c4de3399d38
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz baz vitae morbi elit" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 6 ;
+	nmm:length 1 .
+
+codethink:74c6c70e880742f49dcb37836bb9aa58
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit loreum dictum tellus loreum" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 7 ;
+	nmm:length 9 .
+
+codethink:a96fea5a5f5144e8a8d251fe09514886
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo morbi amet magna auctor" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 8 ;
+	nmm:length 6 .
+
+codethink:222dc3d313ea43f8ad45a11f74a609c8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit morbi amet foo grate" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 9 .
+
+codethink:0cb807c8391747d18091dd4b079cb4cc
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum dictum morbi magna amet" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 10 ;
+	nmm:length 6 .
+
+codethink:b9017a06c4e949ca8b71fa883a960bd8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus grate bar ipsum loreum" ;
+	nmm:musicAlbum codethink:99b0267d5c004ae7b8edd5cb25e89b72 ;
+	nmm:trackNumber 11 ;
+	nmm:length 6 .
+
+codethink:f62732f4707f40ed8945a6dfd351129a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet grate ipsum loreum grate" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 1 ;
+	nmm:length 9 .
+
+codethink:35f4491b486a4f018758769f6eb24d7f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo sit tellus sit dictum" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 2 ;
+	nmm:length 7 .
+
+codethink:9599b169250647699b160c63f4d15c57
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor amet loreum bar dolor" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 3 ;
+	nmm:length 4 .
+
+codethink:5bf93e8a88ed452ab91dac3ee76d7f6c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate eget consectetuer dictum ipsum" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 4 .
+
+codethink:0916a226b03f48668d50439afff0b746
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae dictum vitae consectetuer consectetuer" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 5 ;
+	nmm:length 2 .
+
+codethink:0bf69f5a4d39487a8ad6bbec4ec15636
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet elit ipsum elit consectetuer" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 6 .
+
+codethink:b31f5aedbb974c22980633143dc9cae9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit consectetuer dolor elit vitae" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 7 ;
+	nmm:length 9 .
+
+codethink:fb64e53aa6f24ffea1679014ff1c3550
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget sit morbi elit sit" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 8 .
+
+codethink:6e62cccc0b7d47f79332747308a3d5e2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar baz auctor vitae dictum" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 9 ;
+	nmm:length 9 .
+
+codethink:8c8e0dccaa7a41ebaedbd68cd53b64ff
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz bar elit baz eget" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 10 ;
+	nmm:length 2 .
+
+codethink:d6a71b53b05a4756872673b0ff8c87d2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus dolor amet sit loreum" ;
+	nmm:musicAlbum codethink:80d195f66c7b46bdab3e3e75ffd372e6 ;
+	nmm:trackNumber 11 ;
+	nmm:length 9 .
+
+codethink:8f41ebfe3fc74c4bad20d26894bea057
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor grate tellus dolor loreum" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 1 .
+
+codethink:5fb5e817efdd4f61b04414c763f93ce5
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus morbi tellus loreum morbi" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 2 ;
+	nmm:length 1 .
+
+codethink:fae7e02c2988434984d0f4b8d952c331
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget elit morbi magna vitae" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 3 .
+
+codethink:02b5d0d7515a4ae290b38b31c9258bce
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz auctor auctor baz eget" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 4 ;
+	nmm:length 2 .
+
+codethink:2ab7b679850e4222afbe51f5778bf139
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna baz elit consectetuer foo" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 5 ;
+	nmm:length 2 .
+
+codethink:8243f57458eb4735ae3aae3ca677c3d2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget magna dictum dictum baz" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 6 ;
+	nmm:length 8 .
+
+codethink:b0c0abd0d94c463ab45f666243d473da
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit morbi vitae dictum magna" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 7 .
+
+codethink:cbdbbb5ffeb945588806b8578de9d4de
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar tellus elit loreum loreum" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 8 ;
+	nmm:length 9 .
+
+codethink:08e01603045441d18a83a0f26cba64ec
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer amet baz amet foo" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 9 .
+
+codethink:4b147f8d29064593afafe1d4f5860111
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus elit dictum tellus bar" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 10 ;
+	nmm:length 6 .
+
+codethink:f3159ea6f9434be6841d50f8ee662a9e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer bar dolor eget ipsum" ;
+	nmm:musicAlbum codethink:4e68189987df4a539ef917022f8ef0aa ;
+	nmm:trackNumber 11 ;
+	nmm:length 1 .
+
+codethink:43b2f19589f246149130f5c877eaf665
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer amet grate elit ipsum" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 1 ;
+	nmm:length 2 .
+
+codethink:0f6aca05e25b47f5aa345ee75a9686a3
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar tellus ipsum loreum eget" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 2 .
+
+codethink:26b527b76128431f9cab9a3ef7405e95
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit elit sit eget auctor" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 3 ;
+	nmm:length 1 .
+
+codethink:9b3082011a0647bcb9327b2ef091ade3
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer tellus elit dictum grate" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 4 .
+
+codethink:f79e6a03151447d5a728e983b76d8dbb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna vitae morbi dolor dolor" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 5 .
+
+codethink:0e4f6c0b322b4c67845d053a819b34df
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum bar bar eget tellus" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 6 ;
+	nmm:length 3 .
+
+codethink:6bcefa5e98ef4ba6a5b351ccda431936
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum tellus consectetuer auctor ipsum" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 7 ;
+	nmm:length 7 .
+
+codethink:bdfb65b5082b480e89e799165986fe44
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit magna consectetuer foo vitae" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 8 ;
+	nmm:length 6 .
+
+codethink:3dfde832a6b0447194a0be40b8d3ffb8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor tellus baz auctor auctor" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 9 ;
+	nmm:length 5 .
+
+codethink:dbf6f7d4af414c2799bc0c4eaff03e34
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum morbi dolor sit ipsum" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 10 ;
+	nmm:length 0 .
+
+codethink:65db6d09da4b442e84e0e1ac40b2afde
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum loreum magna auctor tellus" ;
+	nmm:musicAlbum codethink:53f7f75c190a427b88f93cd9c562101a ;
+	nmm:trackNumber 11 ;
+	nmm:length 5 .
+
+codethink:8b75b175ec8f46cc98a87dc90c9fd6fa
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer loreum loreum grate dolor" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 1 .
+
+codethink:a837331fc7444c9fb2250f40edf6ee0f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo grate loreum sit foo" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 2 ;
+	nmm:length 4 .
+
+codethink:d1e2b0cc9a114ef2af2f5f8db9926d63
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor sit sit ipsum sit" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 3 ;
+	nmm:length 9 .
+
+codethink:9419cad2679f425586017b76985a6952
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum foo foo foo consectetuer" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 4 ;
+	nmm:length 1 .
+
+codethink:dbd22a5261cd4b618e12ac26a97b4514
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor consectetuer amet loreum consectetuer" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 5 ;
+	nmm:length 8 .
+
+codethink:34d8e6ed614748318b29fe49311f45fe
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet tellus vitae amet dolor" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 6 ;
+	nmm:length 1 .
+
+codethink:8e9ac6d19d1b45f1bf4e24405e4dff3c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit vitae loreum consectetuer amet" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 7 ;
+	nmm:length 2 .
+
+codethink:a1ce5a3b26694e03a981f226f00ad05c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna ipsum foo foo sit" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 8 .
+
+codethink:ef42d7b1679f4b928ef38b1856d75806
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo tellus foo foo loreum" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 9 ;
+	nmm:length 7 .
+
+codethink:299786e072ee43079880682930be1a2b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum grate loreum tellus amet" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 10 ;
+	nmm:length 5 .
+
+codethink:18b22974f30a48579a467e30d5b9ea04
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet dolor dolor morbi tellus" ;
+	nmm:musicAlbum codethink:bbe0561b50864a8c95bb332ef20a524e ;
+	nmm:trackNumber 11 ;
+	nmm:length 0 .
+
+codethink:c95a4f32974944ba96ee77568a30e1b0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer dictum elit dictum vitae" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 1 ;
+	nmm:length 1 .
+
+codethink:0e7b0fce44314914a7e82d5787f20e35
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dolor elit elit tellus" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 2 .
+
+codethink:e5806e85abfb453db763ef38848921bd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate tellus consectetuer dictum bar" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 3 .
+
+codethink:973d1410d46a42fd8cba02476e898990
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor magna amet dictum baz" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 4 ;
+	nmm:length 9 .
+
+codethink:75aaac6f14f3483cbc7f6ffcc8a2422d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae amet amet ipsum ipsum" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 5 ;
+	nmm:length 9 .
+
+codethink:ff09aa329c5141bc9ba005e68cf0e927
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae elit tellus amet eget" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 6 ;
+	nmm:length 7 .
+
+codethink:dfcac556dade44acbfc5c9497e0a8efb
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor ipsum elit dictum foo" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 7 ;
+	nmm:length 3 .
+
+codethink:7c1f3e1b1a58439183ad9191b88b78cf
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dictum vitae baz baz" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 8 .
+
+codethink:54811bf1c5134f21bdabe9a2dba37049
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor baz amet grate magna" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 9 ;
+	nmm:length 1 .
+
+codethink:e71b2bfbcb7740fdadeae087d31f6599
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit magna tellus eget sit" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 10 .
+
+codethink:9637f88ff67247779f29b75dbaecd465
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna consectetuer consectetuer magna consectetuer" ;
+	nmm:musicAlbum codethink:84eaa57cf6e44da3b81feaa56714879d ;
+	nmm:trackNumber 11 ;
+	nmm:length 4 .
+
+codethink:4342df2cf2af415ea873b9f69bcba605
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum magna bar morbi dictum" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 1 ;
+	nmm:length 0 .
+
+codethink:a740b5f806cf439fb7e934f4f8ee4731
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo dictum eget tellus morbi" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 2 ;
+	nmm:length 4 .
+
+codethink:add3437209b74683851cdbefc502b825
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae amet tellus amet sit" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 3 ;
+	nmm:length 1 .
+
+codethink:6fc01d3b3f5f4454942ef8107aceea32
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet magna morbi eget dictum" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 4 .
+
+codethink:1c0a3f4bcf074988a7f08200579a9dff
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna tellus dolor magna loreum" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 5 ;
+	nmm:length 0 .
+
+codethink:3d803c2d5f814839ae7a9c1293f9aa18
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna dolor auctor eget loreum" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 6 .
+
+codethink:cc1e7e545b15479bac5f013cedb59918
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet consectetuer dictum magna sit" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 7 .
+
+codethink:4cfa7874c43041f889a839a1907025f1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum magna foo amet vitae" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 8 ;
+	nmm:length 9 .
+
+codethink:5113ac7523b1478c8779c0e0108db98f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae auctor morbi tellus amet" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 9 ;
+	nmm:length 7 .
+
+codethink:e6ca5175eacf4d18acdf626e42e3d82a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor dolor magna baz elit" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 10 .
+
+codethink:bd06fd1b93d241f597a607820b33c451
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae morbi dictum sit tellus" ;
+	nmm:musicAlbum codethink:6ad474927736426bbd2f148312a39ce7 ;
+	nmm:trackNumber 11 .
+
+codethink:292f23b6d2ad4d0c9e781362aca243be
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar dictum auctor baz tellus" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 1 .
+
+codethink:ecf311e94c0f4a2183994c910d37fd48
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo ipsum morbi grate magna" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 2 ;
+	nmm:length 0 .
+
+codethink:e6521c874ab94740bf414fbaec271a13
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum bar loreum amet elit" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 3 ;
+	nmm:length 0 .
+
+codethink:ea84852d5c3d45ebb89eaefde8d47850
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum tellus dolor dictum ipsum" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 4 ;
+	nmm:length 8 .
+
+codethink:e86ccbcd82314fab99177ca0000712b0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo foo foo tellus grate" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 5 ;
+	nmm:length 5 .
+
+codethink:9f1b3ed0cf014e10b18584280e839cc6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor tellus eget grate elit" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 6 .
+
+codethink:d155fdf133c24929876c82b85efa8042
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi magna baz tellus magna" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 7 .
+
+codethink:34182d0651ed4fd9a6fcce4ef870fb42
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor dictum ipsum loreum grate" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 8 ;
+	nmm:length 6 .
+
+codethink:1a1c7c8df6de4b50ac00d7c62d753d15
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor auctor magna auctor ipsum" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 9 ;
+	nmm:length 8 .
+
+codethink:a2d2f8d346704139977cd33b517ce72f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum vitae loreum sit baz" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:2920f5b2abda4e0f90f0df911743cc7e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna vitae elit dictum bar" ;
+	nmm:musicAlbum codethink:dad2746a713a4590953ba34790bfe9c1 ;
+	nmm:trackNumber 11 ;
+	nmm:length 5 .
+
+codethink:88ebf31bf8dc424fbfa22d5b5fd32ff2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi foo grate bar eget" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 1 ;
+	nmm:length 8 .
+
+codethink:fc656f41f9eb4b7b9c9c8fbaeee97c98
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit amet bar dolor loreum" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 2 ;
+	nmm:length 7 .
+
+codethink:c901463d4a1c40eaa1440a8655fb0073
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi magna dictum bar elit" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 3 .
+
+codethink:7d595af6e209440493b76d1565c67d53
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate sit morbi vitae bar" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 4 ;
+	nmm:length 7 .
+
+codethink:28c5ad66e2b44c36b91523f4dbf29e33
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit baz vitae bar tellus" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 5 .
+
+codethink:2f48c52c4c88405b9122af435977a896
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer dolor sit bar magna" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 6 ;
+	nmm:length 6 .
+
+codethink:e0641900efdf4b858001965cdae15e74
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum tellus foo foo tellus" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 7 .
+
+codethink:9d70a3343a4148daa5de0692d9aeb268
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus magna bar elit foo" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 8 .
+
+codethink:094a84f3d47848b7880c45df28467a93
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet ipsum dolor morbi consectetuer" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 9 .
+
+codethink:771f7d9c196e4189b4b2b7be974979d2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz vitae sit elit dictum" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 10 ;
+	nmm:length 6 .
+
+codethink:6e870a8903b248ffae45e3b727f33714
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget bar grate bar amet" ;
+	nmm:musicAlbum codethink:56a70834cf9f490db6a01fd8bddf7515 ;
+	nmm:trackNumber 11 ;
+	nmm:length 9 .
+
+codethink:ed10974c0f42467e8f00f098cf87b8ea
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate morbi dolor morbi sit" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 1 .
+
+codethink:8e48dc1af9e64276b89d31e97b822575
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum dolor baz consectetuer elit" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 2 ;
+	nmm:length 5 .
+
+codethink:6c209687832f4d508a1451f7d9244375
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit sit bar morbi magna" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 3 .
+
+codethink:9120c80142d741e086a7b15d34a578d3
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor morbi eget ipsum sit" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 4 ;
+	nmm:length 4 .
+
+codethink:0aad19f3f6364fdc96ab37fab196b705
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit ipsum baz elit consectetuer" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 5 ;
+	nmm:length 3 .
+
+codethink:f0d858063fe9442b94e01c372f45546a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum dolor ipsum consectetuer vitae" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 6 .
+
+codethink:b2fc6873a1f8414089c5e47d22c21c79
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar ipsum bar morbi sit" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 7 ;
+	nmm:length 2 .
+
+codethink:eeabb2f827ff442ba85568c8b4865034
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum magna ipsum dictum consectetuer" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 8 .
+
+codethink:1117294aae4a4727b661eada9bc373d1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus foo loreum auctor auctor" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 9 ;
+	nmm:length 6 .
+
+codethink:adfff4e66ba047659b44452abf8e5b54
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor baz baz auctor dictum" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 10 .
+
+codethink:8f92db8401a24e84a5c7090dc48da472
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum baz morbi sit vitae" ;
+	nmm:musicAlbum codethink:5c335829d79543348875344a660ccd14 ;
+	nmm:trackNumber 11 .
+
+codethink:6362d102aac2455b9af6f673693cde34
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo dictum consectetuer tellus dictum" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 1 ;
+	nmm:length 0 .
+
+codethink:c3659600d443480786d4667ff1af9b64
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate amet consectetuer elit auctor" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 2 ;
+	nmm:length 4 .
+
+codethink:e882273731a64a2b8bf6b36a216aae65
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit elit consectetuer eget magna" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 3 .
+
+codethink:aa3a5321143746d29eadbbd04bc33bfe
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit tellus morbi sit dolor" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 4 ;
+	nmm:length 7 .
+
+codethink:a7b6f741045d4356913851470a22bb39
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna loreum baz amet baz" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 5 ;
+	nmm:length 5 .
+
+codethink:4daf41006c2d4d368c0b9fb4e317111b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor baz consectetuer morbi morbi" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 6 .
+
+codethink:ca9f894e1080472f97f1f50be956e498
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor sit sit foo eget" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 7 .
+
+codethink:3200ef91841c405b94506abb53b11377
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum baz morbi loreum loreum" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 8 ;
+	nmm:length 4 .
+
+codethink:595bc888c1444ca189250cb1c87373a2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz bar foo dictum baz" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 9 ;
+	nmm:length 4 .
+
+codethink:56a76323d93d4e1a99918bfc291466a7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi elit foo amet dictum" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 10 .
+
+codethink:64d67f0e77c34d85bd93f3b31afebfae
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar morbi loreum magna sit" ;
+	nmm:musicAlbum codethink:fde7f74779fc46cabc2cb86bea47b543 ;
+	nmm:trackNumber 11 ;
+	nmm:length 7 .
+
+codethink:29b2e6eb3387419584c77355a6d77654
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor auctor dictum baz eget" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 1 ;
+	nmm:length 7 .
+
+codethink:03a6b0de22b642babf53bb232773f209
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer magna tellus magna dolor" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 2 ;
+	nmm:length 5 .
+
+codethink:ee085d15da35460293a40513814316d2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer elit sit dolor baz" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 3 ;
+	nmm:length 3 .
+
+codethink:049d007b5ddd4793845d42625af0f2ab
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet grate vitae morbi loreum" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 4 ;
+	nmm:length 8 .
+
+codethink:056e2cd0ffc2404085ab977f5ad3dc5d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit eget eget foo tellus" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 5 ;
+	nmm:length 1 .
+
+codethink:241170d666e644c3992ead18087e4932
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo vitae magna foo bar" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 6 .
+
+codethink:192d6af46d7a405bb66eca9eef8e0d96
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit baz auctor dictum loreum" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 7 ;
+	nmm:length 3 .
+
+codethink:70f480fc8d284630b61629438b166fa0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum magna eget bar sit" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 8 .
+
+codethink:ae3b5a3638984409840a1b3f28fe109f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar eget morbi grate eget" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 9 ;
+	nmm:length 6 .
+
+codethink:6b6e671ffcbf4f609c366ba8ddcb50db
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum morbi loreum eget vitae" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:431587b047aa4f47a516ec2f365da9ff
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet ipsum amet loreum loreum" ;
+	nmm:musicAlbum codethink:85c774388fc34695b0d6fc52dd035078 ;
+	nmm:trackNumber 11 .
+
+codethink:cc28ff0095484524a7b3ec0a2239287b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget baz ipsum foo auctor" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 1 .
+
+codethink:4095b019ec0e4a9f906eccc0339d4094
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum loreum eget dolor loreum" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 2 ;
+	nmm:length 6 .
+
+codethink:dc9b44c23c1a457b9b3ad23249cff108
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget dolor elit foo dictum" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 3 .
+
+codethink:49a7178daeb14ff7b2e1a36e605d5f94
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate dolor foo consectetuer baz" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 4 .
+
+codethink:e6e48e70d6514046a7d1d559e6af15e2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor magna vitae bar vitae" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 5 ;
+	nmm:length 8 .
+
+codethink:2d4c00d69bd44334b6aae469a08af351
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna morbi dolor morbi grate" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 6 ;
+	nmm:length 4 .
+
+codethink:6d021c6b37304b13b270d1794cc91f26
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus grate tellus dictum baz" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 7 .
+
+codethink:5638e7de6bb3433a80acb23ceea3dad8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "eget auctor dolor bar grate" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 8 .
+
+codethink:84e3b14f348844c6ae84ab96e375ee1f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate morbi morbi ipsum ipsum" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 9 .
+
+codethink:4b660bc46ab84dd9a96ff4653e3f224d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor magna dictum ipsum tellus" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 10 ;
+	nmm:length 5 .
+
+codethink:426e8f3188f740c58101f68fa0799bf2
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar dictum loreum loreum elit" ;
+	nmm:musicAlbum codethink:53f4b304438e40f19d3b287dadcbeedb ;
+	nmm:trackNumber 11 ;
+	nmm:length 9 .
+
+codethink:0fc7c30094e7443fa41e4733d39c231f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit dictum vitae tellus morbi" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 1 ;
+	nmm:length 2 .
+
+codethink:58a22c5bee0d4ef38c547538181484f7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor vitae auctor amet morbi" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 2 ;
+	nmm:length 5 .
+
+codethink:a60905b747d74de1834e9f4c8b0d6dd4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo dictum magna tellus foo" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 3 ;
+	nmm:length 1 .
+
+codethink:75ffdcc401a84c64b26dbff17a5cc648
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet auctor magna consectetuer eget" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 4 .
+
+codethink:1adef564316f4c7eb8ec2f0a3991281e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor auctor foo magna amet" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 5 .
+
+codethink:32cc197148d84a88a5e9c14d0abc1d94
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dictum tellus auctor dolor" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 6 ;
+	nmm:length 3 .
+
+codethink:1258cc48441d42d883cab8e6d39ec1a7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar morbi magna morbi consectetuer" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 7 .
+
+codethink:053f4f41817e4176b3ca1f1961bf629a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet sit sit dictum morbi" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 8 ;
+	nmm:length 4 .
+
+codethink:0a9ddaa0fb004755ad8328f8ec0ee97e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate magna vitae elit dolor" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 9 .
+
+codethink:bf724d29c3734db0b5249f9b25b1cd74
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "tellus sit auctor dictum sit" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 10 ;
+	nmm:length 1 .
+
+codethink:b78739159464451f93023b2d8f998e01
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor auctor dictum tellus consectetuer" ;
+	nmm:musicAlbum codethink:416e156e16244c71b0c55438cecf8aab ;
+	nmm:trackNumber 11 .
+
+codethink:349c0c5ead5d490eb45bfd13b1a786b0
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "vitae ipsum morbi auctor loreum" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 1 ;
+	nmm:length 7 .
+
+codethink:821235fbef98442eb01cca42165c87e4
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "baz elit foo vitae magna" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 2 .
+
+codethink:a720b93d82d344948fd55ee8ed60033c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna vitae eget dictum magna" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 3 ;
+	nmm:length 4 .
+
+codethink:1387508f07024d399ff8265bb59903e3
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer bar foo foo morbi" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 4 ;
+	nmm:length 5 .
+
+codethink:5818d8ca8b654f62a07d2ff0a910e20b
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum bar tellus eget grate" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 5 ;
+	nmm:length 8 .
+
+codethink:cc4fd0697aa5477087bb4331053a37c7
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor consectetuer dolor tellus elit" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 6 ;
+	nmm:length 6 .
+
+codethink:185a2d4093604429839341c1fa7ba9fd
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna elit vitae dictum dictum" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 7 ;
+	nmm:length 6 .
+
+codethink:ce94a8859517419ba867bdedff24943e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit auctor auctor dictum foo" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 8 ;
+	nmm:length 9 .
+
+codethink:6f96dc81142c4716b98db350c18de0a8
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum eget consectetuer consectetuer tellus" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 9 .
+
+codethink:3344a157b8a2442da1634b668e9559c6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate eget sit eget auctor" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 10 ;
+	nmm:length 7 .
+
+codethink:48cbe9a85daa4ac9bba364bc40ebf6ff
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit auctor tellus eget amet" ;
+	nmm:musicAlbum codethink:22aefbea567a44259bfa3bd60b6f5f5e ;
+	nmm:trackNumber 11 ;
+	nmm:length 8 .
+
+codethink:7b287f0651cc4ba6b06a8936d5502b5a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi magna elit auctor bar" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 1 .
+
+codethink:3b98b6e17a064f05a64b6ac208b8d38e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor elit baz foo consectetuer" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 2 ;
+	nmm:length 0 .
+
+codethink:9b0b04a8d69d419fb47c41dd4c191a49
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dolor sit morbi amet" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 3 ;
+	nmm:length 2 .
+
+codethink:741dcc3be0aa43ec97bbeaf0824d646e
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "auctor foo consectetuer sit grate" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 4 ;
+	nmm:length 8 .
+
+codethink:68436eb8e8164745bf1828b1d14b9c21
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "ipsum loreum foo magna auctor" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 5 ;
+	nmm:length 4 .
+
+codethink:60d1649ed4e24be98e692fb378125496
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate vitae bar baz baz" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 6 .
+
+codethink:073c1e63774a4468aa2a6f988f9f93f9
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "morbi dictum grate bar grate" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 7 ;
+	nmm:length 8 .
+
+codethink:1f9726ca0d014381851b7ca12ec109b6
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "magna dolor loreum vitae loreum" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 8 ;
+	nmm:length 8 .
+
+codethink:aed37ab9c9ed4a05b3cc988e73102519
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate baz baz elit consectetuer" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 9 .
+
+codethink:c9fc4c6048c14092bf337cf4834d2872
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "sit magna eget tellus elit" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 10 .
+
+codethink:214d275dfad743eb98cb8f9c6dd3cd48
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "foo consectetuer consectetuer grate grate" ;
+	nmm:musicAlbum codethink:0c6fd7b8e0cb4c0b920fc6d5fb33b273 ;
+	nmm:trackNumber 11 ;
+	nmm:length 6 .
+
+codethink:a13b19d94bc24805ac7699026c12a373
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum dictum grate ipsum magna" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 1 .
+
+codethink:f5c22fb0f06f430a81506cd6ea7da843
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor amet elit foo consectetuer" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 2 .
+
+codethink:96fa60cc141f44e2a832499e86dda530
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "elit bar auctor eget morbi" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 3 .
+
+codethink:f29bb5b242b141f3ac1110cb2dd76d97
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "loreum ipsum elit dolor dictum" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 4 .
+
+codethink:309e4874e5814d0daa6825e86ae8c804
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate dolor eget elit magna" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 5 ;
+	nmm:length 7 .
+
+codethink:0d5a175f3bbe40658e4917d7fb55b64d
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "consectetuer elit foo grate baz" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 6 ;
+	nmm:length 8 .
+
+codethink:4771662886a34fbbb2c8ac621f10af4a
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "bar loreum tellus elit auctor" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 7 ;
+	nmm:length 9 .
+
+codethink:0c82f0b54f8b4166a0b053700a35537c
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dictum foo auctor loreum vitae" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 8 ;
+	nmm:length 0 .
+
+codethink:e121071dd4ef443b9b4a5ab1838d3c4f
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "amet dictum auctor consectetuer auctor" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 9 ;
+	nmm:length 2 .
+
+codethink:b449ad9f3f3442f6a4cc0094bccd0310
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "grate magna baz auctor ipsum" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 10 .
+
+codethink:bd193c1f88394c58b55443d4bacc8ea1
+	a rdfs:Resource ;
+	a nie:InformationElement ;
+	nie:isLogicalPartOf codethink:nmm-test-graph-001 ;
+	a nfo:Media ;
+	a nmm:MusicPiece ;
+	nie:title "dolor loreum auctor grate dolor" ;
+	nmm:musicAlbum codethink:88c092ff95fb4ea282fbbd1f16a49da0 ;
+	nmm:trackNumber 11 ;
+	nmm:length 8 .
+

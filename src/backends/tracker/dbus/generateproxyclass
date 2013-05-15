@@ -1,0 +1,2 @@
+#!/bin/bash
+qdbusxml2cpp -c TrackerNodesProxy -p tracker_resources -i dbus_types.h tracker-resources.xml org.freedesktop.Tracker1.Resources

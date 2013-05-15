@@ -1,0 +1,1 @@
+Addition of many RDFVariable const's in return types to avoid implicit share copying.

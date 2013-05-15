@@ -1,0 +1,468 @@
+<rdf:RDF
+	xmlns:maemo="http://maemo.org/ontologies/tracker#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nie="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#"
+	xmlns:nco="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#"
+	xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+	xmlns:nmo="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#"
+	xmlns:ncal="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#"
+	xmlns:nid3="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#"
+	xmlns:nao="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#"
+	xmlns:nrl="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#"
+	xmlns:fts="http://www.tracker-project.org/ontologies/fts#"
+	xmlns:poi="http://www.tracker-project.org/ontologies/poi#"
+	xmlns:tracker="http://www.tracker-project.org/ontologies/tracker#"
+	xmlns:mfo="http://www.tracker-project.org/temp/mfo#"
+	xmlns:mlo="http://www.tracker-project.org/temp/mlo#"
+	xmlns:mto="http://www.tracker-project.org/temp/mto#"
+	xmlns:mtp="http://www.tracker-project.org/temp/mtp#"
+	xmlns:nmm="http://www.tracker-project.org/temp/nmm#"
+	xmlns:scal="http://www.tracker-project.org/temp/scal#"
+	xmlns:slo="http://www.tracker-project.org/temp/slo#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:sopranolive="http://purl.org/sopranolive/ontologies/core#"
+>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject">
+		<rdfs:comment>A unit of data that is created, annotated and processed on the user desktop. It represents a native structure the user works with. The usage of the term 'native'	is important. It means that a DataObject can be directly mapped to a data structure maintained by a native application.	This may be a file, a set of files or a part of a file. The granularity depends on the user. This class is not intended to be instantiated by itself. Use more specific subclasses.</rdfs:comment>
+		<rdfs:label>Data Object</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1012</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#byteSize">
+		<rdfs:comment>File size in bytes</rdfs:comment>
+		<rdfs:label>Size</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1248</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#dataSource">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1813</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/source"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataSource"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#interpretedAs">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1656</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#lastRefreshed">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1402</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1436</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isPartOf">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1537</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<tracker:weight>2</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url">
+		<rdfs:comment>URL pointing at the location of the resource. In cases where creating a simple file:// or http:// URL for a file is difficult (e.g. for files inside compressed archives) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html.</rdfs:comment>
+		<rdfs:label>URL</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1935</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:indexed>true</tracker:indexed>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer">
+		<rdfs:comment>Models the containment relations between Files and Folders (or CompressedFiles).</rdfs:comment>
+		<rdfs:label>belongsToContainer</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1904</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isPartOf"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/ontologies/tracker#available">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1183</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataSource">
+		<rdfs:comment>A superclass for all entities from which DataObjects can be extracted. Each entity represents a native application or some other system that manages information that may be of interest to the user of the Semantic Desktop. Subclasses may include FileSystems, Mailboxes, Calendars, websites etc. The exact choice of subclasses and their properties is considered application-specific. Each data extraction application is supposed to provide it's own DataSource ontology. Such an ontology should contain supported data source types coupled with properties necessary for the application to gain access to the data sources. (paths, urls, passwords etc...)</rdfs:comment>
+		<rdfs:label>Data Source</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1032</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdfs:Class rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement">
+		<rdfs:comment>A unit of content the user works with. This is a superclass for all interpretations of a DataObject.</rdfs:comment>
+		<rdfs:label>Information Element</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1453</tracker:modified>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	</rdfs:Class>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#title">
+		<rdfs:comment>The title of the document</rdfs:comment>
+		<rdfs:label>Title</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1317</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>10</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#subject">
+		<rdfs:comment>The subject or topic of the document</rdfs:comment>
+		<rdfs:label>Subject</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1376</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:fulltextNoLimit>true</tracker:fulltextNoLimit>
+		<tracker:weight>5</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType">
+		<rdfs:comment>File Mime Type</rdfs:comment>
+		<rdfs:label>Mime Type</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1647</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#language">
+		<rdfs:comment>Language the InformationElement is expressed in. Users are encouraged to use the two-letter code specified in the RFC 3066</rdfs:comment>
+		<rdfs:label>Language</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1051</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#plainTextContent">
+		<rdfs:comment>Plain-text representation of the content of a InformationElement with all markup removed. The main purpose of this property is full-text indexing and search. Its exact content is considered application-specific. The user can make no assumptions about what is and what is not contained within. Applications should use more specific properties wherever possible.</rdfs:comment>
+		<rdfs:label>Plain-text content</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1619</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#informationElementDate">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1977</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#legal">
+		<rdfs:comment>A common superproperty for all properties that point at legal information about an Information Element</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1115</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#relatedTo">
+		<rdfs:comment>A common superproperty for all relations between a piece of content and other pieces of data (which may be interpreted as other pieces of content).</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1939</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#generator">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1519</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#description">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1187</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#disclaimer">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1375</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#legal"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#depends">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1295</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#relatedTo"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#links">
+		<rdfs:comment>A linking relation. A piece of content links/mentions a piece of data</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1018</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#relatedTo"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#copyright">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1396</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#legal"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#comment">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1894</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isStoredAs">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1801</tracker:modified>
+		<nao:deprecated>true</nao:deprecated>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentLastModified">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1020</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#informationElementDate"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#version">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1842</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentCreated">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1429</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#informationElementDate"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentAccessed">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1578</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#informationElementDate"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#license">
+		<rdfs:comment>Terms and intellectual property rights licensing conditions.</rdfs:comment>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1400</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#legal"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1283</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#keyword">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1929</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<tracker:fulltextIndexed>true</tracker:fulltextIndexed>
+		<tracker:weight>5</tracker:weight>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1958</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<tracker:weight>2</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1302</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#relatedTo"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"/>
+		<tracker:weight>2</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#licenseType">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1777</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#legal"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#characterSet">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1563</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isLogicalPartOf">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1663</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<tracker:weight>2</tracker:weight>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentSize">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1257</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#rootElementOf">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1385</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataSource"/>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#usageCounter">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1359</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+		<tracker:isAnnotation>true</tracker:isAnnotation>
+		<tracker:weight>3</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasProperty">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1897</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#Property"/>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor">
+		<rdfs:comment>An entity responsible for making contributions to the content of the InformationElement.</rdfs:comment>
+		<rdfs:label>contributor</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1373</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator">
+		<rdfs:comment>Creator of a data object, an entity primarily responsible for the creation of the content of the data object.</rdfs:comment>
+		<rdfs:label>creator</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1639</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+		<rdfs:subPropertyOf rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:weight>4</tracker:weight>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#publisher">
+		<rdfs:comment>An entity responsible for making the InformationElement available.</rdfs:comment>
+		<rdfs:label>publisher</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1983</tracker:modified>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"/>
+		<tracker:weight>2</tracker:weight>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#isContentEncrypted">
+		<rdfs:comment>Might change (IE of DataObject property?)</rdfs:comment>
+		<rdfs:label>Is content encrypted</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1344</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/mlo#location">
+		<rdfs:comment>This can be subclassed to add semantics</rdfs:comment>
+		<rdfs:label>Property linking something to a location</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1386</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/mlo#GeoLocation"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://maemo.org/ontologies/tracker#relevance">
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>1899</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+		<tracker:defaultValue>1000000</tracker:defaultValue>
+		<nrl:maxCardinality>1</nrl:maxCardinality>
+	</rdf:Property>
+	<rdf:Property rdf:about="http://www.tracker-project.org/temp/slo#location">
+		<rdfs:comment>This can be subclassed to add semantics</rdfs:comment>
+		<rdfs:label>Property linking something to a location</rdfs:label>
+		<tracker:added>2010-11-30T13:24:06Z</tracker:added>
+		<tracker:modified>2054</tracker:modified>
+		<rdfs:domain rdf:resource="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement"/>
+		<rdfs:range rdf:resource="http://www.tracker-project.org/temp/slo#GeoLocation"/>
+		<tracker:indexed>true</tracker:indexed>
+		<tracker:writeback>true</tracker:writeback>
+	</rdf:Property>
+	<tracker:Ontology rdf:about="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#">
+	</tracker:Ontology >
+</rdf:RDF>

@@ -1,0 +1,8 @@
+unit-tests             -- unit-tests run regularly
+perf-tests             -- performance tests
+mafw                   -- mafw tests
+CreateQtTrackerTest.py -- creates a skeleton test
+test                   -- Iridian's sandbox
+unsorted               -- the mess, their fate should be either becoming a
+                          real test which is run regularly, becoming an
+						  example or getting deleted.

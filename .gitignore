@@ -1,0 +1,79 @@
+# global ignores
+
+#   qttracker is run by qmake. Allow in subdirs if required.
+Makefile
+
+#   temporary file ignores
+.obj/
+.moc/
+*.o
+*.moc
+*moc_*
+*.pyc
+*core
+
+# current directory ignores
+
+lib/
+temp/
+
+#   eclipse project file ignores
+.project
+.cproject
+
+# Qt Creator project file ignores
+*.pro.user
+
+# ... and ignores for emacs users
+BROWSE
+TAGS
+.dir-locals.el
+
+# tool executables
+tracker-browser
+
+# Test executables
+mafwsuite
+Test
+qttracker-unit-tests
+qttracker-util-tests
+qttracker-perf-tests
+tests/contrib
+calls-benchmark
+contacts-benchmark
+content-benchmark
+email-benchmark
+gallery-benchmark
+im-benchmark
+location-benchmark
+music-benchmark
+rtcom-benchmark
+
+
+tests.xml
+
+# package building
+build-stamp
+configure-stamp
+debian/files
+debian/*.substvars
+debian/*.postinst.debhelper
+debian/*.postrm.debhelper
+debian/*.prerm.debhelper
+debian/*.preinst.debhelper
+debian/*.debhelper.log
+debian/libqttracker-dev
+debian/libqttracker-doc
+debian/libqttracker-tests
+debian/libqttracker1pre6-dbg
+debian/libqttracker1pre6
+debian/tmp
+qttracker-unit-tests
+
+# Coverage files
+*.h.gcov
+*.cov
+src/coverage/
+
+# Contributed data
+contrib

@@ -1,0 +1,71 @@
+
+  LibQtTracker 0.2.x to 0.3.0 migration
+
+1. Introduction
+
+Changes are represented as follows:
+
+// === Explanation on change
+Lines to be altered before change
+// >>> further explanation
+Lines after change
+// ===
+
+
+2. Mandatory changes:
+
+2.1. Live<> wrapping for convenience classes
+ 
+// === All convenience class _instantiations_ of the type 
+nco::Contact contact; 
+// >>> have to be wrapped as 
+Live<nco::Contact> contact;
+// === where nco::Contact represents any and all ontology class types.
+// Note that this only applies to instantiations.
+// Whenever a class type is used as a template parameter, no change is required 
+RDFVariable var = RDFVariable::fromType<nco::Contact>(); // no change.
+
+2.2. LiveNodeModelPtr to LiveNodes
+
+// === The main node model storage type is no longer a plain shared pointer object:
+LiveNodeModelPtr results = ::tracker()->modelQuery(selection);
+// >>> But instead a full blown convenience object
+LiveNodes results = ::tracker()->modelQuery(selection);
+// === 
+// The api is now consistent between LiveNode and LiveNodes:
+// LiveNode = a smart pointer to one rdf resource/literal
+// LiveNodes = a smart pointer to a model of many rdf resources/literals
+
+2.3. Retrieval of QAbstractItemModel from LiveNodes object.
+
+// === a QAbstractItemModel from livenodes can be retrieved now more intuitively, change all
+QAbstractItemModel *model = livenodemodelptr.data();   
+// >>> into
+QAbstractItemModel *model = livenodes.model();
+// === note once again that the lifetime of the model is guaranteed to be only as long as the last LiveNodes reference to it is.
+
+
+3. Recommended and/or suggested changes
+
+3.1. Retrieving a QList of LiveNode objects from LiveNodes
+
+// a LiveNodes object can be assigned to LiveNodeList as previously was possible with LiveNodeModelPtr
+LiveNodes results = ::tracker()->modelQuery(selection);
+LiveNodeList nodelist = results;
+// Also, LiveNodeList is now only a typedef for QList<LiveNode> and no longer offers additional functionality.
+// Due to these issues, this form might be deprecated at some point. 
+// All new code should use the stable, more clear and explicit version:
+QList<LiveNode> nodelist = results.nodes();
+
+3.2. Using foreach with convenience types and model
+// Following monster is now possible:
+foreach(Live<nco::Contact> contact, ::tracker()->modelVariable(RDFVariable::fromType<nco::Contact>()).nodes())
+	qDebug() << contact.uri().toString();
+
+// However the more verbose but identical version of it is recommended:
+
+RDFVariable contacts_var = RDFVariable::fromType<nco::Contact>();
+LiveNodes contacts = ::tracker()->modelVariable(contacts_var);
+foreach(Live<nco::Contact> contact, contacts.nodes())
+	qDebug() << contact.uri().toString();
+

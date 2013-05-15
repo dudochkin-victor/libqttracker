@@ -1,0 +1,69 @@
+Source: libqttracker
+Section: libs
+Priority: extra
+Maintainer: Iridian Kiiskinen <ext-iridian.kiiskinen@nokia.com>
+Build-Depends: debhelper (>= 5),
+               libqt4-dev (>= 4.6),
+               doxygen,
+               testhelper,
+               uuid-dev,
+               pkg-config,
+               aegis-builder (>= 1.4),
+               libqtsparql-dev
+Standards-Version: 3.7.3
+
+Package: libqttracker-dev
+Section: libdevel
+Architecture: any
+Depends: libqttracker1pre6 (= ${binary:Version}), libqt4-dev (>= 4.6)
+Description: Multilayered Qt convenience library for Tracker (development files)
+ Thin layer offers SPARQL support, insertion and deletion of triples.
+ Service layer offers powerful query builder, resource reflection and
+ manipulation, modification signaling and result sets with QAbstractModel.
+ Convenience layer offers intuitive classes generated from rdf-xml files.
+ .
+ This package contains development files for libqttracker1pre6.
+
+Package: libqttracker1pre6
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, tracker (>= 0.7.0-git20090528-1+0m6),
+         libqtsparql-tracker-direct
+Description: Multilayered Qt convenience library for Tracker
+ Thin layer offers SPARQL support, insertion and deletion of triples.
+ Service layer offers powerful query builder, resource reflection and
+ manipulation, modification signaling and result sets with QAbstractModel.
+ Convenience layer offers intuitive classes generated from rdf-xml files.
+
+Package: libqttracker1pre6-dbg
+Section: libs
+Architecture: any
+Depends: libqttracker1pre6 (= ${binary:Version})
+Description: Multilayered Qt convenience library for Tracker (debug symbols)
+ Thin layer offers SPARQL support, insertion and deletion of triples.
+ Service layer offers powerful query builder, resource reflection and
+ manipulation, modification signaling and result sets with QAbstractModel.
+ Convenience layer offers intuitive classes generated from rdf-xml files.
+ .
+ This package contains debugging symbols for libqttracker1pre6.
+
+Package: libqttracker-tests
+Section: libs
+Architecture: any
+Depends: testrunner-lite, libqttracker1pre6, ci-testing
+XB-Maemo-CI-Packages: libqttracker1pre6, tracker
+XB-Maemo-CI-Stage: fast, staging, acceptance
+Description: Multilayered Qt convenience library for Tracker - tests package
+
+
+Package: libqttracker-doc
+Section: doc
+Architecture: any
+Description: Multilayered Qt convenience library for Tracker (documentation)
+ Thin layer offers SPARQL support, insertion and deletion of triples.
+ Service layer offers powerful query builder, resource reflection and
+ manipulation, modification signaling and result sets with QAbstractModel.
+ Convenience layer offers intuitive classes generated from rdf-xml files.
+ .
+ This package contains API html documentation and examples with source code
+ for libqttracker1pre6.

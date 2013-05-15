@@ -1,0 +1,29 @@
+To configure libqttracker, in the top-level directory run:
+
+  qmake PREFIX=/usr         # to specify installation prefix (default: /usr/local)
+  qmake CONFIG+=coverage    # to allow code coverage measurement
+  qmake CONFIG+=timestamps  # to print timestamps at certain key places
+  qmake CONFIG+=profile     # to build with profiling enabled
+  qmake CONFIG+=noopt       # to build without optimizations, debug mode
+
+Then the following make targets are available in the top level directory:
+
+  make                      # to build the library and its tests
+  make doc                  # to build the documentation
+  make dev-doc              # to build developer documentation
+  make check                # to run regression tests
+  make coverage-report      # to create a coverage report with lcov
+                            # (available only with CONFIG+=coverage)
+  make import_ontologies    # to import fresh tracker ontologies
+  make autogenerate         # to regenerate ontology headers from rdf-xml
+  make install              # to install the package
+  make uninstall            # to undo installation
+  make performance_tests    # run performance tests
+
+
+Note: import_ontologies requires to have a running tracker instance and
+      installed libqttracker (?), and generates ontology files in
+      data/rdf-xml/QtTracker/ontologies/*.xml
+
+Warning: if you run `qmake' in any subdirectory, the arguments (like PREFIX)
+         given at top-level are lost, unless they are specified again.

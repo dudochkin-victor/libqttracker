@@ -1,0 +1,6 @@
+interface: libqttracker
+type: library
+scope: Platform
+state: stable
+libs-pkg: libqttracker1pre6
+dev-pkg: libqttracker-dev

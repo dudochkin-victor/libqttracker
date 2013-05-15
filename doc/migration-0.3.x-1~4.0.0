@@ -1,0 +1,29 @@
+
+  QtTracker 0.3.x to 1~4.0.0 migration
+
+	1. Intro
+
+1~4.0.0 has seen a lot of internal changes and ABI breaks, and couple 
+API breaks, migration changes are described below. Some API features
+are deprecated, these are marked as DEPRECATED 0.3.x, and they will 
+be supported until 1~5.0.0.
+
+
+	2. API Migration changes:
+
+	2.1. Implicit inclusion of ontology headers will be dropped.
+
+// === Including <QtTracker/QTracker> has all ontologies and is slow.
+#include <QtTracker/QTracker>
+// >>> replace with the slim header and specific ontology headers
+// >>> f.ex. nco and nfo:
+#include <QtTracker/Tracker>
+#include <QtTracker/ontologies/nco.h>
+#include <QtTracker/ontologies/nfo.h>
+// ===
+
+
+	2.2. Dropping get* prefix from property accessors as per Qt policy.
+
+// === RDFGraph::getService >>> RDFGraph::service ===
+// === RDFGraph::getGraphIri >>> RDFGraph::graphIri ===
