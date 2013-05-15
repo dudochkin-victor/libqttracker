@@ -9,7 +9,8 @@ TEMPLATE = subdirs
 include(shared.pri)
 
 CONFIG += ordered
-SUBDIRS = src tests
+SUBDIRS = src 
+#tests
 
 include(doc/doc.pri)
 include(dev-doc/dev-doc.pri)
