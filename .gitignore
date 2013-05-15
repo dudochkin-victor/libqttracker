@@ -10,7 +10,7 @@ Makefile
 *.moc
 *moc_*
 *.pyc
-*core
+#*core
 
 # current directory ignores
 
