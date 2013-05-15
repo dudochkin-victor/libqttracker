@@ -85,7 +85,7 @@ namespace SopranoLive
 
 			void TrackerAccessQSparql::startQuery(const QString& query)
 			{
-				debug(6) << " TrackerAccessQSparql::startQuery" << quint32(this);
+                //debug(6) << " TrackerAccessQSparql::startQuery" << quint32(this);
 				abort();
 				debug(6) << "QUERY: " << query;
 
@@ -104,7 +104,7 @@ namespace SopranoLive
 
 			void TrackerAccessQSparql::waitForQueryComplete()
 			{
-				debug(6) << "ENTER: TrackerAccessQSparql::waitForQueryComplete" <<	quint32(this);
+                //debug(6) << "ENTER: TrackerAccessQSparql::waitForQueryComplete" <<	quint32(this);
 				if(!waitingForFinished_ && sparqlResult_)
 				{
 					debug(6) << "WAITING QUERY" << sparqlResult_->isFinished() << sparqlResult_->hasError();
@@ -113,7 +113,7 @@ namespace SopranoLive
 					debug(6) << "WAITING STOPPED" << sparqlResult_->isFinished() << sparqlResult_->hasError();
 					waitingForFinished_ = false;
 				}
-			debug(6) << "EXIT: TrackerAccessQSparql::waitForQueryComplete" <<	quint32(this);
+                //debug(6) << "EXIT: TrackerAccessQSparql::waitForQueryComplete" <<	quint32(this);
 			}
 
 			bool TrackerAccessQSparql::isWaitingForQueryComplete() const
@@ -123,7 +123,7 @@ namespace SopranoLive
 
 			TrackerQueryResult TrackerAccessQSparql::takeQueryResult()
 			{
-				debug(6) << " TrackerAccessQSparql::takeQueryResult()" << quint32(this);
+                //debug(6) << " TrackerAccessQSparql::takeQueryResult()" << quint32(this);
 				const bool finished = sparqlResult_ ? sparqlResult_->isFinished() : false;
 				const bool error =isError();
 				TrackerQueryResult result(finished, error, errorMessage());

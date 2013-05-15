@@ -74,9 +74,9 @@ namespace SopranoLive
 			{ iterator ret(*this); const_iterator::operator++(0); return ret; }
 			iterator operator--(int)
 			{ iterator ret(*this); const_iterator::operator--(0); return ret; }
-			Value_ &value() { return static_cast<ItemNode const *>(this->n_)->value_; }
-			Value_ &operator*() { return value(); }
-			Value_ *operator->() { return &value(); }
+            //Value_ &value() { return static_cast<ItemNode const *>(this->n_)->value_; } //DV
+            //Value_ &operator*() { return value(); } //DV
+            //Value_ *operator->() { return &value(); } //DV
 		};
 
 		QFifoMap() {}

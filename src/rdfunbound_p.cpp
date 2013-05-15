@@ -1361,7 +1361,7 @@ namespace SopranoLive
 	{
 		results.push_back(pattern.key());
 		// mark pattern as processed
-		*pattern = true;
+        //*pattern = true; //DV
 
 		PatternProgress::iterator di;
 		for(PatternLinks::const_iterator cpli = pattern_links_.lowerBound(pattern.key())
